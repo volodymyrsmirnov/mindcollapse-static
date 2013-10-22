@@ -44,10 +44,11 @@ nosetests.xml
 # sass
 compiled
 !compiled/do_not_remove_me.txt
+
 .sass-cache
 .webassets-cache
 
-build
+build/*
 !build/robots.txt
 !build/favicon.ico
 !build/.ht*
