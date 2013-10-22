@@ -1,0 +1,126 @@
+.mindcollapse {
+    
+    .container {
+        max-width: 930px;
+    }
+
+    .article a, .archive a {
+        color: #9c30b6;
+        text-decoration: underline;
+
+        &:hover {
+            color: #f93703;
+        }
+    }
+
+    .header {
+        margin-top: 5px;
+        background-color: #ffffff;
+        border: 0px;
+
+        .navbar-brand {
+            padding-left: 0px;
+            color: #111;
+        }
+
+        .navbar-toggle {
+            margin-right: 0px;
+            outline: none;
+        }
+
+        ul li:last-child a {
+            padding-right: 0px;
+        }
+    }
+
+    .archive {
+        li {
+            margin-bottom: 10px;
+            vertical-align: middle;
+        }
+    }
+
+    .article {
+        margin-top: 20px;
+
+        color: #111;
+        font-size: 16px;
+        font-family: Georgia, Times New Roman, serif;
+
+
+        hr {
+            margin: {
+                top: 15px;
+                bottom: 15px;
+            };
+
+            &.first {
+                margin-top: 10px;
+            }
+        }
+
+        .content_header {
+            line-height: 20px; 
+
+            h1 {
+                font-size: 18px;
+                font-weight: normal;
+                margin: 0px;
+            }
+
+            .published {
+                text-align: right;
+                font-size: 14px;
+                cursor: pointer;
+            }
+
+            @media (max-width: 767px) { 
+                .published {
+                    margin-top: 15px;
+                    float: left !important;
+                    clear:both;
+                }
+            }
+        }
+
+        .content {
+            text-align: justify;
+
+            h2 {
+                font-size: 18px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            h4 {
+                font-size: 15px;
+            }
+
+            h2 a, h3 a, h4 a {
+                text-decoration: none;
+                color: #111;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #111;
+                }
+            }
+
+            .toc {
+                display: none;
+            }
+
+            img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+
+        .content_footer {
+            font-style: italic;
+        }
+    }
+}

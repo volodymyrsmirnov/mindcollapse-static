@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Блог mindcollapse.com</title>
+	<subtitle>Личный блог Владимира Смирнова</subtitle>
+
+	<link href="http://www.mindcollapse.com/blog.xml" rel="self" />
+    <link href="http://www.mindcollapse.com/blog/" />
+
+    <id>http://www.mindcollapse.com/blog.xml</id>
+
+    <author>
+		<name>Vladimir Smirnov</name>
+		<email>mail@mindcollapse.com</email>
+		<uri>http://www.mindcollapse.com/</uri>
+    </author>
+
+	<updated>{{ posts[0].parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}</updated>
+
+	{% for post in posts %}
+		<entry>
+			<id>{{ url_for("blog.post", slug=post.slug, _external=True) }}</id>
+			<updated>{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}</updated>
+			<title>{{ post.title }}</title>
+			<link rel="alternate" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}"/>
+			<content type="html">
+				{{ post.content }}
+			</content>
+		</entry>
+	{% endfor %}
+</feed>

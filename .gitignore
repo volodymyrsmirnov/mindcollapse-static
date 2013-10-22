@@ -6,8 +6,8 @@
 # Packages
 *.egg
 *.egg-info
+*.obj
 dist
-build
 eggs
 parts
 bin
@@ -17,7 +17,6 @@ develop-eggs
 .installed.cfg
 lib
 lib64
-__pycache__
 
 # Installer logs
 pip-log.txt
@@ -34,3 +33,25 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Mac OSX crap
+.DS_Store
+
+# IntelliJ Idea
+.idea
+*.iml
+
+# sass
+compiled
+!compiled/do_not_remove_me.txt
+.sass-cache
+.webassets-cache
+
+build
+!build/robots.txt
+!build/favicon.ico
+
+virtualenv
+
+*.sublime-project
+*.sublime-workspace

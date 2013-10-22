@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for post in posts %}
+    <url>
+            <loc>{{ url_for("blog.post", slug=post.slug, _external=True) }}</loc>
+            <lastmod>{{ post.parsed_date.strftime("%Y-%m-%d") }}</lastmod>
+    </url>
+{% endfor %}
+</urlset> 

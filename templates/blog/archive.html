@@ -1,0 +1,14 @@
+{% extends "blog/layout.html" %}
+
+{% block title %}Архив записей блога{% endblock %}
+
+{% block content %}
+    <ol class="archive list-unstyled">
+        {% for post in posts %}
+            <li>
+                <span class="text-muted">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</span> <br>
+                <a href="{{ url_for("blog.post", slug=post.slug) }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}
