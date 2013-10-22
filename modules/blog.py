@@ -50,15 +50,6 @@ def index():
 @blog.route("/404.html")
 def error_404():
     return flask.render_template("blog/404.html")
-    
-@blog.route("/blog/<slug>.html")
-def post(slug):
-    entries = get_data("blog")
-
-    if not slug in entries:
-        return flask.abort(404)
-
-    return flask.render_template("blog/post.html", post=process_post(entries[slug]))
 
 @blog.route("/blog/archive/")
 def archive():
@@ -72,6 +63,15 @@ def archive():
         posts.append(post)
 
     return flask.render_template("blog/archive.html", posts=posts)
+    
+@blog.route("/blog/<slug>.html")
+def post(slug):
+    entries = get_data("blog")
+
+    if not slug in entries:
+        return flask.abort(404)
+
+    return flask.render_template("blog/post.html", post=process_post(entries[slug]))
 
 @blog.route("/blog.xml")
 def rss():
