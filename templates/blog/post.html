@@ -17,7 +17,7 @@
 
 		<hr>
 		
-		<div class="content_footer" class="hidden-print">
+		<div class="content_footer hidden-print">
 			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="{{ url_for("blog.archive") }}">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}&amp;text={{ post.title | urlencode }}&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">вконтакте</a></span>.</p>
 		</div>
 	</div>

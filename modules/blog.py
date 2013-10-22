@@ -46,6 +46,10 @@ def register_assets():
 def index():
     first_post = get_data("blog").items()[0]
     return flask.redirect(flask.url_for("blog.post", slug=first_post[0]))
+
+@blog.route("/404.html")
+def error_404():
+    return flask.render_template("blog/404.html")
     
 @blog.route("/blog/<slug>.html")
 def post(slug):
@@ -54,7 +58,6 @@ def post(slug):
     if not slug in entries:
         return flask.abort(404)
 
-   
     return flask.render_template("blog/post.html", post=process_post(entries[slug]))
 
 @blog.route("/blog/archive/")

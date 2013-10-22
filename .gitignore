@@ -50,6 +50,7 @@ compiled
 build
 !build/robots.txt
 !build/favicon.ico
+!build/.ht*
 
 virtualenv
 
