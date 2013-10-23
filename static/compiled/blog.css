@@ -11,117 +11,125 @@
 .mindcollapse .container {
   max-width: 930px;
 }
-/* line 7 */
+/* line 8 */
+.mindcollapse .error h1 {
+  font-size: 150px;
+}
+/* line 12 */
+.mindcollapse .error h2 {
+  font-size: 75px;
+}
+/* line 17 */
 .mindcollapse .article a, .mindcollapse .archive a {
   color: #9c30b6;
   text-decoration: underline;
 }
-/* line 11 */
+/* line 21 */
 .mindcollapse .article a:hover, .mindcollapse .archive a:hover {
   color: #f93703;
 }
-/* line 16 */
+/* line 26 */
 .mindcollapse .header {
   margin-top: 5px;
   background-color: #ffffff;
   border: 0px;
 }
-/* line 21 */
+/* line 31 */
 .mindcollapse .header .navbar-brand {
   padding-left: 0px;
   color: #111;
 }
-/* line 26 */
+/* line 36 */
 .mindcollapse .header .navbar-toggle {
   margin-right: 0px;
   outline: none;
 }
-/* line 31 */
+/* line 41 */
 .mindcollapse .header ul li:last-child a {
   padding-right: 0px;
 }
-/* line 37 */
+/* line 47 */
 .mindcollapse .archive li {
   margin-bottom: 10px;
   vertical-align: middle;
 }
-/* line 43 */
+/* line 53 */
 .mindcollapse .article {
   margin-top: 20px;
   color: #111;
   font-size: 16px;
   font-family: Georgia, Times New Roman, serif;
 }
-/* line 51 */
+/* line 61 */
 .mindcollapse .article hr {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-/* line 57 */
+/* line 67 */
 .mindcollapse .article hr.first {
   margin-top: 10px;
 }
-/* line 62 */
+/* line 72 */
 .mindcollapse .article .content_header {
   line-height: 20px;
 }
-/* line 65 */
+/* line 75 */
 .mindcollapse .article .content_header h1 {
   font-size: 18px;
   font-weight: normal;
   margin: 0px;
 }
-/* line 71 */
+/* line 81 */
 .mindcollapse .article .content_header .published {
   text-align: right;
   font-size: 14px;
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  /* line 78 */
+  /* line 88 */
   .mindcollapse .article .content_header .published {
     margin-top: 15px;
     float: left !important;
     clear: both;
   }
 }
-/* line 86 */
+/* line 96 */
 .mindcollapse .article .content {
   text-align: justify;
 }
-/* line 89 */
+/* line 99 */
 .mindcollapse .article .content h2 {
   font-size: 18px;
 }
-/* line 93 */
+/* line 103 */
 .mindcollapse .article .content h3 {
   font-size: 16px;
 }
-/* line 97 */
+/* line 107 */
 .mindcollapse .article .content h4 {
   font-size: 15px;
 }
-/* line 101 */
+/* line 111 */
 .mindcollapse .article .content h2 a, .mindcollapse .article .content h3 a, .mindcollapse .article .content h4 a {
   text-decoration: none;
   color: #111;
 }
-/* line 105 */
+/* line 115 */
 .mindcollapse .article .content h2 a:hover, .mindcollapse .article .content h3 a:hover, .mindcollapse .article .content h4 a:hover {
   text-decoration: none;
   color: #111;
 }
-/* line 111 */
+/* line 121 */
 .mindcollapse .article .content .toc {
   display: none;
 }
-/* line 115 */
+/* line 125 */
 .mindcollapse .article .content img {
   display: block;
   height: auto;
   max-width: 100%;
 }
-/* line 122 */
+/* line 132 */
 .mindcollapse .article .content_footer {
   font-style: italic;
 }

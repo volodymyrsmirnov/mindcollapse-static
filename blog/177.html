@@ -5,8 +5,6 @@
 
     <meta charset="utf-8">
 
-    <meta name="freezed" content="2013-10-22 18:55:06.617017">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
@@ -17,12 +15,12 @@
         <link rel="canonical" href="http://www.mindcollapse.com/blog/177.html">
 
         <meta property="og:title" content="MySQL БД синонимов русского языка">
-        <meta property="og:description" content="Как-то по­на­до­би­лась мне для ре­а­ли­за­ции идеи по оп­ти­ми­за­ции вы­да­чи по­ис­ко­вых за­про­сов на сай­те од­но­го ла­ба­за сло­варь си­но­ни­мов рус­ско­го язы­ка в ви­де mysql или sqlite ...">
+        <meta property="og:description" content="Как-то по­на­до­би­лась мне для ре­а­ли­за­ции идеи по оп­ти­ми­за­ции вы­да­чи по­ис­ко­вых за­про­сов на сай­те од­но­го ла­ба­за сло­варь си­но­ни­мов рус­ско­го язы­ка в ви­де mysql или sqlite ба­зы дан­ных. Гугл по за­про­сам вы­да­вал лишь б-го­мерз­кие сай­ты аля пла­ти.ру и про­чую ...">
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="mindcollapse.com">
         <meta property="og:url" content="http://www.mindcollapse.com/blog/177.html">
 
-        <meta name="description" content="Как-то по­на­до­би­лась мне для ре­а­ли­за­ции идеи по оп­ти­ми­за­ции вы­да­чи по­ис­ко­вых за­про­сов на сай­те од­но­го ла­ба­за сло­варь си­но­ни­мов рус­ско­го язы­ка в ви­де mysql или sqlite ...">
+        <meta name="description" content="Как-то по­на­до­би­лась мне для ре­а­ли­за­ции идеи по оп­ти­ми­за­ции вы­да­чи по­ис­ко­вых за­про­сов на сай­те од­но­го ла­ба­за сло­варь си­но­ни­мов ...">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:creator" content="@middlesizetit">
@@ -35,7 +33,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f402a3f1" rel="stylesheet" media="all">
     
 
     
@@ -81,7 +79,7 @@
 	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="content_header clearfix">
 			<h1 itemprop="name" class="pull-left">MySQL БД синонимов русского языка</h1>
-			<div class="published pull-right"><span title="опубликован 1740 дней назад" itemprop="dateCreated" class="text-muted">16 января 2009 г.</span></div>
+			<div class="published pull-right"><span title="опубликован 1741 день назад" class="text-muted">16 января 2009 г.</span></div>
 		</div>
 
 		<hr class="first">
@@ -92,14 +90,14 @@
 
 		<hr>
 		
-		<div class="content_footer" class="hidden-print">
+		<div class="content_footer hidden-print">
 			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/177.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/177.html&amp;text=MySQL%20%D0%91%D0%94%20%D1%81%D0%B8%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BE%D0%B2%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/177.html">вконтакте</a></span>.</p>
 		</div>
 	</div>
 
     </div>
 
-    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-                
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->      
 </body>
+
 </html>

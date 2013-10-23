@@ -5,8 +5,6 @@
 
     <meta charset="utf-8">
 
-    <meta name="freezed" content="2013-10-22 18:55:09.018775">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
@@ -17,12 +15,12 @@
         <link rel="canonical" href="http://www.mindcollapse.com/blog/84.html">
 
         <meta property="og:title" content="Squid + live &#39;src from files&#39; update">
-        <meta property="og:description" content="Соб­ствен­но бы­ла по­став­ле­на пе­ре­до мной та­кая за­да­ча - ор­га­ни­зо­вать proxy server c до­сту­пом по схе­ме - ПО кли­ен­та каж­дые 5 ми­нут от­прав­ля­ет http get за­прос к скрип­ту, ...">
+        <meta property="og:description" content="Соб­ствен­но бы­ла по­став­ле­на пе­ре­до мной та­кая за­да­ча - ор­га­ни­зо­вать proxy server c до­сту­пом по схе­ме - ПО кли­ен­та каж­дые 5 ми­нут от­прав­ля­ет http get за­прос к скрип­ту, ко­то­рый дол­жен до­бав­лять IP кли­ен­та в БД и да­вать ему до­ступ к прок­си на сле­ду­ю­щие 5 ми­нут. ...">
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="mindcollapse.com">
         <meta property="og:url" content="http://www.mindcollapse.com/blog/84.html">
 
-        <meta name="description" content="Соб­ствен­но бы­ла по­став­ле­на пе­ре­до мной та­кая за­да­ча - ор­га­ни­зо­вать proxy server c до­сту­пом по схе­ме - ПО кли­ен­та каж­дые 5 ми­нут от­прав­ля­ет http get за­прос к скрип­ту, ...">
+        <meta name="description" content="Соб­ствен­но бы­ла по­став­ле­на пе­ре­до мной та­кая за­да­ча - ор­га­ни­зо­вать proxy server c до­сту­пом по схе­ме - ПО кли­ен­та каж­дые 5 ми­нут ...">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:creator" content="@middlesizetit">
@@ -35,7 +33,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f402a3f1" rel="stylesheet" media="all">
     
 
     
@@ -81,7 +79,7 @@
 	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
 		<div class="content_header clearfix">
 			<h1 itemprop="name" class="pull-left">Squid + live &#39;src from files&#39; update</h1>
-			<div class="published pull-right"><span title="опубликован 2153 дня назад" itemprop="dateCreated" class="text-muted">30 ноября 2007 г.</span></div>
+			<div class="published pull-right"><span title="опубликован 2154 дня назад" class="text-muted">30 ноября 2007 г.</span></div>
 		</div>
 
 		<hr class="first">
@@ -92,14 +90,14 @@
 
 		<hr>
 		
-		<div class="content_footer" class="hidden-print">
+		<div class="content_footer hidden-print">
 			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/84.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/84.html&amp;text=Squid%20%2B%20live%20%27src%20from%20files%27%20update&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/84.html">вконтакте</a></span>.</p>
 		</div>
 	</div>
 
     </div>
 
-    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
-                
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->      
 </body>
+
 </html>
