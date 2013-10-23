@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Пишем Skype бот с искусственными мозгами</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:02.811617">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/274.html">
+
+        <meta property="og:title" content="Пишем Skype бот с искусственными мозгами">
+        <meta property="og:description" content="Су­ще­ству­ет два спо­со­ба вза­и­мо­дей­ствия со скай­пом. Пер­вый и основ­ной - SkypeKit. Это на­бор из би­нар­но­го ядра, за­бот­ли­во со­бран­но­го мей­н­тей­не­ром для всех ОС, и бин­дин­гов к ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/274.html">
+
+        <meta name="description" content="Су­ще­ству­ет два спо­со­ба вза­и­мо­дей­ствия со скай­пом. Пер­вый и основ­ной - SkypeKit. Это на­бор из би­нар­но­го ядра, за­бот­ли­во со­бран­но­го мей­н­тей­не­ром для всех ОС, и бин­дин­гов к ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Су­ще­ству­ет два спо­со­ба вза­и­мо­дей­ствия со скай­пом. Пер­вый и основ­ной - SkypeKit. Это на­бор из би­нар­но­го ядра, за­бот­ли­во со­бран­но­го мей­н­тей­не­ром для всех ОС, и бин­дин­гов к ...">
+        <meta name="twitter:title" content="Пишем Skype бот с искусственными мозгами">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Пишем Skype бот с искусственными мозгами</h1>
+			<div class="published pull-right"><span title="опубликован 573 дня назад" itemprop="dateCreated" class="text-muted">28 марта 2012 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Су&shy;ще&shy;ству&shy;ет два спо&shy;со&shy;ба вза&shy;и&shy;мо&shy;дей&shy;ствия со скай&shy;пом. Пер&shy;вый и основ&shy;ной - <a href="http://developer.skype.com/public/skypekit">SkypeKit</a>. Это на&shy;бор из би&shy;нар&shy;но&shy;го ядра, за&shy;бот&shy;ли&shy;во со&shy;бран&shy;но&shy;го мей&shy;н&shy;тей&shy;не&shy;ром для всех ОС, и бин&shy;дин&shy;гов к не&shy;му на пи&shy;то&shy;не, джа&shy;ве и плю&shy;сах. Все это до&shy;ступ&shy;но по под&shy;пис&shy;ке, ко&shy;то&shy;рая сто&shy;ит 5 дол&shy;ла&shy;ров разо&shy;вым пла&shy;те&shy;жом и по&shy;став&shy;ля&shy;ет&shy;ся со скуд&shy;ной до&shy;ку&shy;мен&shy;та&shy;ци&shy;ей, ко&shy;то&shy;рая пред&shy;став&shy;ля&shy;ет со&shy;бой ско&shy;рее <a href="http://developer.skype.com/skypekit/reference/python/html/">опи&shy;са&shy;ние API</a>&nbsp;(нам не при&shy;вы&shy;кать к Epydoc, ага), да и то не всех ме&shy;то&shy;дов и свойств. За&shy;то в на&shy;груз&shy;ку вы по&shy;лу&shy;чи&shy;те с де&shy;ся&shy;ток раз&shy;ных пре&shy;ду&shy;пре&shy;жде&shy;ний о се&shy;крет&shy;но&shy;сти и кон&shy;фи&shy;ден&shy;ци&shy;аль&shy;но&shy;сти по&shy;лу&shy;чен&shy;ных фай&shy;лов. А вот ка&shy;че&shy;ство ре&shy;а&shy;ли&shy;за&shy;ции очень хро&shy;ма&shy;ет, ваш по&shy;кор&shy;ный слу&shy;га так и не смог най&shy;ти тот event, ко&shy;то&shy;рый под&shy;ни&shy;ма&shy;ет&shy;ся при по&shy;лу&shy;че&shy;ния за&shy;про&shy;са на ав&shy;то&shy;ри&shy;за&shy;цию. В ин&shy;тер&shy;не&shy;те, что ха&shy;рак&shy;тер&shy;но, ин&shy;фор&shy;ма&shy;ции то&shy;же су&shy;щие кру&shy;пи&shy;цы и, в боль&shy;шин&shy;стве сво&shy;ем, по бин&shy;дин&shy;гу на C++, но, разо&shy;брав&shy;шись со всем не&shy;об&shy;хо&shy;ди&shy;мым функ&shy;ци&shy;о&shy;на&shy;лом ме&shy;то&shy;дом проб и оши&shy;бок, вы по&shy;лу&shy;чи&shy;те до&shy;ступ к аб&shy;со&shy;лют&shy;но всем функ&shy;ци&shy;ям Skype. Ну и для за&shy;пус&shy;ка би&shy;нар&shy;ни&shy;ка ядра из SkypeKit SDK в той же Linux вер&shy;сии ни&shy;ка&shy;кие ик&shy;сы не нуж&shy;ны, что то&shy;же за&shy;мет&shy;ное пре&shy;иму&shy;ще&shy;ство пе&shy;ред вто&shy;рым спо&shy;со&shy;бом - <a href="http://developer.skype.com/public-api-reference">Skype API</a>. Этот ва&shy;ри&shy;ант пред&shy;став&shy;ля&shy;ет из се&shy;бя на&shy;бор про&shy;то&shy;ко&shy;лов вза&shy;и&shy;мо&shy;дей&shy;ствия с скай&shy;по&shy;вым гу&shy;ем че&shy;рез Skype.framework для MacOS, X11 и DBUS для Linux, COM-ин&shy;тер&shy;фейс на Windows. Основ&shy;ные ми&shy;ну&shy;сы: острая не&shy;об&shy;хо&shy;ди&shy;мость в за&shy;пу&shy;щен&shy;ном кли&shy;ен&shy;те, ко&shy;то&shy;рый жрет ре&shy;сур&shy;сы и тре&shy;бу&shy;ет на&shy;ли&shy;чия ик&shy;сов, ну и от&shy;но&shy;си&shy;тель&shy;ная глюч&shy;ность, срав&shy;ни&shy;тель&shy;но с пер&shy;вым ва&shy;ри&shy;ан&shy;том.&nbsp;<div><br /></div><div>Хо&shy;дят без&shy;дар&shy;ные&nbsp;<a href="http://news.ycombinator.com/item?id=2611299">слу&shy;хи</a>, что в ско&shy;ром вре&shy;ме&shy;ни мы по&shy;лу&shy;чим еще и тре&shy;тий спо&shy;соб - на&shy;тив&shy;ная биб&shy;лио&shy;те&shy;ка без ка&shy;ких-ли&shy;бо ли&shy;ми&shy;тов. По&shy;доб&shy;ные раз&shy;го&shy;во&shy;ры на&shy;ча&shy;лись по&shy;сле деоб&shy;фус&shy;ка&shy;ции би&shy;нар&shy;ни&shy;ка скай&shy;па и про&shy;дол&shy;жа&shy;ют&shy;ся по ме&shy;ре на&shy;пол&shy;не&shy;ния ре&shy;по&shy;зи&shy;то&shy;рия&nbsp;<a href="https://github.com/skypeopensource/">https://github.com/skypeopensource/</a>.&nbsp;Хо&shy;тя, меж&shy;ду на&shy;ми, де&shy;воч&shy;ка&shy;ми, на&shy;пол&shy;ня&shy;ет&shy;ся он ко&shy;дом та&shy;ко&shy;го низ&shy;ко&shy;го ка&shy;че&shy;ства, что ме&shy;ня одо&shy;ле&shy;ва&shy;ют со&shy;мне&shy;ния, бу&shy;дет ли до&shy;ве&shy;ден про&shy;ект до ра&shy;бо&shy;че&shy;го об&shy;раз&shy;ца.<div><br /></div><div>Я ре&shy;шил ис&shy;поль&shy;зо&shy;вать SkypeAPI. Преж&shy;де все&shy;го, я во&shy;об&shy;ще не знал о су&shy;ще&shy;ство&shy;ва&shy;нии SkypeKit, вот та&shy;кой вот стыд&shy;ный про&shy;кол. Впро&shy;чем, оно и к луч&shy;ше&shy;му, мень&shy;ше вре&shy;ме&shy;ни ушло на на&shy;пи&shy;са&shy;ние то&shy;го, что не ра&shy;бо&shy;та&shy;ло. Ана&shy;ло&shy;гов не&shy;об&shy;хо&shy;ди&shy;мых мне функ&shy;ций, до&shy;ступ&shy;ных в ста&shy;рой пи&shy;то&shy;нов&shy;ской биб&shy;лио&shy;тек&nbsp;<a href="http://skype4py.sourceforge.net/doc/html/">Skype4Py</a>, в SDK про&shy;сто про&shy;сто не ока&shy;за&shy;лось. До&shy;пус&shy;каю, что я про&shy;сто пло&shy;хо ис&shy;кал, но тем не ме&shy;нее. Бо&shy;та мы с ва&shy;ми бу&shy;дем пи&shy;сать не про&shy;сто&shy;го, а ум&shy;но&shy;го, ко&shy;то&shy;рый смо&shy;жет под&shy;дер&shy;жи&shy;вать эле&shy;мен&shy;тар&shy;ный раз&shy;го&shy;вор, ну или да&shy;же по&shy;слать. Тут нам на по&shy;мощь при&shy;хо&shy;дит&nbsp;<a href="http://en.wikipedia.org/wiki/AIML">AIML</a>&nbsp;- XML-про&shy;из&shy;вод&shy;ный язык раз&shy;мет&shy;ки ло&shy;ги&shy;ки бо&shy;тов в сти&shy;ле "по&shy;бол&shy;тать". Со&shy;всем удач&shy;но на&shy;шлась и биб&shy;лио&shy;те&shy;ка&nbsp;<a href="http://pyaiml.sourceforge.net/">PyAIML</a>, ко&shy;то&shy;рая сде&shy;ла&shy;ла со&shy;зда&shy;ние ум&shy;но&shy;го болт&shy;ли&shy;во&shy;го ро&shy;бо&shy;та де&shy;лом трех строк ко&shy;да. Для на&shy;ча&shy;ла, нам нуж&shy;ны моз&shy;ги.&nbsp;</div><div><br /></div><div>Моз&shy;ги мож&shy;но взять в мяс&shy;ном ма&shy;га&shy;зи&shy;не, сту&shy;шить их вме&shy;сте с цвет&shy;ной ка&shy;пу&shy;стой или спар&shy;же&shy;вой фа&shy;со&shy;лью, по&shy;дать с бе&shy;лым ви&shy;ном, за&shy;бив на про&shy;дол&shy;же&shy;ние это&shy;го по&shy;ста. Если та&shy;кие ку&shy;ли&shy;нар&shy;ные изыс&shy;ки вас не пре&shy;льща&shy;ют, то от&shy;кры&shy;вай&shy;те <a href="http://code.google.com/p/aiml-en-us-foundation-alice/">Google Code</a>, ку&shy;да до&shy;брые лю&shy;ди вы&shy;ло&shy;жи&shy;ли и до сих пор про&shy;дол&shy;жа&shy;ют ко&shy;ми&shy;тить боль&shy;шой жир&shy;ный сет aiml-ок, ко&shy;то&shy;рые по&shy;мо&shy;гут ма&shy;ши&shy;не на&shy;чать ду&shy;мать и чув&shy;ство&shy;вать. Преж&shy;де чем про&shy;дол&shy;жить, нуж&shy;но пе&shy;ре&shy;ве&shy;сти моз&shy;ги из XML раз&shy;мет&shy;ки в би&shy;нар&shy;ный фор&shy;мат, ина&shy;че каж&shy;дый раз ваш бот бу&shy;дет за&shy;пус&shy;кать&shy;ся по 5-10 ми&shy;нут. Все это де&shy;ла&shy;ет&shy;ся с по&shy;мо&shy;щью <a href="https://code.google.com/p/mindcollapse-com-blog-source/source/browse/small_projects/SkypeBot/Learn.py">та&shy;ко&shy;го про&shy;сто&shy;го ко&shy;да</a> на Python. Будь&shy;те го&shy;то&shy;вы к ис&shy;прав&shy;ле&shy;ни&shy;ям фай&shy;лов сво&shy;и&shy;ми соб&shy;ствен&shy;ны&shy;ми ру&shy;ка&shy;ми, мно&shy;гие из них про&shy;сто не про&shy;хо&shy;дят ва&shy;ли&shy;да&shy;цию и пар&shy;сер от&shy;ва&shy;ли&shy;ва&shy;ет&shy;ся с пе&shy;чаль&shy;ны&shy;ми но&shy;во&shy;стям. Обыч&shy;но все про&shy;бле&shy;мы ли&shy;бо в не&shy;за&shy;кры&shy;том те&shy;ге, ли&shy;бо в не&shy;экра&shy;ни&shy;ро&shy;ван&shy;ном спец&shy;сим&shy;во&shy;ле, или точ&shy;ке гу&shy;ля&shy;щей. Про&shy;цесс это уто&shy;ми&shy;тель&shy;ный и не&shy;спеш&shy;ный, но во всем есть свои плю&shy;сы: по ме&shy;ре ре&shy;дак&shy;ти&shy;ро&shy;ва&shy;ния вы по&shy;зна&shy;ко&shy;ми&shy;тесь с син&shy;так&shy;си&shy;сом AIML.</div></div><div><br /></div><div>На этом мож&shy;но бы&shy;ло бы и за&shy;кон&shy;чить, 3 стро&shy;ки ко&shy;да и ваш бот на&shy;учил&shy;ся го&shy;во&shy;рить и от&shy;ве&shy;чать на по&shy;лу&shy;чен&shy;ные со&shy;об&shy;ще&shy;ния. &nbsp;Но нам все ма&shy;ло. Да&shy;вай&shy;те при&shy;де&shy;ла&shy;ем воз&shy;мож&shy;ность взять труб&shy;ку и по&shy;го&shy;во&shy;рить го&shy;ло&shy;сом с за&shy;де&shy;лом на крос&shy;с&shy;плат&shy;фор&shy;мен&shy;ность, све&shy;дя за&shy;ви&shy;си&shy;мо&shy;сти и слож&shy;ность ко&shy;да к ми&shy;ни&shy;му&shy;му. Для это&shy;го мы бу&shy;дем ис&shy;поль&shy;зо&shy;вать 2 би&shy;нар&shy;ни&shy;ка, ко&shy;то&shy;рые со&shy;би&shy;ра&shy;ют&shy;ся под все&shy;ми си&shy;сте&shy;ма&shy;ми, и 2 нео&shy;фи&shy;ци&shy;аль&shy;ных APIш&shy;ки от Google. Вни&shy;ма&shy;ние, код и опи&shy;са&shy;ние предо&shy;став&shy;ле&shy;ны ис&shy;клю&shy;чи&shy;тель&shy;но для озна&shy;ком&shy;ле&shy;ния. Я на&shy;сто&shy;я&shy;тель&shy;но не ре&shy;ко&shy;мен&shy;дую на&shy;ру&shy;шать ли&shy;цен&shy;зи&shy;он&shy;ное со&shy;гла&shy;ше&shy;ние. По&shy;мни, каж&shy;дый раз, ко&shy;гда ты от&shy;прав&shy;ля&shy;ешь за&shy;прос по этим ссыл&shy;кам, Эрик Шмидт уби&shy;ва&shy;ет ко&shy;тен&shy;ка.&nbsp;Нуж&shy;но бы&shy;ло на&shy;пи&shy;сать, уже бы&shy;ли пре&shy;це&shy;ден&shy;ты. Вер&shy;нем&shy;ся к на&shy;шим API. Пер&shy;вый - TTS, ко&shy;то&shy;рый ис&shy;поль&shy;зу&shy;ет&shy;ся в Google Translate и пе&shy;ре&shy;во&shy;дит текст в MP3. Как это ра&shy;бо&shy;та&shy;ет, мо&shy;же&shy;те <a href="https://code.google.com/p/mindcollapse-com-blog-source/source/browse/small_projects/SkypeBot/__init__.py#186">по&shy;смот&shy;реть в ко&shy;де</a>. Впро&shy;чем, ра&shy;но ра&shy;до&shy;вать&shy;ся - наш Skype не пой&shy;мет, если ему в Output ка&shy;нал мы бу&shy;дем за&shy;со&shy;вы&shy;вать не теп&shy;лый лам&shy;по&shy;вый WAV (16Khz, 256kb/s, Mono), а ужа&shy;тый MPEG. Я пы&shy;тал&shy;ся де&shy;ко&shy;ди&shy;ро&shy;вать с по&shy;мо&shy;щью ме&shy;ди&shy;а&shy;ком&shy;бай&shy;на ffmpeg, но Скайп на&shy;от&shy;рез от&shy;ка&shy;зы&shy;вал&shy;ся по&shy;ни&shy;мать по&shy;лу&shy;чен&shy;ный файл. Имен&shy;но по&shy;это&shy;му, мы и бу&shy;дем ис&shy;поль&shy;зо&shy;вать <a href="http://www.mpg123.de/">mpg123</a>, ко&shy;то&shy;рый очень бы&shy;стро справ&shy;ля&shy;ет&shy;ся с по&shy;став&shy;лен&shy;ной за&shy;да&shy;чей. Вот так у нас и по&shy;лу&shy;чи&shy;лась функ&shy;ция пе&shy;ре&shy;во&shy;да тек&shy;ста в речь, ко&shy;то&shy;рую вы мо&shy;же&shy;те ис&shy;поль&shy;зо&shy;вать в лю&shy;бом про&shy;ек&shy;те. Идем даль&shy;ше - <a href="https://code.google.com/p/mindcollapse-com-blog-source/source/browse/small_projects/SkypeBot/__init__.py#147">за&shy;пи&shy;сы&shy;ва&shy;ем</a> 10 се&shy;кунд ре&shy;чи на&shy;ше&shy;го со&shy;бе&shy;сед&shy;ни&shy;ка и тут бы не по&shy;ме&shy;ша&shy;ло пе&shy;ре&shy;ве&shy;сти ее в текст. Нам опять по&shy;мо&shy;жет Google и API, выдран&shy;ное из Хро&shy;ми&shy;у&shy;ма, ко&shy;то&shy;рое как раз этим и за&shy;ни&shy;ма&shy;ет&shy;ся. Тут воз&shy;ни&shy;ка&shy;ет сле&shy;ду&shy;ю&shy;щая про&shy;бле&shy;ма - &nbsp;от&shy;да&shy;вать нуж&shy;но не WAV, a FLAC. К сча&shy;стью, есть од&shy;но&shy;имен&shy;ный про&shy;ект <a href="http://flac.sourceforge.net/">на сурс&shy;фор&shy;же,</a> ко&shy;то&shy;рый ма&shy;ло то&shy;го, что крос&shy;с&shy;плат&shy;фор&shy;мен&shy;ный, так еще и бы&shy;стрый, как во&shy;об&shy;ра&shy;же&shy;ние школь&shy;ни&shy;ка в жен&shy;ской раз&shy;де&shy;вал&shy;ке.</div><div><br /></div><div><a href="https://code.google.com/p/mindcollapse-com-blog-source/source/browse/small_projects/SkypeBot/__init__.py">Итог</a> за&shy;пус&shy;ка&shy;ет&shy;ся вме&shy;сте с скай&shy;пов&shy;ским GUI в ка&shy;ком-то Xvfb или да&shy;же в Xvnc, что пред&shy;по&shy;чти&shy;тель&shy;ней, так как вам нуж&shy;но бу&shy;дет под&shy;твер&shy;дить пра&shy;ва до&shy;сту&shy;па на&shy;шей про&shy;грам&shy;мы к API кли&shy;ком мы&shy;ши. В ка&shy;че&shy;стве про&shy;вер&shy;ки мо&shy;же&shy;те <a href="skype:alice.mindcollapse?chat">на&shy;пи&shy;сать</a> или <a href="skype:alice.mindcollapse?call">по&shy;зво&shy;нить</a>&nbsp;на ID alice.mindcollapse. Она бу&shy;дет до&shy;ступ&shy;на не круг&shy;ло&shy;су&shy;точ&shy;но. Если оста&shy;ет&shy;ся мол&shy;ча&shy;ли&shy;вой - зна&shy;чит ушла спать вме&shy;сте со мной и от&shy;ве&shy;тит, глав&shy;ное, ото&shy;шли&shy;те ей за&shy;прос на ав&shy;то&shy;ри&shy;за&shy;цию. Ах да, в блог, сле&shy;дуя мо&shy;де, вер&shy;ну&shy;лись со&shy;ци&shy;аль&shy;ные кноп&shy;ки. Те&shy;перь все в ва&shy;ших ру&shy;ках: сто&shy;ит ли мне пи&shy;сать о сво&shy;ем пер&shy;вом сек&shy;су&shy;аль&shy;ном опы&shy;те со сле&shy;пой уса&shy;той про&shy;сти&shy;ту&shy;кой, или рас&shy;ска&shy;зы&shy;вать о на&shy;пи&shy;са&shy;нии мо&shy;ду&shy;ля ядра для Embedded Linux. Про&shy;сто <a href="http://www.mindcollapse.com/blog/274.html">пе&shy;рей&shy;ди&shy;те на веб вер&shy;сию</a> по&shy;ста и щелк&shy;ни&shy;те ле&shy;ни&shy;во мыш&shy;кой, по&shy;ста&shy;вив +1 или рас&shy;ска&shy;зав бра&shy;тю&shy;ням. Ван лов, па&shy;цан&shy;ва.&nbsp;</div>
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/274.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/274.html&amp;text=%D0%9F%D0%B8%D1%88%D0%B5%D0%BC%20Skype%20%D0%B1%D0%BE%D1%82%20%D1%81%20%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8%20%D0%BC%D0%BE%D0%B7%D0%B3%D0%B0%D0%BC%D0%B8&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/274.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

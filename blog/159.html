@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Linux: оптимизируем SSD</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:07.219188">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/159.html">
+
+        <meta property="og:title" content="Linux: оптимизируем SSD">
+        <meta property="og:description" content="Са­мой не­га­тив­ной сто­ро­ной SSD, как я и пи­сал ра­нее, яв­ля­ет­ся чрез­вы­чай­но низ­кая ско­рость ра­бо­ты, а в част­но­сти - за­пи­си. Тех сред­не­ста­ти­сти­че­ских 8-10 mbit\s ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/159.html">
+
+        <meta name="description" content="Са­мой не­га­тив­ной сто­ро­ной SSD, как я и пи­сал ра­нее, яв­ля­ет­ся чрез­вы­чай­но низ­кая ско­рость ра­бо­ты, а в част­но­сти - за­пи­си. Тех сред­не­ста­ти­сти­че­ских 8-10 mbit\s ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Са­мой не­га­тив­ной сто­ро­ной SSD, как я и пи­сал ра­нее, яв­ля­ет­ся чрез­вы­чай­но низ­кая ско­рость ра­бо­ты, а в част­но­сти - за­пи­си. Тех сред­не­ста­ти­сти­че­ских 8-10 mbit\s ...">
+        <meta name="twitter:title" content="Linux: оптимизируем SSD">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Linux: оптимизируем SSD</h1>
+			<div class="published pull-right"><span title="опубликован 1821 день назад" itemprop="dateCreated" class="text-muted">27 октября 2008 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Са&shy;мой не&shy;га&shy;тив&shy;ной сто&shy;ро&shy;ной SSD, как я и пи&shy;сал <a href="/blog/149.html">ра&shy;нее</a>, яв&shy;ля&shy;ет&shy;ся чрез&shy;вы&shy;чай&shy;но низ&shy;кая ско&shy;рость ра&shy;бо&shy;ты, а в част&shy;но&shy;сти - за&shy;пи&shy;си. Тех сред&shy;не&shy;ста&shy;ти&shy;сти&shy;че&shy;ских 8-10 mbit\s ка&shy;та&shy;стро&shy;фи&shy;че&shy;ски не хва&shy;та&shy;ет для нор&shy;маль&shy;но&shy;го функ&shy;ци&shy;о&shy;ни&shy;ро&shy;ва&shy;ния си&shy;сте&shy;мы, ко&shy;то&shy;рая из-за это&shy;го пе&shy;ри&shy;о&shy;ди&shy;че&shy;ски ухо&shy;дит в пол&shy;ный аут, све&shy;тя ди&shy;о&shy;дом об&shy;ра&shy;ще&shy;ния к дис&shy;ку. Имен&shy;но по&shy;это&shy;му я по&shy;пы&shy;та&shy;юсь рас&shy;ска&shy;зать, как на&shy;стро&shy;ить си&shy;сте&shy;му для бо&shy;лее-ме&shy;нее ком&shy;форт&shy;ной ра&shy;бо&shy;ты. Ча&shy;стич&shy;но все ин&shy;струк&shy;ции бы&shy;ли на&shy;гло укра&shy;де&shy;ны.Пер&shy;вый мод дол&shy;жен быть ап&shy;па&shy;рат&shy;ным - нам нуж&shy;но уве&shy;ли&shy;чить ко&shy;ли&shy;че&shy;ство си&shy;стем&shy;ной па&shy;мя&shy;ти до 1 GB и бо&shy;лее, в за&shy;ви&shy;си&shy;мо&shy;сти от ис&shy;поль&shy;зу&shy;е&shy;мой на&shy;ми ОС. Для стан&shy;дарт&shy;ной уста&shy;нов&shy;ки Ubuntu Hardy мне ком&shy;форт&shy;но хва&shy;та&shy;ет 1.5 GB на мо&shy;ем <a href="/blog/142.html">нет&shy;бу&shy;ке</a>, 60 про&shy;цен&shy;тов ко&shy;то&shy;рых про&shy;ста&shy;и&shy;ва&shy;ют. Пер&shy;вым де&shy;лом кон&shy;вер&shy;ти&shy;ру&shy;ем основ&shy;ной раз&shy;дел в ext2, жур&shy;на&shy;ли&shy;ру&shy;е&shy;мые фай&shy;ло&shy;вые си&shy;сте&shy;мы с ве&shy;ре&shy;ни&shy;цей не&shy;нуж&shy;ных опе&shy;ра&shy;ций за&shy;пи&shy;си нам ни к че&shy;му. По&shy;дроб&shy;ный ма&shy;ну&shy;ал "а как это сде&shy;лать" <a href="http://www.aspireoneuser.com/forum/viewtopic.php?f=5&amp;t=164&amp;st=0&amp;sk=t&amp;sd=a&amp;start=10#p1177">мож&shy;но про&shy;чи&shy;тать</a>. Да&shy;лее де&shy;ла&shy;ем то, ра&shy;ди че&shy;го мы рас&shy;ко&shy;ше&shy;ли&shy;лись на лиш&shy;ний SO-DIMM мо&shy;дуль: от&shy;клю&shy;ча&shy;ем свап, уда&shy;лив со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий раз&shy;дел в /etc/fstab и до&shy;ба&shy;вив vm.swappiness = 0 в /etc/sysctl.conf. Пе&shy;ре&shy;за&shy;гру&shy;жа&shy;ем&shy;ся и чув&shy;ству&shy;ем боль&shy;шую раз&shy;ни&shy;цу, но нам все ма&shy;ло! Це&shy;ле&shy;со&shy;об&shy;раз&shy;ным бу&shy;дет вы&shy;не&shy;се&shy;ние /var/log, /tmp и /var/tmp в tmpfs, пе&shy;ре&shy;ме&shy;стив их с мед&shy;лен&shy;но&shy;го дис&shy;ка в от&shy;но&shy;си&shy;тель&shy;но бы&shy;струю опе&shy;ра&shy;тив&shy;ную па&shy;мять. Мон&shy;ти&shy;ру&shy;ем дан&shy;ные ди&shy;рек&shy;то&shy;рии в fstab. Ми&shy;ну&shy;сом дан&shy;но&shy;го ме&shy;то&shy;да яв&shy;ля&shy;ет&shy;ся уте&shy;ря всех ло&shy;гов по&shy;сле пе&shy;ре&shy;за&shy;груз&shy;ки, а не&shy;ко&shy;то&shy;рые при&shy;ло&shy;же&shy;ния от&shy;ка&shy;жут&shy;ся за&shy;пус&shy;кать&shy;ся ли&shy;бо же бу&shy;дут за&shy;дал&shy;бы&shy;вать ер&shy;ро&shy;ра&shy;ми и но&shy;тай&shy;са&shy;ми, со&shy;слав&shy;шись на от&shy;сут&shy;ствие пап&shy;ки их ло&shy;гов, со&shy;здан&shy;ной при уста&shy;нов&shy;ке. Ре&shy;ша&shy;ет&shy;ся это до&shy;бав&shy;ле&shy;ни&shy;ем не&shy;об&shy;хо&shy;ди&shy;мо&shy;го mkdir в ~/.profile, на&shy;при&shy;мер. Даль&shy;ше по&shy;экс&shy;пе&shy;ри&shy;мен&shy;ти&shy;ру&shy;ем еще не&shy;мно&shy;го с си&shy;стем&shy;ны&shy;ми па&shy;ра&shy;мет&shy;ра&shy;ми, как это опи&shy;са&shy;но <a href="https://help.ubuntu.com/community/AspireOne#/etc/sysctl.d/60-aspireone.conf">тут</a>. Не за&shy;бы&shy;ва&shy;ем так&shy;же до&shy;ба&shy;вить оп&shy;цию elevator=noop в бут па&shy;ра&shy;мет&shy;ры ядра /boot/grub/menu.lst и noatime в оп&shy;ции фай&shy;ло&shy;вой си&shy;сте&shy;мы - за&shy;пись вре&shy;ме&shy;ни до&shy;сту&shy;па к фай&shy;лу это про&shy;сто лиш&shy;няя тра&shy;та дис&shy;ко&shy;во&shy;го вре&shy;ме&shy;ни.Не&shy;пло&shy;хой иде&shy;ей бу&shy;дет вы&shy;не&shy;се&shy;ние /home ди&shy;рек&shy;то&shy;рии на SD кар&shy;ту, что уве&shy;ли&shy;чит жиз&shy;нен&shy;ный срок ва&shy;ше&shy;го твер&shy;до&shy;тель&shy;но&shy;го на&shy;ко&shy;пи&shy;те&shy;ля, а еще не по&shy;ме&shy;ша&shy;ет от&shy;клю&shy;че&shy;ние дис&shy;ко&shy;во&shy;го ке&shy;ша firefox в about:config. По&shy;сле вы&shy;ше&shy;при&shy;ве&shy;ден&shy;ных опе&shy;ра&shy;ций мы по&shy;лу&shy;чим ОС, ра&shy;бо&shy;та ко&shy;то&shy;рой не бу&shy;дет на&shy;по&shy;ми&shy;нать по&shy;ша&shy;го&shy;вую стра&shy;те&shy;гию.
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/159.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/159.html&amp;text=Linux%3A%20%D0%BE%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B8%D1%80%D1%83%D0%B5%D0%BC%20SSD&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/159.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Поднимаем jabber-сервер</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:10.544626">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/19.html">
+
+        <meta property="og:title" content="Поднимаем jabber-сервер">
+        <meta property="og:description" content="Т.к. ICQ - страш­ная вещь и зло се­тей во всех сво­их про­яв­ле­ни­ях, но, увы, юзве­ри без нее жить не мо­гут, то по­ста­ра­юсь опи­сать, как бы­стро под­нять Jabber сер­вер. А имен­но Jabberd 1.4. ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/19.html">
+
+        <meta name="description" content="Т.к. ICQ - страш­ная вещь и зло се­тей во всех сво­их про­яв­ле­ни­ях, но, увы, юзве­ри без нее жить не мо­гут, то по­ста­ра­юсь опи­сать, как бы­стро под­нять Jabber сер­вер. А имен­но Jabberd 1.4. ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Т.к. ICQ - страш­ная вещь и зло се­тей во всех сво­их про­яв­ле­ни­ях, но, увы, юзве­ри без нее жить не мо­гут, то по­ста­ра­юсь опи­сать, как бы­стро под­нять Jabber сер­вер. А имен­но Jabberd 1.4. ...">
+        <meta name="twitter:title" content="Поднимаем jabber-сервер">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Поднимаем jabber-сервер</h1>
+			<div class="published pull-right"><span title="опубликован 2549 дней назад" itemprop="dateCreated" class="text-muted">30 октября 2006 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Т.к. <a href="http://icq.com">ICQ</a> - страш&shy;ная вещь и зло се&shy;тей во всех сво&shy;их про&shy;яв&shy;ле&shy;ни&shy;ях, но, увы, юзве&shy;ри без нее жить не мо&shy;гут, то по&shy;ста&shy;ра&shy;юсь опи&shy;сать, как бы&shy;стро под&shy;нять <a href="http://www.jabber.org">Jabber</a> сер&shy;вер. А имен&shy;но <a href="http://jabberd.jabberstudio.org/1.4/">Jabberd 1.4</a>. Ста&shy;тья вы&shy;шла до&shy;ста&shy;точ&shy;но объ&shy;ем&shy;ной, по&shy;это&shy;му бы&shy;ла пе&shy;ре&shy;ме&shy;ще&shy;на по ад&shy;ре&shy;су:<a href="/index.php?page=jabber">/index.php?page=jabber</a>
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/19.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/19.html&amp;text=%D0%9F%D0%BE%D0%B4%D0%BD%D0%B8%D0%BC%D0%B0%D0%B5%D0%BC%20jabber-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/19.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

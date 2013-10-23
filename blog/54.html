@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Реестр на PHP</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:09.924708">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/54.html">
+
+        <meta property="og:title" content="Реестр на PHP">
+        <meta property="og:description" content="Ре­естр для хра­не­ния клас­сов и зна­че­ний пе­ре­мен­ных в $GLOBALS, что де­ла­ет до­ступ­ным их из лю­бо­го мо­ду­ля скрип­та, не при­бе­гая к ан­ти эсте­тич­ным ме­то­дам аля global $var; . ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/54.html">
+
+        <meta name="description" content="Ре­естр для хра­не­ния клас­сов и зна­че­ний пе­ре­мен­ных в $GLOBALS, что де­ла­ет до­ступ­ным их из лю­бо­го мо­ду­ля скрип­та, не при­бе­гая к ан­ти эсте­тич­ным ме­то­дам аля global $var; . ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Ре­естр для хра­не­ния клас­сов и зна­че­ний пе­ре­мен­ных в $GLOBALS, что де­ла­ет до­ступ­ным их из лю­бо­го мо­ду­ля скрип­та, не при­бе­гая к ан­ти эсте­тич­ным ме­то­дам аля global $var; . ...">
+        <meta name="twitter:title" content="Реестр на PHP">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Реестр на PHP</h1>
+			<div class="published pull-right"><span title="опубликован 2398 дней назад" itemprop="dateCreated" class="text-muted">30 марта 2007 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Ре&shy;естр для хра&shy;не&shy;ния клас&shy;сов и зна&shy;че&shy;ний пе&shy;ре&shy;мен&shy;ных в $GLOBALS, что де&shy;ла&shy;ет до&shy;ступ&shy;ным их из лю&shy;бо&shy;го мо&shy;ду&shy;ля скрип&shy;та, не при&shy;бе&shy;гая к ан&shy;ти эсте&shy;тич&shy;ным ме&shy;то&shy;дам аля global $var; . При&shy;чи&shy;ной на&shy;пи&shy;са&shy;ния ста&shy;ла раз&shy;ра&shy;бот&shy;ка мо&shy;дуль&shy;но&shy;го движ&shy;ка для <b>brailessmonkey.cms</b>. На уни&shy;каль&shy;ность идеи не пре&shy;тен&shy;дую.<b>class Registry</b>:<i>RegisterClass ($className, &amp;$classInstance)</i> - ре&shy;ги&shy;сри&shy;ру&shy;ем class в ре&shy;естре по име&shy;ни <i>$className</i>. <i>$classInstance</i> = new someclassname;<i>RegisterSetting ($name, $value)</i> - ре&shy;ги&shy;стри&shy;ру&shy;ем пе&shy;ре&shy;мен&shy;ную и ее зна&shy;че&shy;ние. <i>$name</i> != array, <i>$value</i> = лю&shy;бая variable, в т.ч. и мас&shy;си&shy;вы.<i>RetrieveClass ($className), RetrieveSetting ($name)</i> - по&shy;лу&shy;ча&shy;ем class instance по <i>$className</i> в пер&shy;вом слу&shy;чае и зна&shy;че&shy;ния пе&shy;ре&shy;мен&shy;ной по име&shy;ни <i>$name</i> во вто&shy;ром.<i>ReadConfig ($filename)</i> - со&shy;зда&shy;на для ис&shy;поль&shy;зо&shy;ва&shy;ния plaintext кон&shy;фиг-фай&shy;лов для юзе&shy;ров, ко&shy;то&shy;рые очень да&shy;ле&shy;ки от php и в то же вре&shy;мя не ис&shy;поль&shy;зую parse_ini_file. <u>Струк&shy;ту&shy;ра фай&shy;ла кон&shy;фи&shy;гу&shy;ра&shy;ции:</u><p class="message">###### За&shy;кво&shy;тен&shy;ная об&shy;ласть ###### variable1 = value 1variable2 = value 2# variable3 = value 3 - за&shy;кво&shy;тен&shy;ная пе&shy;ре&shy;мен&shy;ная</p><b>Ска&shy;чать registry.php:</b><a href="/media/etc/PHP/registry.zip">/media/etc/PHP/registry.zip</a>
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/54.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/54.html&amp;text=%D0%A0%D0%B5%D0%B5%D1%81%D1%82%D1%80%20%D0%BD%D0%B0%20PHP&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/54.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

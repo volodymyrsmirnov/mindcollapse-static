@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Samba server + clamav</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:10.209754">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/38.html">
+
+        <meta property="og:title" content="Samba server + clamav">
+        <meta property="og:description" content="Од­на из не­пло­хих идей от Microsoft™ но­сит гор(д\н)ое на­зва­ние ActiveDirectory. Для со­хран­но­сти и кон­фи­ден­ци­аль­но­сти до­ку­мен­тов на ра­бо­те по­сле мно­го­ча­со­во­го со­ве­ща­ния ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/38.html">
+
+        <meta name="description" content="Од­на из не­пло­хих идей от Microsoft™ но­сит гор(д\н)ое на­зва­ние ActiveDirectory. Для со­хран­но­сти и кон­фи­ден­ци­аль­но­сти до­ку­мен­тов на ра­бо­те по­сле мно­го­ча­со­во­го со­ве­ща­ния ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Од­на из не­пло­хих идей от Microsoft™ но­сит гор(д\н)ое на­зва­ние ActiveDirectory. Для со­хран­но­сти и кон­фи­ден­ци­аль­но­сти до­ку­мен­тов на ра­бо­те по­сле мно­го­ча­со­во­го со­ве­ща­ния ...">
+        <meta name="twitter:title" content="Samba server + clamav">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Samba server + clamav</h1>
+			<div class="published pull-right"><span title="опубликован 2513 дней назад" itemprop="dateCreated" class="text-muted">5 декабря 2006 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Од&shy;на из не&shy;пло&shy;хих идей от <a href="http://microsoft.com">Microsoft&trade;</a> но&shy;сит гор(д\н)ое на&shy;зва&shy;ние ActiveDirectory. Для со&shy;хран&shy;но&shy;сти и кон&shy;фи&shy;ден&shy;ци&shy;аль&shy;но&shy;сти до&shy;ку&shy;мен&shy;тов <a href="/index.php?page=portfolio">на ра&shy;бо&shy;те</a> по&shy;сле мно&shy;го&shy;ча&shy;со&shy;во&shy;го со&shy;ве&shy;ща&shy;ния ме&shy;ня со мной бы&shy;ло при&shy;ня&shy;то ре&shy;ше&shy;ния под&shy;ни&shy;мать дан&shy;ное чу&shy;до на осно&shy;ве samba сер&shy;вер-а. Не&shy;плохую до&shy;ку при&shy;слал мне то&shy;ва&shy;рищ <strong>LightD</strong>. Про&shy;чи&shy;тать ее мож&shy;но <a href="/media/etc/samba_server.txt">тут</a>.Но, вин&shy;довс вин&shy;дов&shy;сом и оста&shy;нет&shy;ся. Че&shy;рез па&shy;ру дней по&shy;сле ре&shy;а&shy;ли&shy;за&shy;ции в се&shy;ти по&shy;явил&shy;ся ви&shy;рус, ко&shy;то&shy;рый ли&shy;цен&shy;зи&shy;он&shy;ным (!!!) <a href="http://www.drweb.ru/">DrWeb-ом</a> не опре&shy;де&shy;лял&shy;ся. Как по&shy;том ока&shy;за&shy;лось, дан&shy;ную за&shy;ра&shy;зу под&shy;хва&shy;ти&shy;ла де&shy;вуш&shy;ка из фи&shy;нан&shy;со&shy;во&shy;го от&shy;де&shy;ла, т.к. в пись&shy;ме со ссыл&shy;кой на не&shy;го бы&shy;ло на&shy;пи&shy;са&shy;но "<em>Download this program and you will get 5000$</em>". А ведь этот че&shy;ло&shy;век име&shy;ет ВО. Так вот, этот ви&shy;рус рас&shy;пло&shy;дил&shy;ся на сам&shy;ба-сер&shy;ве&shy;ре в не&shy;мыс&shy;лен&shy;ных ко&shy;ли&shy;че&shy;ствах и со&shy;би&shy;рал но&shy;вые тол&shy;пы жа&shy;жду&shy;щих бы&shy;стро&shy;го за&shy;ра&shy;бот&shy;ка. Ужас, ну да вер&shy;нем&shy;ся к на&shy;шим ба&shy;ра&shy;нам.Ка&shy;ча&shy;ем сыр&shy;цы clamav. На мо&shy;мент на&shy;пи&shy;са&shy;ния по&shy;след&shy;няя ста&shy;биль&shy;ная вер&shy;сия 0.8.66.<ins>Даль&shy;ше по пла&shy;ну:</ins><em># groupadd clamav# useradd -g clamav -s /bin/false clamav</em>да&shy;лее кон&shy;фи&shy;грим, со&shy;би&shy;ра&shy;ем и ин&shy;стал&shy;лим.По де&shy;фол&shy;ту, кон&shy;фиг файл ле&shy;жит в ди&shy;рек&shy;то&shy;рии<em> /usr/local/etc</em> и на&shy;зы&shy;ва&shy;ет&shy;ся <em>freshclam.conf</em>. Его, от&shy;бро&shy;сив со&shy;мне&shy;ния, и ре&shy;дак&shy;ти&shy;ру&shy;ем.1. За&shy;ком&shy;мен&shy;ти&shy;ру&shy;ем стро&shy;ку <em>Example #</em>2. <em>DatabaseDirectory /var/lib/clama</em>v3. <em>DatabaseOwner clamav</em>Ре&shy;фре&shy;шер баз на&shy;стро&shy;и&shy;ли - пе&shy;ре&shy;хо&shy;дим к на&shy;строй&shy;ке са&shy;мо&shy;го де&shy;мо&shy;на.По то&shy;му же пу&shy;ти <em>clamd.conf</em>1. За&shy;ком&shy;мен&shy;ти&shy;ру&shy;ем стро&shy;ку <em>Example #</em>2. <em>DatabaseDirectory /var/lib/clamav</em>3. <em>LocalSocket /tmp/clamd</em> (со&shy;кет, по&shy;это&shy;му поз&shy;во&shy;ля&shy;ем юзе&shy;ру clamav чи&shy;тать\пи&shy;сать в не&shy;го )4.<em>User clamav</em>На&shy;стой&shy;ки ан&shy;ти&shy;ви&shy;ру&shy;са го&shy;то&shy;вы. Те&shy;перь об&shy;нов&shy;ля&shy;ем&shy;ся # freshclamav и за&shy;пус&shy;ка&shy;ем <em># clamd</em>.Под&shy;ра&shy;зу&shy;ме&shy;ва&shy;ет&shy;ся, что сам&shy;ба у нас уже уста&shy;нов&shy;ле&shy;на. В мо&shy;ем слу&shy;чае это вер&shy;сия 3.0.22. Да&shy;лее нам ну&shy;жен мо&shy;дуль к сам&shy;бе - <strong>samba v-scan</strong>. Ска&shy;чать порт для freebsd и сыр&shy;цы для дру&shy;гих unix-like мож&shy;но по ссыл&shy;ке:<a href="http://www.openantivirus.org/projects.php#samba-vscan">http://www.openantivirus.org/projects.php#samba-vscan</a>Для сбор&shy;ки из cvs вам по&shy;тре&shy;бу&shy;ет&shy;ся samba-sources. По&shy;сле ком&shy;пи&shy;ля&shy;ции по&shy;лу&shy;чим биб&shy;лио&shy;те&shy;ку <em>vscan-clamav.so</em>, ко&shy;то&shy;рую ко&shy;пи&shy;ру&shy;ем в <em>/usr/lib/samba/vfs/</em>, а кон&shy;фиг <em>vscan-clamav.conf</em> в <i>/etc/samba/.</i>Ну вот, 80 % го&shy;то&shy;во.<strong>Те&shy;перь кон&shy;фи&shy;гу&shy;ри&shy;ру&shy;ем го&shy;то&shy;вое до&shy;бро.</strong>В smb.conf до&shy;бав&shy;ля&shy;ем в блок кон&shy;фи&shy;гу&shy;ра&shy;ции нуж&shy;ных нам ди&shy;рек&shy;то&shy;рий.<em>vfs object = vscan-clamavvscan-clamav:config-file=/etc/samba/vscan-clamav.conf</em>Вприн&shy;ци&shy;пе, пе&shy;ре&shy;ры&shy;вать файл <em>vscan-clamav.conf</em> не име&shy;ет смыс&shy;ла. Там и так все на&shy;стро&shy;е&shy;но. Ме&shy;ня&shy;ем толь&shy;ко<em>clamd socket name = /tmp/clamd</em>Ну вот и все <em># /etc/rc.d/rc.samba restart</em>Ра&shy;ду&shy;ем&shy;ся, ра&shy;ду&shy;ем&shy;ся, ра&shy;ду&shy;ем&shy;ся...
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/38.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/38.html&amp;text=Samba%20server%20%2B%20clamav&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/38.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

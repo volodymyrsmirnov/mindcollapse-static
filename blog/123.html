@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>MetaWeblog API сервер на PHP и CI</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:08.169574">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/123.html">
+
+        <meta property="og:title" content="MetaWeblog API сервер на PHP и CI">
+        <meta property="og:description" content="Се­го­дня столк­нул­ся со сле­ду­ю­щей про­бле­мой: нуж­но бы­ло на­пи­сать XML-RPC сер­вер API для уда­лен­но­го пост­ин­га со­об­ще­ний, а так­же трах­ба­ков, пинг­ба­ков (по­ка еще не ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/123.html">
+
+        <meta name="description" content="Се­го­дня столк­нул­ся со сле­ду­ю­щей про­бле­мой: нуж­но бы­ло на­пи­сать XML-RPC сер­вер API для уда­лен­но­го пост­ин­га со­об­ще­ний, а так­же трах­ба­ков, пинг­ба­ков (по­ка еще не ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Се­го­дня столк­нул­ся со сле­ду­ю­щей про­бле­мой: нуж­но бы­ло на­пи­сать XML-RPC сер­вер API для уда­лен­но­го пост­ин­га со­об­ще­ний, а так­же трах­ба­ков, пинг­ба­ков (по­ка еще не ...">
+        <meta name="twitter:title" content="MetaWeblog API сервер на PHP и CI">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">MetaWeblog API сервер на PHP и CI</h1>
+			<div class="published pull-right"><span title="опубликован 1931 день назад" itemprop="dateCreated" class="text-muted">9 июля 2008 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			<p>Се&shy;го&shy;дня столк&shy;нул&shy;ся со сле&shy;ду&shy;ю&shy;щей про&shy;бле&shy;мой: нуж&shy;но бы&shy;ло на&shy;пи&shy;сать XML-RPC сер&shy;вер API для уда&shy;лен&shy;но&shy;го пост&shy;ин&shy;га со&shy;об&shy;ще&shy;ний, а так&shy;же трах&shy;ба&shy;ков, пинг&shy;ба&shy;ков (по&shy;ка еще не ре&shy;а&shy;ли&shy;зо&shy;ва&shy;но, кам&shy;мен&shy;тов то не&shy;ту) и про&shy;чих wordpress-по&shy;доб&shy;ных при&shy;блуд. За&shy;да&shy;ча ока&shy;за&shy;лось не из про&shy;стых да&shy;же при на&shy;ли&shy;чии в мо&shy;ем ми&shy;лом-лю&shy;би&shy;мом <a href="http://codeigniter.com/" target="_self">Codeigniter</a> от&shy;лич&shy;но&shy;го врап&shy;пе&shy;ра род&shy;но&shy;го для php <a href="http://www.php.net/xmlrpc" target="_self">xmlrpc</a> мо&shy;ду&shy;ля. Но этот пост уже пи&shy;шу из <a href="http://www.bytescout.com/post2blog.html" target="_self">Bytescout Post2Blog</a>, а зна&shy;чит "всьо чот&shy;ко". Вот как это вы&shy;гля&shy;дит на <a href="http://www.flickr.com/photos/28439677@N08/2653270774/" target="_self">фли&shy;кре</a>.</p><p>Во&shy;об&shy;ще су&shy;ще&shy;ству&shy;ет мно&shy;го вер&shy;сий API для "оф&shy;флай&shy;но&shy;во&shy;го бло&shy;гин&shy;га", это <a href="http://www.livejournal.com/doc/server/ljp.csp.xml-rpc.protocol.html" target="_self">livejournal api</a>, это <a href="http://code.google.com/apis/blogger/" target="_self">blogger api</a>, это <a href="http://www.xmlrpc.com/metaWeblogApi" target="_self">metaweblog api</a> и на&shy;ко&shy;нец <a href="http://www.sixapart.com/developers/xmlrpc/movable_type_api/" target="_self">movable type api</a>. По край&shy;ней ме&shy;ре, это все что я на&shy;шел, воз&shy;мож&shy;но су&shy;ще&shy;ству&shy;ют и дру&shy;гие. Ин&shy;тер&shy;фейс Жажы очень прост: не под&shy;дер&shy;жи&shy;ва&shy;ет пост&shy;инг с ка&shy;те&shy;го&shy;ри&shy;я&shy;ми, за&shy;то на&shy;гру&shy;жен вся&shy;ки&shy;ми функ&shy;ци&shy;я&shy;ми френ&shy;дов и их френд&shy;лент, что нам со&shy;вер&shy;шен&shy;но не нуж&shy;но. Blogger же, до по&shy;куп&shy;ки его гуглом, предо&shy;став&shy;лял очень мощ&shy;ный и в то же вре&shy;мя, очень про&shy;стой про&shy;то&shy;кол. До&shy;ку&shy;мен&shy;та&shy;цию по ста&shy;рым вер&shy;си&shy;ям <a href="http://www.blogger.com/developers/api/documentation20.html" target="_self">мож&shy;но по&shy;смот&shy;реть</a>. По&shy;сле по&shy;гло&shy;ще&shy;ния гугл-им&shy;пе&shy;ри&shy;а&shy;лист пе&shy;ре&shy;де&shy;лал всю ав&shy;то&shy;ри&shy;за&shy;цию и про&shy;то&shy;кол под свой <a href="http://code.google.com/apis/gdata/" target="_self">GData</a>, ко&shy;то&shy;рый хоть и са&shy;мый за&shy;щи&shy;щен&shy;ный бла&shy;го&shy;да&shy;ря вся&shy;ким то&shy;ке&shy;нам, auth чек&shy;су&shy;мам, api клю&shy;чам, но в то же вре&shy;мя по&shy;еда&shy;ет мозг сво&shy;ей мон&shy;стру&shy;оз&shy;но&shy;стью сто&shy;ло&shy;вы&shy;ми лож&shy;ка&shy;ми. На php шла прав&shy;да го&shy;то&shy;вая биб&shy;лио&shy;те&shy;ка, но шла под Zend, а зна&shy;чит и этот ва&shy;ри&shy;ант от&shy;пал. </p><p>Оста&shy;лись ме&shy;та&shy;блог vs. му&shy;вабл тайп. Вы&shy;бор сде&shy;лал в сто&shy;ро&shy;ну пер&shy;во&shy;го. Хо&shy;тя бы по&shy;то&shy;му что он под&shy;дер&shy;жи&shy;ва&shy;ет&shy;ся все&shy;ми кли&shy;ен&shy;та&shy;ми и для вин&shy;дов&shy;са, и для ли&shy;нук&shy;са, и для ма&shy;ко&shy;са. А вот вто&shy;рой та&shy;ким по&shy;хва&shy;стать&shy;ся уже не мо&shy;жет. Сле&shy;ду&shy;ю&shy;щим эта&shy;пом был по&shy;иск до&shy;ку&shy;мен&shy;та&shy;ции, <a href="http://www.xmlrpc.com/metaWeblogApi" target="_self">офи&shy;ци&shy;аль&shy;ный</a> ма&shy;ну&shy;ал ни&shy;хре&shy;на не по&shy;ня&shy;тен: не&shy;ту при&shy;ме&shy;ров за&shy;про&shy;сов и от&shy;ве&shy;тов, все это на&shy;пи&shy;са&shy;но не тех&shy;ни&shy;че&shy;ским язы&shy;ком, раз&shy;го&shy;во&shy;ры о жиз&shy;ни, смер&shy;ти и вол&shy;шеб&shy;ном стан&shy;дар&shy;те RSS. От&shy;лич&shy;ная до&shy;ку&shy;мен&shy;та&shy;ция бы&shy;ла най&shy;де&shy;на на <a href="http://msdn.microsoft.com/en-us/library/bb259697.aspx" target="_self">MSDN</a> и это, по&shy;жа&shy;луй, впер&shy;вые на мо&shy;ей па&shy;мя&shy;ти, ко&shy;гда док от май&shy;кро&shy;соф&shy;та ока&shy;зал&shy;ся по&shy;лез&shy;ным. </p><p>В ито&shy;ге по&shy;лу&shy;чил&shy;ся но&shy;вый <a href="/xmlrpc" target="_self">кон&shy;трол&shy;лер</a>, ра&shy;бо&shy;то&shy;спо&shy;соб&shy;ность ко&shy;то&shy;ро&shy;го вы и мо&shy;же&shy;те на&shy;блю&shy;дать. Код, как обыч&shy;но, мож&shy;но по&shy;смот&shy;реть в <a href="http://code.google.com/p/coffe-stain-blog/source/browse/trunk/application/blog/controllers/xmlrpc.php" target="_self">google project</a>.</p>
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/123.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/123.html&amp;text=MetaWeblog%20API%20%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%20%D0%BD%D0%B0%20PHP%20%D0%B8%20CI&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/123.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

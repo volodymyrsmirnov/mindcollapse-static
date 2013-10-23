@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Делаем свой собственный Dropbox</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:04.308662">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/246.html">
+
+        <meta property="og:title" content="Делаем свой собственный Dropbox">
+        <meta property="og:description" content="Преж­де все­го, хо­чу за­ме­тить, что дан­ная ста­тья не пре­тен­ду­ет ни на уни­каль­ность, ни на тех­но­ло­ги­че­ские ин­но­ва­ции тем бо­лее - ис­поль­зо­вать мы бу­дем все го­то­вое. Про­сто в ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/246.html">
+
+        <meta name="description" content="Преж­де все­го, хо­чу за­ме­тить, что дан­ная ста­тья не пре­тен­ду­ет ни на уни­каль­ность, ни на тех­но­ло­ги­че­ские ин­но­ва­ции тем бо­лее - ис­поль­зо­вать мы бу­дем все го­то­вое. Про­сто в ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Преж­де все­го, хо­чу за­ме­тить, что дан­ная ста­тья не пре­тен­ду­ет ни на уни­каль­ность, ни на тех­но­ло­ги­че­ские ин­но­ва­ции тем бо­лее - ис­поль­зо­вать мы бу­дем все го­то­вое. Про­сто в ...">
+        <meta name="twitter:title" content="Делаем свой собственный Dropbox">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">Делаем свой собственный Dropbox</h1>
+			<div class="published pull-right"><span title="опубликован 1003 дня назад" itemprop="dateCreated" class="text-muted">23 января 2011 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Преж&shy;де все&shy;го, хо&shy;чу за&shy;ме&shy;тить, что дан&shy;ная ста&shy;тья не пре&shy;тен&shy;ду&shy;ет ни на уни&shy;каль&shy;ность, ни на тех&shy;но&shy;ло&shy;ги&shy;че&shy;ские ин&shy;но&shy;ва&shy;ции тем бо&shy;лее - ис&shy;поль&shy;зо&shy;вать мы бу&shy;дем все го&shy;то&shy;вое. Про&shy;сто в ка&shy;кой-то мо&shy;мент мне ста&shy;ла ин&shy;те&shy;рес&shy;на те&shy;ма со&shy;зда&shy;ния сво&shy;е&shy;го соб&shy;ствен&shy;но&shy;го ана&shy;ло&shy;га <a href="https://www.dropbox.com">Dropbox</a>-а, по&shy;это&shy;му я ре&shy;шил по&shy;де&shy;лить&shy;ся с ва&shy;ми ре&shy;зуль&shy;та&shy;том, ко&shy;то&shy;рый мож&shy;но ис&shy;поль&shy;зо&shy;вать ис&shy;клю&shy;чи&shy;тель&shy;но для те&shy;стов или даль&shy;ней&shy;ших раз&shy;ра&shy;бо&shy;ток. Ни я, ни со&shy;зда&shy;те&shy;ли unison ни&shy;че&shy;го вам га&shy;ран&shy;ти&shy;ро&shy;вать не мо&shy;жем, но об этом чуть ни&shy;же. Кто не в кур&shy;се, Dropbox - ве&shy;ли&shy;ко&shy;леп&shy;ней&shy;ший стар&shy;тап из всех ны&shy;не су&shy;ще&shy;ству&shy;ю&shy;щих, поз&shy;во&shy;ля&shy;ет син&shy;хро&shy;ни&shy;зи&shy;ро&shy;вать свои фай&shy;лы с уда&shy;лен&shy;ным хра&shy;ни&shy;ли&shy;щем в об&shy;ла&shy;ках Amazon S3. Аб&shy;со&shy;лют&shy;но бес&shy;плат&shy;но мож&shy;но по&shy;лу&shy;чить 2GB, а если за&shy;ре&shy;ги&shy;стри&shy;ро&shy;вать&shy;ся по <a href="http://db.tt/pcQvkUx">мо&shy;ей ре&shy;фе&shy;раль&shy;ной ссыл&shy;ке</a>, то нам обо&shy;им еще на&shy;ки&shy;нет по 250MB. Вро&shy;де и ме&shy;лочь, а при&shy;ят&shy;но. Ре&shy;кла&shy;ма ре&shy;кла&shy;мой, но да&shy;вай&shy;те пе&shy;рей&shy;дем к тех&shy;ни&shy;че&shy;ско&shy;му опи&shy;са&shy;нию.<p></p><p>Де&shy;лать свой ал&shy;го&shy;ритм для diff с по&shy;сле&shy;ду&shy;ю&shy;щим push-pull из&shy;ме&shy;не&shy;ний мы не бу&shy;дем - это слож&shy;но и бес&shy;пер&shy;спек&shy;тив&shy;но, а возь&shy;мем мы го&shy;то&shy;вое ре&shy;ше&shy;ние для син&shy;хро&shy;ни&shy;за&shy;ции ло&shy;каль&shy;ной и уда&shy;лен&shy;ной ди&shy;рек&shy;то&shy;рии под на&shy;зва&shy;ни&shy;ем <a href="http://www.cis.upenn.edu/~bcpierce/unison/">Unison</a>. Очень, кста&shy;ти, не&shy;пло&shy;хое ре&shy;ше&shy;ние, кро&shy;с&shy;плат&shy;фор&shy;мен&shy;ное, со&shy;бра&shy;но под windows, linux и macos, про&shy;стое в на&shy;строй&shy;ке и до&shy;ста&shy;точ&shy;но бы&shy;строе. Есть, прав&shy;да, и свои не&shy;до&shy;стат&shy;ки, при пе&shy;ре&shy;име&shy;но&shy;ва&shy;нии фай&shy;ла в local folder идет уда&shy;ле&shy;ние его на remote ди&shy;рек&shy;то&shy;рии с по&shy;сле&shy;ду&shy;ю&shy;щей пе&shy;ре&shy;за&shy;лив&shy;кой, воз&shy;мож&shy;но, это как-то ле&shy;чит&shy;ся на&shy;строй&shy;ка&shy;ми, при по&shy;верх&shy;ност&shy;ном про&shy;чте&shy;нии я по&shy;доб&shy;ной ин&shy;фор&shy;ма&shy;ции не на&shy;шел. Unison тре&shy;бу&shy;ет на&shy;ли&shy;чие би&shy;нар&shy;ни&shy;ка на кли&shy;ен&shy;те-сер&shy;ве&shy;ре (важ&shy;ный мо&shy;мент, вер&shy;сии обя&shy;за&shy;тель&shy;но долж&shy;ны сов&shy;па&shy;дать) и мо&shy;жет ра&shy;бо&shy;тать в ви&shy;де со&shy;кет-де&shy;мо&shy;на (не под&shy;хо&shy;дит нам из со&shy;об&shy;ра&shy;же&shy;ний без&shy;опас&shy;но&shy;сти, от&shy;сут&shy;ству&shy;ет аутен&shy;ти&shy;фи&shy;ка&shy;ция), по&shy;верх rsync или ssh. Мы бу&shy;дем ис&shy;поль&shy;зо&shy;вать по&shy;след&shy;ний ва&shy;ри&shy;ант для удоб&shy;ства огра&shy;ни&shy;че&shy;ния до&shy;сту&shy;па, от&shy;сут&shy;ствия про&shy;блем с пра&shy;ва&shy;ми до&shy;сту&shy;па, без&shy;опас&shy;ной пе&shy;ре&shy;да&shy;чи и ку&shy;чи дру&shy;гих пре&shy;иму&shy;ществ, ко&shy;то&shy;рые да&shy;ет нам secure shell protocol. Сле&shy;ду&shy;ю&shy;щая труд&shy;ность со&shy;сто&shy;ит в том, что usinon тре&shy;бу&shy;ет би&shy;нар&shy;ник openssh кли&shy;ен&shy;та для сво&shy;ей ра&shy;бо&shy;ты, а мы в на&shy;сто&shy;я&shy;щий мо&shy;мент пи&shy;шем кли&shy;ент для windows, не за&shy;бы&shy;вай&shy;те. Ра&shy;зу&shy;ме&shy;ет&shy;ся, ни&shy;что не ме&shy;ша&shy;ет взять cygwin ском&shy;пи&shy;ли&shy;ро&shy;ван&shy;ную вер&shy;сию, но она у ме&shy;ня как-то кри&shy;во ра&shy;бо&shy;та&shy;ла, не под&shy;дер&shy;жи&shy;ва&shy;ла ин&shy;тер&shy;ак&shy;тив&shy;ную ав&shy;то&shy;ри&shy;за&shy;цию ло&shy;ги&shy;ном и па&shy;ро&shy;лем, и не да&shy;ва&shy;ла ло&shy;ги&shy;нить&shy;ся че&shy;рез rsa_key, рас&shy;ска&shy;зы&shy;вая про insecure file permission, тре&shy;буя chmod-ить его в 0600, а как, про&shy;сти&shy;те, я это в ок&shy;нах сде&shy;лаю? Бла&shy;го, су&shy;ще&shy;ству&shy;ет на&shy;тив&shy;ная CLI вер&shy;сия <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY SSH Client</a> под на&shy;зва&shy;ни&shy;ем Plink.exe, ко&shy;то&shy;рую мы и бу&shy;дем ис&shy;поль&shy;зо&shy;вать. Пря&shy;мое пе&shy;ре&shy;име&shy;но&shy;ва&shy;ние plink.exe в ssh.exe ра&shy;бо&shy;тать не бу&shy;дет, plink не под&shy;дер&shy;жи&shy;ва&shy;ет не&shy;ко&shy;то&shy;рые атри&shy;бу&shy;ты и от&shy;ва&shy;ли&shy;ва&shy;ет&shy;ся с ошиб&shy;кой. В ин&shy;тер&shy;не&shy;те бы&shy;ла най&shy;де&shy;на оберт&shy;ка, ко&shy;то&shy;рая ис&shy;прав&shy;ля&shy;ет дан&shy;ный не&shy;до&shy;ста&shy;ток. Это обыч&shy;ный bat файл, его со&shy;дер&shy;жа&shy;ние <a href="/media/copypaste/ssh2plink.bat">мож&shy;но по&shy;смот&shy;реть</a>. Все, те&shy;перь ни&shy;че&shy;го не ме&shy;ша&shy;ет вам ис&shy;поль&shy;зо&shy;вать дву&shy;сто&shy;рон&shy;нюю син&shy;хро&shy;ни&shy;за&shy;цию с по&shy;мо&shy;щью ко&shy;ман&shy;ды <em>unison.exe C:\local\path\ ssh://host.com/remote/path/ -batch -sshcmd ssh2plink.bat -sshargs "-pw mysshpass -l mysshlogin</em>". Если вы пе&shy;ре&shy;жи&shy;ва&shy;е&shy;те за без&shy;опас&shy;ность, то мож&shy;но на&shy;стро&shy;ить и passwordless ав&shy;то&shy;ри&shy;за&shy;цию. Для это ге&shy;не&shy;ри&shy;руй&shy;те ключ на сер&shy;ве&shy;ре, кон&shy;вер&shy;ти&shy;руй&shy;те его в ppk фор&shy;мат, ко&shy;то&shy;рый ис&shy;поль&shy;зу&shy;ет PuTTY, c по&shy;мо&shy;щью PuTTYgen и го&shy;во&shy;ри&shy;те Plink-у ис&shy;поль&shy;зо&shy;вать этот файл че&shy;рез<em> -sshargs "-i pathtomykey.ppk -l mysshlogin</em>". </p><p></p><p>На этом ка&shy;за&shy;лось бы мож&shy;но бы&shy;ло за&shy;кон&shy;чить, но мы же хо&shy;тим ана&shy;лог дропбок&shy;са, весь кайф ко&shy;то&shy;ро&shy;го за&shy;клю&shy;ча&shy;ет&shy;ся в immediate synchronization: от&shy;кры&shy;ли файл, от&shy;ре&shy;дак&shy;ти&shy;ро&shy;ва&shy;ли его, со&shy;хра&shy;ни&shy;ли и он сра&shy;зу же про&shy;толк&shy;нул&shy;ся на сер&shy;вер. Вот тут нам не обой&shy;тись уже без кли&shy;ен&shy;та, пи&shy;сать его мы бу&shy;дем на Microsoft Visual C# Express. По&shy;че&shy;му? Да про&shy;сто мне так удоб&shy;но, к то&shy;му же в нем по умол&shy;ча&shy;нию есть все не&shy;об&shy;хо&shy;ди&shy;мые нам ин&shy;стру&shy;мен&shy;ты. Основ&shy;ные клас&shy;сы, ко&shy;то&shy;рые мы бу&shy;дем ис&shy;поль&shy;зо&shy;вать: System.Diagnostics.Process для ра&shy;бо&shy;ты с unison.exe и его StandardOutput (ко&shy;то&shy;рый по&shy;че&shy;му-то у ме&shy;ня от&shy;да&shy;вал&shy;ся в StandardError, не&shy;смот&shy;ря на 0 ExitCode про&shy;цес&shy;са), System.IO.FileSystemWatcher для от&shy;сле&shy;жи&shy;ва&shy;ния из&shy;ме&shy;не&shy;ний в ди&shy;рек&shy;то&shy;рии и System.ComponentModel.BackgroundWorker для ра&shy;бо&shy;ты в фо&shy;не. На&shy;бро&shy;сан&shy;ный на ско&shy;рую ру&shy;ку код вы&shy;гля&shy;дит <a href="/media/copypaste/sshbox.cs">сле&shy;ду&shy;ю&shy;щим об&shy;ра&shy;зом</a>. Ну или вот <a href="/media/etc/sshbox.zip">весь про&shy;ект</a> для сбор&shy;ки. А вот го&shy;то&shy;вый <a href="/media/etc/sshbox_bin.zip">би&shy;нар&shy;ник</a>. По&shy;вто&shy;рюсь, все это де&shy;ла&shy;лось на ско&shy;рую ру&shy;ку, но мо&shy;жет стать ба&shy;зой для нор&shy;маль&shy;но&shy;го про&shy;ек&shy;та, если вам это так ин&shy;те&shy;рес&shy;но. Да, кста&shy;ти, usinon под&shy;дер&shy;жи&shy;ва&shy;ет муль&shy;ти&shy;кли&shy;ент&shy;ную син&shy;хро&shy;ни&shy;за&shy;цию с то&shy;по&shy;ло&shy;ги&shy;ей ви&shy;да звез&shy;да, так что, если до&shy;ба&shy;вить тай&shy;мер для син&shy;хро&shy;ни&shy;за&shy;ции, то тут вам и воз&shy;мож&shy;ность ра&shy;бо&shy;тать це&shy;лым код&shy;лом над од&shy;ним фай&shy;лом, прав&shy;да я по&shy;доб&shy;ное не те&shy;сти&shy;ро&shy;вал.</p><p></p><p>Та&shy;ким об&shy;ра&shy;зом, для на&shy;строй&shy;ки сво&shy;е&shy;го сер&shy;ве&shy;ра син&shy;хро&shy;ни&shy;за&shy;ции вам ну&shy;жен уда&shy;лен&shy;ный linux\freebsd сер&shy;вер с ру&shy;том или хо&shy;тя бы воз&shy;мож&shy;но&shy;стью со&shy;би&shy;рать би&shy;нар&shy;ни&shy;ки, оди&shy;на&shy;ко&shy;вые вер&shy;сии unison на обо&shy;их кон&shy;цах (до&shy;ста&shy;точ&shy;но x.xx.000, вер&shy;сия бил&shy;да 000 ни&shy;как не вли&shy;я&shy;ет на сов&shy;ме&shy;сти&shy;мость), оберт&shy;ка для от&shy;сле&shy;жи&shy;ва&shy;ния из&shy;ме&shy;не&shy;ний и вы по&shy;лу&shy;ча&shy;е&shy;те свой ана&shy;лог Dropbox. Я по&shy;вто&shy;рюсь, ана&shy;лог, ко&shy;то&shy;рый вы&shy;пол&shy;ня&shy;ет лишь 50% функ&shy;ций ори&shy;ги&shy;на&shy;ла, но тем не ме&shy;нее мо&shy;жет стать за&shy;ме&shy;ной лю&shy;дям, ко&shy;то&shy;рые не до&shy;ве&shy;ря&shy;ют свои фай&shy;ли&shy;ки ни&shy;ко&shy;му, а весь /home у них мон&shy;ти&shy;ру&shy;ет&shy;ся в EncFS.</p>
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/246.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/246.html&amp;text=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC%20%D1%81%D0%B2%D0%BE%D0%B9%20%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20Dropbox&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/246.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>

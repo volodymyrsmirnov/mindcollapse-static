@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>JQuery-like DOM селекторы для PHP</title> 
+
+    <meta charset="utf-8">
+
+    <meta name="freezed" content="2013-10-22 18:55:06.476166">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
+    <meta name="yandex-verification" content="4b85f46617ab1114"> 
+    <meta name="y_key" content="04bed234d6a405cc"> 
+    <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    
+        <link rel="canonical" href="http://www.mindcollapse.com/blog/184.html">
+
+        <meta property="og:title" content="JQuery-like DOM селекторы для PHP">
+        <meta property="og:description" content="Я ду­маю, что мно­гие зна­ко­мы с JavaScript се­лек­то­ра­ми биб­лио­те­ки JQuery да и мно­гих дру­гих, ко­то­рые идео­ло­ги­че­ски бы­ли по­за­им­ство­ва­ны у CSS и яв­ля­ют­ся очень удоб­ным ...">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="mindcollapse.com">
+        <meta property="og:url" content="http://www.mindcollapse.com/blog/184.html">
+
+        <meta name="description" content="Я ду­маю, что мно­гие зна­ко­мы с JavaScript се­лек­то­ра­ми биб­лио­те­ки JQuery да и мно­гих дру­гих, ко­то­рые идео­ло­ги­че­ски бы­ли по­за­им­ство­ва­ны у CSS и яв­ля­ют­ся очень удоб­ным ...">
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@middlesizetit">
+        <meta name="twitter:description" content="Я ду­маю, что мно­гие зна­ко­мы с JavaScript се­лек­то­ра­ми биб­лио­те­ки JQuery да и мно­гих дру­гих, ко­то­рые идео­ло­ги­че­ски бы­ли по­за­им­ство­ва­ны у CSS и яв­ля­ют­ся очень удоб­ным ...">
+        <meta name="twitter:title" content="JQuery-like DOM селекторы для PHP">
+    
+
+    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="alternate" type="application/rss+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+
+    
+        <link href="/static/compiled/blog.css?78212916" rel="stylesheet" media="all">
+    
+
+    
+        <script type="text/javascript" src="/static/compiled/blog.js?b8dc5e57" defer></script>
+    
+
+    <!--[if lt IE 9]>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+    <![endif]-->
+</head>
+
+<body class="mindcollapse">
+    <div class="container">
+
+        <div class="header navbar navbar-default hidden-print" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a href="/" class="navbar-brand">Владимир Смирнов</a>
+            </div>
+
+            <div class="collapse navbar-collapse blogmenu">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Блог</a></li>
+                    <li ><a href="/blog/archive/">Архив</a></li>
+                    <li><a target="_blank" href="/moho/">Кино</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
+                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                </ul>
+            </div>
+        </div>
+
+        
+	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+		<div class="content_header clearfix">
+			<h1 itemprop="name" class="pull-left">JQuery-like DOM селекторы для PHP</h1>
+			<div class="published pull-right"><span title="опубликован 1685 дней назад" itemprop="dateCreated" class="text-muted">12 марта 2009 г.</span></div>
+		</div>
+
+		<hr class="first">
+
+		<div itemprop="articleBody" class="content">
+			Я ду&shy;маю, что мно&shy;гие зна&shy;ко&shy;мы с JavaScript се&shy;лек&shy;то&shy;ра&shy;ми биб&shy;лио&shy;те&shy;ки <a href="/blog/132.html">JQuery</a> да и мно&shy;гих дру&shy;гих, ко&shy;то&shy;рые идео&shy;ло&shy;ги&shy;че&shy;ски бы&shy;ли по&shy;за&shy;им&shy;ство&shy;ва&shy;ны у CSS и яв&shy;ля&shy;ют&shy;ся очень удоб&shy;ным ин&shy;стру&shy;мен&shy;том для ра&shy;бо&shy;ты с DOM-ом до&shy;ку&shy;мен&shy;та. И в то же вре&shy;мя мно&shy;гие, я уве&shy;рен, стал&shy;ки&shy;ва&shy;лись с си&shy;ту&shy;а&shy;ци&shy;ей, ко&shy;гда нуж&shy;но с ка&shy;ко&shy;го-то сай&shy;та спиз&shy;дить ка&shy;кую-то ин&shy;фор&shy;ма&shy;цию, ко&shy;то&shy;рая не син&shy;ди&shy;ци&shy;ру&shy;ет&shy;ся в rss-ах или atom-ах, по&shy;это&shy;му при&shy;хо&shy;дит&shy;ся раз&shy;би&shy;рать ре&shy;гу&shy;ляр&shy;ка&shy;ми html код до&shy;ку&shy;мен&shy;та. С му&shy;че&shy;ни&shy;я&shy;ми по&shy;кон&shy;че&shy;но, как го&shy;во&shy;рит нам ка&shy;кая-то ре&shy;кла&shy;ма мо&shy;ю&shy;ще&shy;го сред&shy;ства, пре&shy;вра&shy;ща&shy;ю&shy;ще&shy;го пли&shy;ту, на ко&shy;то&shy;рую вы&shy;ли&shy;ли 10 кг. гов&shy;на в бле&shy;стя&shy;щую пер&shy;ла&shy;мутро&shy;вую по&shy;верх&shy;ность. Ока&shy;зы&shy;ва&shy;ет&shy;ся, есть та&shy;кая биб&shy;лио&shy;те&shy;ка, как <a href="http://simplehtmldom.sourceforge.net/">PHP Simple HTML DOM</a>, под&shy;дер&shy;жи&shy;ва&shy;ю&shy;щая все ба&shy;зо&shy;вые се&shy;лек&shy;то&shy;ры, ин&shy;ва&shy;лид&shy;ный код, на ко&shy;то&shy;ром обыч&shy;ный simplexml уже об&shy;ла&shy;мы&shy;ва&shy;ет&shy;ся, ра&shy;бо&shy;та&shy;ю&shy;щая с мод&shy;ным пат&shy;тер&shy;ном <a href="/blog/114.html">method-chaining</a>, но толь&shy;ко под php5+, что в на&shy;ше сто&shy;ле&shy;тие на&shy;уч&shy;но&shy;го про&shy;грес&shy;са и тех&shy;ни&shy;че&shy;ских ин&shy;но&shy;ва&shy;ций уже не ак&shy;ту&shy;аль&shy;но - толь&shy;ко ин&shy;фан&shy;тиль&shy;ный, од&shy;но&shy;ру&shy;кий и не&shy;мно&shy;го мерт&shy;вый ре&shy;сел&shy;лер ка&shy;ко&shy;го-то де&shy;ше&shy;во&shy;го vds-а не про&shy;ап&shy;дей&shy;тил&shy;ся до пя&shy;те&shy;роч&shy;ки.Ра&shy;ди те&shy;ста биб&shy;лио&shy;те&shy;ки ре&shy;шил взять не&shy;из&shy;вест&shy;ный в кру&shy;гах сле&shy;пых лю&shy;дей и до&shy;ста&shy;точ&shy;но по&shy;пу&shy;ляр&shy;ный сре&shy;ди кар&shy;мадро&shy;че&shy;ров и трол&shy;лей мел&shy;ко&shy;го по&shy;мо&shy;ла сайт <a href="http://habrahabr.ru">habrahabr.ru</a>. Бы&shy;ла по&shy;став&shy;ле&shy;на за&shy;да&shy;ча на&shy;пи&shy;сать код, ко&shy;то&shy;рый из&shy;вле&shy;ка&shy;ет спи&shy;сок ва&shy;кан&shy;сий и рей&shy;тинг ком&shy;па&shy;ний с глав&shy;ной стра&shy;ни&shy;цы в мас&shy;сив, ко&shy;то&shy;рый по&shy;том уже мож&shy;но ис&shy;поль&shy;зо&shy;вать где-то. В ито&shy;ге на все про все ушло ми&shy;нут 15, это учи&shy;ты&shy;вая вре&shy;мя про&shy;чте&shy;ния не&shy;пло&shy;хой <a href="http://simplehtmldom.sourceforge.net/manual.htm">до&shy;ку&shy;мен&shy;та&shy;ции</a> с при&shy;ме&shy;ра&shy;ми и за&shy;ва&shy;ри&shy;ва&shy;ния чая Лип&shy;тон Лейбл Ти. По&shy;смот&shy;реть ис&shy;ход&shy;ный код мож&shy;но в <a href="/media/copypaste/habrahack.php">ко&shy;пи&shy;па&shy;сте&shy;ре</a>, ну и <a href="/media/etc/PHP/simpledom/">при&shy;мер ра&shy;бо&shy;ты</a> то&shy;же име&shy;ет&shy;ся.<strong>PS</strong>: увы, пи&shy;сать те&shy;перь бу&shy;ду по&shy;ре&shy;же: на&shy;ко&shy;нец-то осте&shy;пе&shy;нил&shy;ся, ушел в по&shy;ли&shy;ти&shy;ку и ма&shy;кро&shy;эко&shy;но&shy;ми&shy;че&shy;ские ис&shy;сле&shy;до&shy;ва&shy;ния, со&shy;би&shy;раю мо&shy;нет&shy;ки 18-го ве&shy;ка и за&shy;ни&shy;ма&shy;юсь ку&shy;чой дру&shy;гих ни&shy;ко&shy;му не&shy;нуж&shy;ных и не&shy;ин&shy;те&shy;рес&shy;ных дел, ко&shy;то&shy;рый впро&shy;чем от&shy;ни&shy;ма&shy;ют очень мно&shy;го сво&shy;бод&shy;но&shy;го вре&shy;ме&shy;ни.
+		</div>
+
+		<hr>
+		
+		<div class="content_footer" class="hidden-print">
+			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/184.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/184.html&amp;text=JQuery-like%20DOM%20%D1%81%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B%20%D0%B4%D0%BB%D1%8F%20PHP&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/184.html">вконтакте</a></span>.</p>
+		</div>
+	</div>
+
+    </div>
+
+    <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22151810 = new Ya.Metrika({id:22151810, clickmap:true, trackLinks:true, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22151810" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+                
+</body>
+</html>
