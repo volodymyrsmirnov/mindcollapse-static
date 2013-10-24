@@ -25,7 +25,8 @@ class Config(object):
 		"extensions": [
 			"toc",
 			"extra",
-			"meta"
+			"meta",
+			"codehilite"
 		],
 
 		"extension_configs":{
