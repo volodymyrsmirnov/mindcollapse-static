@@ -1,5 +1,6 @@
 import markdown
 import pytils
+import os
 
 class Config(object):
 	DEBUG = True
@@ -13,6 +14,9 @@ class Config(object):
 		"robots.txt", 
 		"favicon.ico",
 	]
+
+	PYSCSS_STATIC_ROOT = os.path.join(os.getcwd(), "static")
+	PYSCSS_STATIC_URL = "/static"
 
 	MD = None
 	MD_OPTIONS = {

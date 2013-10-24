@@ -42,8 +42,8 @@ nosetests.xml
 *.iml
 
 # sass
-compiled/*.css
-compiled/*.js
+static/compiled/*.css
+static/compiled/*.js
 
 .sass-cache
 .webassets-cache

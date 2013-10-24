@@ -1,4 +1,5 @@
-mindcollapse-static
+mindcollapse.com site generator
 ===================
 
-mindcollapse.com static site generator
+master branch - flask application
+static branch - generated static version of master applications

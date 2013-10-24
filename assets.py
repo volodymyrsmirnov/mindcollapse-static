@@ -4,7 +4,13 @@ blog_js_bundle = Bundle(
 	"assets/third-party/jquery/jquery.min.js",
 	"assets/third-party/jquery/jquery-migrate.min.js",
 	"assets/third-party/bootstrap/bootstrap.min.js",
-	"assets/blog/general.js",
+	
+	Bundle(
+		"assets/blog/general.js",
+
+		filters="rjsmin"
+	),
+
     output="compiled/blog.js"
 )
 
@@ -13,7 +19,7 @@ blog_css_bundle = Bundle(
 
 	Bundle(
 		"assets/blog/general.scss",
-		filters="scss"
+		filters="pyscss, cssmin"
 	),
 
     output="compiled/blog.css"
