@@ -22,11 +22,11 @@ def process_post(entry, content=True, hyphens=True):
 
         if post["type"] == "html": 
             post["content"] = post["raw_content"]
-            post["metadata"] = {}
+            #post["metadata"] = {}
 
         elif post["type"] == "markdown": 
             post["content"] = flask.current_app.config["MD"].reset().convert(post["raw_content"]) 
-            post["metadata"] = flask.current_app.config["MD"].Meta
+            #post["metadata"] = flask.current_app.config["MD"].Meta
 
         if hyphens:
             post["content"] = hyphenate(post["content"])
@@ -71,7 +71,19 @@ def post(slug):
     if not slug in entries:
         return flask.abort(404)
 
-    return flask.render_template("blog/post.html", post=process_post(entries[slug]))
+    next_slug = None
+    prev_slug = None
+
+    entries_keys = entries.keys()
+    current_slug_index = entries_keys.index(slug)
+
+    if not slug == entries_keys[-1]:
+        next_slug = entries_keys[current_slug_index + 1]
+
+    if not slug == entries_keys[0]:
+        prev_slug = entries_keys[current_slug_index - 1]   
+
+    return flask.render_template("blog/post.html", post=process_post(entries[slug]), next_slug=next_slug, prev_slug=prev_slug)
 
 @blog.route("/blog.xml")
 def rss():

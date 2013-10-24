@@ -16,5 +16,4 @@ def context_processor():
     return {
         "active": flask.request.endpoint,
         "pytils": pytils,
-        "now": datetime.datetime.now(),
     }
