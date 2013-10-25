@@ -3,15 +3,15 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-	<div class="article" id="post_{{ post.id }}" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_{{ post.id }}" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">{{ post.title }}</h1>
-			<div class="published pull-right"><span class="text-muted">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">{{ post.title }}</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}" class="text-muted">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			{{ post.content | safe  }}
 		</div>
 

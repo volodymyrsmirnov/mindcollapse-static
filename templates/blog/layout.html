@@ -5,11 +5,16 @@
 
     <title>{% block title %}{% endblock %}</title> 
 
+    <base href="{{ url_for("blog.index", _external=True) }}">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="{{ url_for("blog.sitemap", _external=True) }}">
 
     {% if post %}
         <link rel="canonical" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">
