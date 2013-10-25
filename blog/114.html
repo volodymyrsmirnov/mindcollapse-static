@@ -5,11 +5,16 @@
 
     <title>MySQL PHP class</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/114.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">MySQL PHP class</h1>
-			<div class="published pull-right"><span class="text-muted">17 июня 2008 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/114.html">MySQL PHP class</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2008-06-17T00:00:00Z" class="text-muted">17 июня 2008 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			Объ&shy;ект&shy;ная мо&shy;дель в <abbr title="Пидарски Хуйовое Программирование">PHP</abbr> до&shy;ста&shy;точ&shy;но сла&shy;бая, об этом пи&shy;са&shy;на уже ку&shy;ча ста&shy;тей на ку&shy;че язы&shy;ков, по&shy;это&shy;му углуб&shy;лять&shy;ся в это не бу&shy;ду. Но да&shy;же на том, что име&shy;ет&shy;ся мож&shy;но на&shy;пи&shy;сать до&shy;воль&shy;но по&shy;лез&shy;ные ве&shy;щи. Вот, к при&shy;ме&shy;ру, се&shy;го&shy;дня за&shy;ин&shy;те&shy;ре&shy;со&shy;вал&shy;ся кон&shy;струк&shy;то&shy;ром SQL за&shy;про&shy;сов в <a href="http://codeigniter.com/">CodeIgniter</a> и на&shy;пи&shy;сал свой класс. Сей&shy;час до&shy;бав&shy;лен толь&shy;ко SELECT за&shy;прос, но код про&shy;стой, ко&shy;му ин&shy;те&shy;рес&shy;но и де&shy;лать не&shy;че&shy;го - до&shy;та&shy;чи&shy;вай&shy;те в сво&shy;их це&shy;лях, а я и даль&shy;ше бу&shy;ду юзать <a href="http://codeigniter.com/user_guide/database/active_record.html">Active Record</a> из <a href="http://codeigniter.com/">CodeIgniter </a>и пи&shy;сать ве&shy;ло&shy;си&shy;пе&shy;ды раз&shy;ные от ску&shy;ки.Вот код клас&shy;са (<abbr title="Пидарски Хуйовое Программирование">PHP</abbr> 5 и вы&shy;ше):<a href="/media/etc/PHP/mysql.phps">/media/etc/PHP/mysql.phps</a><b>PS</b>: на за&shy;кус&shy;ку - <a href="http://www.insight-it.ru/">ин&shy;те&shy;рес&shy;ный блог</a> об ар&shy;хи&shy;тек&shy;ту&shy;ре боль&shy;ших ин&shy;тер&shy;нет про&shy;ек&shy;тов.<b>UPD</b>: в свя&shy;зи с <a href="http://solik.sm.chereda.net/wordpress/2008/06/20/1735/#comments">не&shy;ко&shy;то&shy;рой кри&shy;ти&shy;кой дан&shy;ной идеи</a> на&shy;пи&shy;шу "шо я имел вви&shy;ду": эта биб&shy;лио&shy;те&shy;ка все&shy;го лишь при&shy;мер к <a href="http://martinfowler.com/dslwip/MethodChaining.html">method chaining</a> пат&shy;тер&shy;ну ООП с воз&shy;вра&shy;том instance са&shy;мо&shy;го клас&shy;са, что и поз&shy;во&shy;ля&shy;ет ис&shy;поль&shy;зо&shy;вать ме&shy;то&shy;ды клас&shy;са по це&shy;поч&shy;ке. Идео&shy;ло&shy;ги&shy;че&shy;ски не&shy;пра&shy;виль&shy;но ис&shy;поль&shy;зо&shy;вать та&shy;кую SQL хуй&shy;ню в по&shy;ле&shy;вых усло&shy;ви&shy;ях, это бо&shy;го&shy;мерз&shy;кий ве&shy;ло&shy;си&shy;пед. А с where("age &lt; 15", "gender = 'female'") во&shy;об&shy;ще пе&shy;до&shy;филь&shy;ный и ан&shy;ти&shy;ра&shy;ци&shy;о&shy;наль&shy;ный пиз&shy;дец вы&shy;шел. При&shy;том со&shy;вер&shy;шен&shy;но не&shy;умыш&shy;лен&shy;но, по&shy;ра по&shy;чи&shy;тать Фрей&shy;да и про&shy;ве&shy;рить&shy;ся.
 		</div>
 

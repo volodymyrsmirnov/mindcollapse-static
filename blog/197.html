@@ -5,11 +5,16 @@
 
     <title>Popcorn A-110 + WUSB54 - танцы с бубном</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/197.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">Popcorn A-110 + WUSB54 - танцы с бубном</h1>
-			<div class="published pull-right"><span class="text-muted">5 июля 2009 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/197.html">Popcorn A-110 + WUSB54 - танцы с бубном</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2009-07-05T00:00:00Z" class="text-muted">5 июля 2009 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			Ва&shy;лялcя у ме&shy;ня до&shy;ма не&shy;по&shy;нят&shy;но от&shy;ку&shy;да взяв&shy;ший&shy;ся USB Wi-Fi донгл <a href="http://www.linksysbycisco.com/US/en/products/WUSB54GC">Linksys WUSB54GC</a>. Вос&shy;крес&shy;ным дожд&shy;ли&shy;вым утром, по&shy;че&shy;сав ре&shy;пу, я ре&shy;шил по&shy;про&shy;бы&shy;вать под&shy;со&shy;еди&shy;нить его к ме&shy;диа-пле&shy;е&shy;ру <a href="/blog/173.html">Popcorn Hour A-110</a>, по&shy;то&shy;му как на&shy;до&shy;е&shy;ло тас&shy;кать его к ком&shy;пью&shy;те&shy;ру для за&shy;лив&shy;ки оче&shy;ред&shy;ной пи&shy;рат&shy;ской ко&shy;пии ки&shy;но или му&shy;зы&shy;ки. Ко&shy;ро&shy;че, по&shy;че&shy;сал я сно&shy;ва ре&shy;пу и всу&shy;нул донгл в USB порт пле&shy;е&shy;ра, за&shy;ло&shy;ги&shy;нил&shy;ся на не&shy;го че&shy;рез ssh и в dmesg уви&shy;дил ба&shy;наль&shy;ный high-speed usb device connected, что не пред&shy;ве&shy;ща&shy;ло лег&shy;ких сце&shy;на&shy;ри&shy;ев. <p></p><p>Ра&shy;зу&shy;ме&shy;ет&shy;ся, lsmod ядра был пуст, а lsusb ли&shy;бо lshw про&shy;сто от&shy;сут&shy;ство&shy;ва&shy;ли. По&shy;гуглив, <a href="http://funcation.blogspot.com/">на&shy;шел</a>, что мо&shy;дуль ядра для дон&shy;гла на&shy;зы&shy;ва&shy;ет&shy;ся rt73, чуть поз&shy;же на&shy;шлись и ском&shy;пи&shy;ли&shy;ро&shy;ван&shy;ные би&shy;нар&shy;ни&shy;ки (<a href="/media/etc/rt73.zip">ка&shy;ча&shy;бель&shy;но</a>). Воз&shy;ни&shy;ка&shy;ла еще од&shy;на про&shy;бле&shy;ма, insmod мо&shy;дуль уста&shy;нав&shy;ли&shy;вал без эк&shy;с&shy;еп&shy;ше&shy;нов, но вот ifconfig, ли&shy;бо да&shy;же про&shy;сто cat /proc/net/dev вы&shy;зы&shy;ва&shy;ли segmentation fault. Ре&shy;па уже бы&shy;ла до&shy;ста&shy;точ&shy;но ак&shy;тив&shy;но рас&shy;че&shy;са&shy;на в кровь, но пу&shy;тем ко&shy;вы&shy;ря&shy;ний и чи&shy;та&shy;ний фо&shy;ру&shy;ма NMT на&shy;шел та&shy;ки ре&shy;ше&shy;ние.</p><p></p><p>Итак, по&shy;ря&shy;док дей&shy;ствий для уста&shy;нов&shy;ки USB Wi-Fi кар&shy;ты на ба&shy;зе чип&shy;се&shy;та Ralink RT73 (а их мно&shy;го) сле&shy;ду&shy;ю&shy;щий: уста&shy;нав&shy;ли&shy;ва&shy;ем dropbear ssh с по&shy;мо&shy;щью <a href="http://www.networkedmediatank.com/showthread.php?tid=13161">CSI</a>, <a href="/media/etc/rt73.zip">ска&shy;чи&shy;ва&shy;ем</a> би&shy;нар&shy;ни&shy;ки и ки&shy;да&shy;ем их в ко&shy;рень ftp сер&shy;ве&shy;ра ли&shy;бо же в /share ди&shy;рек&shy;то&shy;рию че&shy;рез sftp, ре&shy;дак&shy;ти&shy;ру&shy;ем в этой же ди&shy;рек&shy;то&shy;рии скрипт start_app.sh, при&shy;мер не&shy;об&shy;хо&shy;ди&shy;мой кон&shy;фи&shy;гу&shy;ра&shy;ции в <a href="/media/copypaste/start_app.bash">ко&shy;пи&shy;па&shy;сте&shy;ре</a>. Да по&shy;мо&shy;жет вам <a href="http://linux.die.net/man/8/iwconfig">ма&shy;ну&shy;ал</a> по iwconfig-у. Ре&shy;бу&shy;тим&shy;ся и все ра&shy;бо&shy;та&shy;ет</p><p></p><p>На&shy;по&shy;сле&shy;док на&shy;до ска&shy;зать, что с WPA шиф&shy;ро&shy;ва&shy;ни&shy;ем со&shy;еди&shy;нить&shy;ся не по&shy;лу&shy;чи&shy;лось, при&shy;дет&shy;ся пе&shy;ре&shy;клю&shy;чать&shy;ся на WEP. Ско&shy;рость до&shy;сти&shy;га&shy;ет ~ 5 mbit\s. По&shy;смот&shy;реть, как все вы&shy;гля&shy;дит мож&shy;но на <a href="/media/pictures/pc.jpg">фо&shy;то&shy;гра&shy;фии</a>, про&shy;шу про&shy;ще&shy;ния за те&shy;ле&shy;фон&shy;ное ка&shy;че&shy;ство.</p>
 		</div>
 

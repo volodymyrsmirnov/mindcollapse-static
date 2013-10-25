@@ -5,11 +5,16 @@
 
     <title>Теория изоляции и лимитирования процессов в linux userspace</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/processes-isolation.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">Теория изоляции и лимитирования процессов в linux userspace</h1>
-			<div class="published pull-right"><span class="text-muted">5 ноября 2012 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/processes-isolation.html">Теория изоляции и лимитирования процессов в linux userspace</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2012-11-05T00:00:00Z" class="text-muted">5 ноября 2012 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			<p><img alt="Теория изоляции и лимитирования процессов в linux userspace" src="/static/media/blog/processes-isolation/header.jpg" /></p>
 <p>Этот пост за&shy;ду&shy;мы&shy;вал&shy;ся по&shy;яс&shy;ни&shy;тель&shy;ны&shy;ми ком&shy;мен&shy;та&shy;ри&shy;я&shy;ми к лис&shy;тин&shy;гу го&shy;то&shy;вой про&shy;грам&shy;мы, но ме&shy;ня по&shy;че&shy;му-то в са&shy;мый по&shy;след&shy;ний мо&shy;мент по&shy;про&shy;си&shy;ли уда&shy;лить ре&shy;по&shy;зи&shy;та&shy;рий из гит&shy;ха&shy;ба, хо&shy;тя от&shy;кры&shy;тость ко&shy;да бы&shy;ла ого&shy;во&shy;ре&shy;на за&shy;ра&shy;нее. Вот так те&shy;о&shy;рия и прак&shy;ти&shy;ка в за&shy;го&shy;лов&shy;ке ста&shy;тьи пре&shy;вра&shy;ти&shy;лась про&shy;сто в те&shy;о&shy;рию. Впро&shy;чем, я по&shy;ста&shy;ра&shy;юсь до&shy;ста&shy;точ&shy;но де&shy;таль&shy;но рас&shy;ска&shy;зать о двух основ&shy;ных спо&shy;со&shy;бах изо&shy;ля&shy;ции и ли&shy;ми&shy;ти&shy;ро&shy;ва&shy;ния ис&shy;пол&shy;ня&shy;е&shy;мо&shy;го про&shy;цес&shy;са: basic, ко&shy;то&shy;рый не тре&shy;бу&shy;ет осо&shy;бых зна&shy;ний, пе&shy;ре&shy;сбор&shy;ки ядра, а не&shy;об&shy;хо&shy;ди&shy;мый функ&shy;ци&shy;о&shy;нал уже при&shy;сут&shy;ству&shy;ет во всех со&shy;вре&shy;мен&shy;ных дис&shy;три&shy;бу&shy;ти&shy;вах и advanced. </p>
 <p>Пе&shy;ре&shy;до мной бы&shy;ла по&shy;став&shy;ле&shy;на сле&shy;ду&shy;ю&shy;щая за&shy;да&shy;ча - на&shy;пи&shy;сать бы&shy;струю и по&shy;стро&shy;ен&shy;ную не на ин&shy;стру&shy;мен&shy;тах ап&shy;па&shy;рат&shy;ной или про&shy;грамм&shy;ной вир&shy;ту&shy;а&shy;ли&shy;за&shy;ции сре&shy;ду за&shy;пус&shy;ка по&shy;тен&shy;ци&shy;аль&shy;но не&shy;без&shy;опас&shy;но&shy;го поль&shy;зо&shy;ва&shy;тель&shy;ско&shy;го ко&shy;да. Что&shy;бы вам ста&shy;ло по&shy;нят&shy;ней, мо&shy;же&shy;те взгля&shy;нуть на <a href="http://codepad.org/">Codepad</a> или <a href="http://ideone.com/">Ideone</a> - са&shy;мые обыч&shy;ные па&shy;сте&shy;би&shy;ны, поз&shy;во&shy;ля&shy;ю&shy;щие со&shy;би&shy;рать и вы&shy;пол&shy;нять на&shy;пи&shy;сан&shy;ный не&shy;из&shy;вест&shy;ным Ва&shy;си&shy;ли&shy;ем код, воз&shy;вра&shy;щая стан&shy;дарт&shy;ный вы&shy;вод про&shy;цес&shy;са. По&shy;доб&shy;ные за&shy;да&shy;чи - не мое про&shy;филь&shy;ное на&shy;прав&shy;ле&shy;ние, по&shy;это&shy;му про&shy;шу ме&shy;ня про&shy;стить, если я вдруг кое-где оши&shy;бусь в те&shy;о&shy;рии или бу&shy;ду го&shy;во&shy;рить от&shy;кро&shy;вен&shy;ные глу&shy;по&shy;сти.</p>

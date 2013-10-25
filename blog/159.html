@@ -5,11 +5,16 @@
 
     <title>Linux: оптимизируем SSD</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/159.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">Linux: оптимизируем SSD</h1>
-			<div class="published pull-right"><span class="text-muted">27 октября 2008 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/159.html">Linux: оптимизируем SSD</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2008-10-27T00:00:00Z" class="text-muted">27 октября 2008 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			Са&shy;мой не&shy;га&shy;тив&shy;ной сто&shy;ро&shy;ной SSD, как я и пи&shy;сал <a href="/blog/149.html">ра&shy;нее</a>, яв&shy;ля&shy;ет&shy;ся чрез&shy;вы&shy;чай&shy;но низ&shy;кая ско&shy;рость ра&shy;бо&shy;ты, а в част&shy;но&shy;сти - за&shy;пи&shy;си. Тех сред&shy;не&shy;ста&shy;ти&shy;сти&shy;че&shy;ских 8-10 mbit\s ка&shy;та&shy;стро&shy;фи&shy;че&shy;ски не хва&shy;та&shy;ет для нор&shy;маль&shy;но&shy;го функ&shy;ци&shy;о&shy;ни&shy;ро&shy;ва&shy;ния си&shy;сте&shy;мы, ко&shy;то&shy;рая из-за это&shy;го пе&shy;ри&shy;о&shy;ди&shy;че&shy;ски ухо&shy;дит в пол&shy;ный аут, све&shy;тя ди&shy;о&shy;дом об&shy;ра&shy;ще&shy;ния к дис&shy;ку. Имен&shy;но по&shy;это&shy;му я по&shy;пы&shy;та&shy;юсь рас&shy;ска&shy;зать, как на&shy;стро&shy;ить си&shy;сте&shy;му для бо&shy;лее-ме&shy;нее ком&shy;форт&shy;ной ра&shy;бо&shy;ты. Ча&shy;стич&shy;но все ин&shy;струк&shy;ции бы&shy;ли на&shy;гло укра&shy;де&shy;ны.Пер&shy;вый мод дол&shy;жен быть ап&shy;па&shy;рат&shy;ным - нам нуж&shy;но уве&shy;ли&shy;чить ко&shy;ли&shy;че&shy;ство си&shy;стем&shy;ной па&shy;мя&shy;ти до 1 GB и бо&shy;лее, в за&shy;ви&shy;си&shy;мо&shy;сти от ис&shy;поль&shy;зу&shy;е&shy;мой на&shy;ми ОС. Для стан&shy;дарт&shy;ной уста&shy;нов&shy;ки Ubuntu Hardy мне ком&shy;форт&shy;но хва&shy;та&shy;ет 1.5 GB на мо&shy;ем <a href="/blog/142.html">нет&shy;бу&shy;ке</a>, 60 про&shy;цен&shy;тов ко&shy;то&shy;рых про&shy;ста&shy;и&shy;ва&shy;ют. Пер&shy;вым де&shy;лом кон&shy;вер&shy;ти&shy;ру&shy;ем основ&shy;ной раз&shy;дел в ext2, жур&shy;на&shy;ли&shy;ру&shy;е&shy;мые фай&shy;ло&shy;вые си&shy;сте&shy;мы с ве&shy;ре&shy;ни&shy;цей не&shy;нуж&shy;ных опе&shy;ра&shy;ций за&shy;пи&shy;си нам ни к че&shy;му. По&shy;дроб&shy;ный ма&shy;ну&shy;ал "а как это сде&shy;лать" <a href="http://www.aspireoneuser.com/forum/viewtopic.php?f=5&amp;t=164&amp;st=0&amp;sk=t&amp;sd=a&amp;start=10#p1177">мож&shy;но про&shy;чи&shy;тать</a>. Да&shy;лее де&shy;ла&shy;ем то, ра&shy;ди че&shy;го мы рас&shy;ко&shy;ше&shy;ли&shy;лись на лиш&shy;ний SO-DIMM мо&shy;дуль: от&shy;клю&shy;ча&shy;ем свап, уда&shy;лив со&shy;от&shy;вет&shy;ству&shy;ю&shy;щий раз&shy;дел в /etc/fstab и до&shy;ба&shy;вив vm.swappiness = 0 в /etc/sysctl.conf. Пе&shy;ре&shy;за&shy;гру&shy;жа&shy;ем&shy;ся и чув&shy;ству&shy;ем боль&shy;шую раз&shy;ни&shy;цу, но нам все ма&shy;ло! Це&shy;ле&shy;со&shy;об&shy;раз&shy;ным бу&shy;дет вы&shy;не&shy;се&shy;ние /var/log, /tmp и /var/tmp в tmpfs, пе&shy;ре&shy;ме&shy;стив их с мед&shy;лен&shy;но&shy;го дис&shy;ка в от&shy;но&shy;си&shy;тель&shy;но бы&shy;струю опе&shy;ра&shy;тив&shy;ную па&shy;мять. Мон&shy;ти&shy;ру&shy;ем дан&shy;ные ди&shy;рек&shy;то&shy;рии в fstab. Ми&shy;ну&shy;сом дан&shy;но&shy;го ме&shy;то&shy;да яв&shy;ля&shy;ет&shy;ся уте&shy;ря всех ло&shy;гов по&shy;сле пе&shy;ре&shy;за&shy;груз&shy;ки, а не&shy;ко&shy;то&shy;рые при&shy;ло&shy;же&shy;ния от&shy;ка&shy;жут&shy;ся за&shy;пус&shy;кать&shy;ся ли&shy;бо же бу&shy;дут за&shy;дал&shy;бы&shy;вать ер&shy;ро&shy;ра&shy;ми и но&shy;тай&shy;са&shy;ми, со&shy;слав&shy;шись на от&shy;сут&shy;ствие пап&shy;ки их ло&shy;гов, со&shy;здан&shy;ной при уста&shy;нов&shy;ке. Ре&shy;ша&shy;ет&shy;ся это до&shy;бав&shy;ле&shy;ни&shy;ем не&shy;об&shy;хо&shy;ди&shy;мо&shy;го mkdir в ~/.profile, на&shy;при&shy;мер. Даль&shy;ше по&shy;экс&shy;пе&shy;ри&shy;мен&shy;ти&shy;ру&shy;ем еще не&shy;мно&shy;го с си&shy;стем&shy;ны&shy;ми па&shy;ра&shy;мет&shy;ра&shy;ми, как это опи&shy;са&shy;но <a href="https://help.ubuntu.com/community/AspireOne#/etc/sysctl.d/60-aspireone.conf">тут</a>. Не за&shy;бы&shy;ва&shy;ем так&shy;же до&shy;ба&shy;вить оп&shy;цию elevator=noop в бут па&shy;ра&shy;мет&shy;ры ядра /boot/grub/menu.lst и noatime в оп&shy;ции фай&shy;ло&shy;вой си&shy;сте&shy;мы - за&shy;пись вре&shy;ме&shy;ни до&shy;сту&shy;па к фай&shy;лу это про&shy;сто лиш&shy;няя тра&shy;та дис&shy;ко&shy;во&shy;го вре&shy;ме&shy;ни.Не&shy;пло&shy;хой иде&shy;ей бу&shy;дет вы&shy;не&shy;се&shy;ние /home ди&shy;рек&shy;то&shy;рии на SD кар&shy;ту, что уве&shy;ли&shy;чит жиз&shy;нен&shy;ный срок ва&shy;ше&shy;го твер&shy;до&shy;тель&shy;но&shy;го на&shy;ко&shy;пи&shy;те&shy;ля, а еще не по&shy;ме&shy;ша&shy;ет от&shy;клю&shy;че&shy;ние дис&shy;ко&shy;во&shy;го ке&shy;ша firefox в about:config. По&shy;сле вы&shy;ше&shy;при&shy;ве&shy;ден&shy;ных опе&shy;ра&shy;ций мы по&shy;лу&shy;чим ОС, ра&shy;бо&shy;та ко&shy;то&shy;рой не бу&shy;дет на&shy;по&shy;ми&shy;нать по&shy;ша&shy;го&shy;вую стра&shy;те&shy;гию.
 		</div>
 

@@ -5,11 +5,16 @@
 
     <title>Учет трафика в офис-lan</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/23.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">Учет трафика в офис-lan</h1>
-			<div class="published pull-right"><span class="text-muted">3 ноября 2006 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/23.html">Учет трафика в офис-lan</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2006-11-03T00:00:00Z" class="text-muted">3 ноября 2006 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			Сей&shy;час вот ра&shy;бо&shy;таю над од&shy;ной кор&shy;по&shy;ра&shy;тив&shy;ной се&shy;тью на 23 ма&shy;ши&shy;ны по за&shy;ка&shy;зу Сум&shy;ской стра&shy;хо&shy;вой ор&shy;га&shy;ни&shy;за&shy;ции. Од&shy;ним из тре&shy;бо&shy;ва&shy;ний за&shy;каз&shy;чи&shy;ков был де&shy;таль&shy;ный кон&shy;троль за ис&shy;поль&shy;зо&shy;ва&shy;ни&shy;ем ин&shy;тер&shy;не&shy;та - ба&shy;наль&shy;ная стра&shy;ни&shy;ца ста&shy;ти&shy;сти&shy;ки. Вот ре&shy;шил на&shy;пи&shy;сать сю&shy;да свои на&shy;ра&shy;бот&shy;ки...На ру&shy;те&shy;ре-шлю&shy;зе бы&shy;ла уста&shy;нов&shy;ле&shy;на <a href="http://ubuntu.com">Linux Ubuntu 6.1</a>. Уста&shy;нов&shy;ле&shy;на не мной, но на ней уже бы&shy;ло на&shy;стро&shy;е&shy;но сер&shy;вер&shy;ное ПО, при&shy;чем на&shy;стро&shy;е&shy;но гра&shy;мот&shy;но, по&shy;это&shy;му ре&shy;шил ни&shy;че&shy;го не тро&shy;гать. За&shy;да&shy;ча бы&shy;ла лишь до&shy;ба&shy;вить еще 5 ма&shy;шин и со&shy;здать эту тре&shy;кля&shy;тую стра&shy;ни&shy;цу =)Ре&shy;шил ис&shy;поль&shy;зо&shy;вать го&shy;то&shy;вое ПО (на на&shy;пи&shy;са&shy;ние сво&shy;е&shy;го не&shy;ту вре&shy;ме&shy;ни). <ins>Вы&shy;би&shy;рал меж&shy;ду:</ins>* <a href="http://sourceforge.net/projects/ipcad/">ipCAD</a>* <a href="http://sourceforge.net/projects/ipcad/">ipband</a>* <a href="http://sourceforge.net/projects/ipcad/">NeTAMS</a>Ре&shy;шил оста&shy;но&shy;вить свой вы&shy;бор на по&shy;след&shy;нем, т.к. яв&shy;ны&shy;ми пре&shy;иму&shy;ще&shy;ством бы&shy;ло на&shy;ли&shy;чие web-ин&shy;тер&shy;фей&shy;са. Уж по&shy;верь&shy;те, очень труд&shy;но на&shy;чаль&shy;ству разъ&shy;яс&shy;нить зна&shy;че&shy;ние фай&shy;ла <em>/var/log/trafd/monthly/09.2006.log</em> =)Мой файл кон&shy;фи&shy;гу&shy;ра&shy;ции мож&shy;но по&shy;смот&shy;реть по ссыл&shy;ке:<a href="/media/netams.tar.gz">/media/netams.tar.gz</a>Для ра&shy;бо&shy;ты в <ins>/etc/apache2/sites-enabled/000-default</ins> бы&shy;ло до&shy;бав&shy;ле&shy;но:<p class="message">&lt;Directory /var/www/stattraf&gt;\tOptions FollowSymLinks ExecCGI Indexes\tAllowOverride All&lt;/Directory&gt;Alias /stat/ /var/www/stattraf/</p>Те&shy;перь каж&shy;дый кли&shy;ент мо&shy;жет про&shy;смот&shy;реть свою ста&shy;ти&shy;сти&shy;ку пе&shy;рей&shy;дя по ссыл&shy;ке <a href="#">http://serv/stat/clients/Ivasko_Andrey_Sergeevich</a>. <strong>PS: </strong> по окон&shy;ча&shy;нию ра&shy;бо&shy;ты пла&shy;ни&shy;рую на&shy;ко&shy;нец ку&shy;пить се&shy;бе <a href="http://ipod.ru/models/ipod/">iPod 30GB</a> =)
 		</div>
 

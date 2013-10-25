@@ -5,11 +5,16 @@
 
     <title>Про роль шаблонов в экосистеме</title> 
 
+    <base href="http://www.mindcollapse.com/">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="jm8IGIWg4dsm0cTmih0sIVnUaWibc_hpOiQOlqb--9Y"> 
     <meta name="yandex-verification" content="4b85f46617ab1114"> 
     <meta name="y_key" content="04bed234d6a405cc"> 
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
+
+    <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
+    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
 
     
         <link rel="canonical" href="http://www.mindcollapse.com/blog/129.html">
@@ -43,11 +48,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?170eb2ce" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?f55bb245" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?8c129fd3" defer></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?f97a9d7b" defer></script>
     
 
     <!--[if lt IE 9]>
@@ -86,15 +91,15 @@
         </div>
 
         
-	<div class="article" id="post_" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="article hentry" id="post_" itemscope itemtype="http://schema.org/BlogPosting" role="main">
 		<div class="content_header clearfix">
-			<h1 itemprop="name" class="pull-left">Про роль шаблонов в экосистеме</h1>
-			<div class="published pull-right"><span class="text-muted">13 июля 2008 г.</span></div>
+			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/129.html">Про роль шаблонов в экосистеме</a></h1>
+			<div class="published pull-right"><time itemprop="datePublished" datetime="2008-07-13T00:00:00Z" class="text-muted">13 июля 2008 г.</time></div>
 		</div>
 
 		<hr class="first">
 
-		<div itemprop="articleBody" class="content">
+		<div itemprop="articleBody" class="entry-content content">
 			Ша&shy;блон&shy;ные движ&shy;ки на вся&shy;ких perl-ах, php и про&shy;чей ма&shy;ги&shy;че&shy;ской фе&shy;е&shy;рии - жид&shy;кое по кон&shy;си&shy;стен&shy;ции гов&shy;но, ска&shy;жу я вам. Это же по&shy;ду&shy;мать, пи&shy;сать кон&shy;струк&shy;ции ви&shy;да {foreach from=$array item=a value=b} на <a href="http://ru.wikipedia.org/wiki/Smarty">smarty</a> (это тот слу&shy;чай, ко&shy;гда Пе&shy;до&shy;ви&shy;кия от&shy;кро&shy;вен&shy;но пиз&shy;дит), что бы по&shy;том, пу&shy;тем страш&shy;ных по&shy;туг и му&shy;че&shy;ний в ви&shy;де regexp-ов, php ском&shy;пи&shy;ли&shy;ро&shy;вал эту стро&shy;ку в foreach ($array as $a=&gt;$b). На perl все ко&shy;неч&shy;но ин&shy;те&shy;рес&shy;ней, к при&shy;ме&shy;ру тот же мой лю&shy;би&shy;мый <a href="http://ctpp.havoc.ru">CTPP</a> мо&shy;жет са&shy;мо&shy;сто&shy;я&shy;тель&shy;но пре&shy;вра&shy;щать ша&shy;бло&shy;ны в&nbsp; байт-код, что зна&shy;чи&shy;тель&shy;но уско&shy;ря&shy;ет ис&shy;пол&shy;не&shy;ние. BTW, он же <a href="http://ctpp.havoc.ru/php-ctpp-api.html#2">есть и для php</a> в ви&shy;де мо&shy;ду&shy;ля, но по&shy;про&shy;бы&shy;вать все по&shy;ка не при&shy;хо&shy;ди&shy;лось. Са&shy;мый оп&shy;ти&shy;маль&shy;ный под&shy;ход я ви&shy;дел в фрей&shy;м&shy;фор&shy;ке ruby on rails (ко&shy;то&shy;рый и в <a href="http://ru.wikipedia.org/wiki/CodeIgniter">codeigniter</a> то&shy;же и в ку&shy;че дру&shy;гих, ага), в ка&shy;че&shy;стве view со&shy;став&shy;ля&shy;ю&shy;щей <a href="http://ru.wikipedia.org/wiki/MVC">MVC</a>&nbsp;ис&shy;поль&shy;зу&shy;ет&shy;ся rhtml, что по су&shy;ти яв&shy;ля&shy;ет&shy;ся обыч&shy;ным ruby в обыч&shy;ном html. И ни&shy;ка&shy;ких те&shy;бе фи&shy;гур&shy;ных ско&shy;бо&shy;чек.Един&shy;ствен&shy;ный "пра&shy;виль&shy;ный" ал&shy;го&shy;ритм от&shy;де&shy;ле&shy;ния син&shy;так&shy;си&shy;са от ша&shy;бло&shy;нов это, по&shy;жа&shy;луй, <a href="http://ru.wikipedia.org/wiki/XSLT">xslt</a>. Плю&shy;са&shy;ми его яв&shy;ля&shy;ет&shy;ся на&shy;ли&shy;чие <a href="http://www.w3.org/Style/XSL/">от&shy;лич&shy;ной до&shy;ку&shy;мен&shy;та&shy;ции</a> от W3C, воз&shy;мож&shy;ность транс&shy;фор&shy;ма&shy;ций в xml, html, pdf, postscript и еще огром&shy;ную ку&shy;чу фор&shy;ма&shy;тов, род&shy;ная под&shy;держ&shy;ка мно&shy;ги&shy;мим ин&shy;тер&shy;пре&shy;та&shy;то&shy;ра&shy;ми, а зна&shy;чит и крос&shy;с&shy;плат&shy;фор&shy;мен&shy;ность, ну а ми&shy;ну&shy;са&shy;ми - вер&shy;сталь&shy;щик или про&shy;грам&shy;мист не зна&shy;ко&shy;мый с xslt (нын&shy;че стыд&shy;но, им&shy;хо) хуй сло&shy;ма&shy;ет. По&shy;то&shy;му что xslt по&shy;хож толь&shy;ко на xslt, ну и не&shy;мно&shy;го на япон&shy;скую ани&shy;ма&shy;цию. И всьо. К че&shy;му это я? А к то&shy;му, что по&shy;ни&shy;маю все это от&shy;лич&shy;но, но все&shy;рав&shy;но не хо&shy;чу по не&shy;по&shy;нят&shy;ной мне при&shy;чи&shy;не де&shy;лать пра&shy;виль&shy;но. За&shy;чем-то для сво&shy;е&shy;го бло&shy;га вы&shy;брал smarty, из-за ко&shy;то&shy;ро&shy;го стра&shy;ни&shy;ца ге&shy;не&shy;ри&shy;ро&shy;ва&shy;лась по 5 се&shy;кунд, объ&shy;едав 3-5Mb па&shy;мя&shy;ти. Прав&shy;ду го&shy;во&shy;рят, что дол&shy;бо&shy;еб в сво&shy;их изо&shy;щре&shy;ни&shy;ях ре&shy;а&shy;ли&shy;за&shy;ции эле&shy;мен&shy;тар&shy;ной за&shy;да&shy;чи стре&shy;мит&shy;ся к бес&shy;ко&shy;неч&shy;но&shy;сти. При&shy;шлось за&shy;но&shy;во пе&shy;ре&shy;пи&shy;сы&shy;вать все отоб&shy;ра&shy;же&shy;ния на чи&shy;стом php. И за&shy;чем, спра&shy;ши&shy;ва&shy;ет&shy;ся? Вот к при&shy;ме&shy;ру, <a href="http://coffe-stain-blog.googlecode.com/svn/trunk/application/blog/views/rss.php">бы&shy;ло</a> на smarty и <a href="http://coffe-stain-blog.googlecode.com/svn/version/1.0/system/application/blog/views/rss.php">ста&shy;ло</a> на php, за&shy;то ле&shy;та&shy;ет те&shy;перь. За ком&shy;па&shy;нию прак&shy;ти&shy;че&shy;ски пол&shy;но&shy;стью пе&shy;ре&shy;де&shy;лал кон&shy;трол&shy;лер и мо&shy;дель бло&shy;га, упро&shy;стив за&shy;про&shy;сы. Те&shy;перь весь сайт кро&shy;ме ар&shy;хи&shy;ва со&shy;об&shy;ще&shy;ний смо&shy;жет ра&shy;бо&shy;тать на sqlite и postgresql - это про&shy;ве&shy;ре&shy;но, а те&shy;о&shy;ре&shy;ти&shy;че&shy;ски - на mssql, mysqli, oci8, odbc и дру&shy;гих, ко&shy;то&shy;рые под&shy;дер&shy;жи&shy;ва&shy;ют&shy;ся <a href="http://codeigniter.com/user_guide/database/active_record.html">active record</a> клас&shy;сом codeigniter. <a href="http://coffe-stain-blog.googlecode.com/svn/version/1.0/">Но&shy;вая вет&shy;ка</a> в svn, ап&shy;дей&shy;тесь, ко&shy;му ин&shy;те&shy;рес&shy;но по&shy;смот&shy;реть.
 		</div>
 
