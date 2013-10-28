@@ -4,7 +4,6 @@ blog_js_bundle = Bundle(
 	"assets/third-party/jquery/jquery.min.js",
 	"assets/third-party/jquery/jquery-migrate.min.js",
 	"assets/third-party/bootstrap/bootstrap.min.js",
-	"assets/third-party/retinajs/retina-1.1.0.min.js",
 
 	Bundle(
 		"assets/blog/general.js",
