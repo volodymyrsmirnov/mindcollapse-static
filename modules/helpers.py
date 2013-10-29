@@ -8,7 +8,7 @@ from collections import OrderedDict
 from hyphenator import Hyphenator
 from BeautifulSoup import BeautifulSoup, NavigableString
 
-import flask
+import flask 
 
 def get_data(module):
     index_path = os.path.join(flask.current_app.root_path, "data", module, ".index")

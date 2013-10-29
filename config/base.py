@@ -2,6 +2,8 @@ import markdown
 import pytils
 import os
 
+from flask import url_for
+
 class Config(object):
 	DEBUG = True
 
@@ -25,6 +27,7 @@ class Config(object):
 		"extensions": [
 			"toc",
 			"extra",
+			"modules.absoluter"
 			#"meta",
 			#"codehilite"
 		],
@@ -33,6 +36,10 @@ class Config(object):
 			"toc": [
 				("anchorlink", True),
 				("slugify", lambda s, sep: pytils.translit.slugify(s)),
+			],
+
+			"modules.absoluter": [
+				("base_url", lambda: url_for("blog.index", _external=True))
 			]
 		}
 	}
