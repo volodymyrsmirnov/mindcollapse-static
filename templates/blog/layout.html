@@ -28,16 +28,16 @@
         {% endif %}
 
         <meta property="og:title" content="{{ post.title }}">
-        <meta property="og:description" content="{{ post.content | striptags | truncate(300) | trim }}">
+        <meta property="og:description" content="{{ post.content | striptags | truncate(300) | trim | no_shy }}">
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="mindcollapse.com">
         <meta property="og:url" content="{{ url_for("blog.post", slug=post.slug, _external=True) }}">
 
-        <meta name="description" content="{{ post.content | striptags | truncate(160) | trim }}">
+        <meta name="description" content="{{ post.content | striptags | truncate(160) | trim | no_shy }}">
 
         <meta name="twitter:card" content="summary">
         <meta name="twitter:creator" content="@middlesizetit">
-        <meta name="twitter:description" content="{{ post.content | striptags | truncate(200) | trim }}">
+        <meta name="twitter:description" content="{{ post.content | striptags | truncate(200) | trim | no_shy }}">
         <meta name="twitter:title" content="{{ post.title | truncate(70) | trim }}">
     {% endif %}
 

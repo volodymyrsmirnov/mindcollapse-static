@@ -10,6 +10,9 @@ from BeautifulSoup import BeautifulSoup, NavigableString
 
 import flask 
 
+def no_shy(text):
+    return text.replace(u"\u00AD", "")
+
 def get_data(module):
     index_path = os.path.join(flask.current_app.root_path, "data", module, ".index")
 
