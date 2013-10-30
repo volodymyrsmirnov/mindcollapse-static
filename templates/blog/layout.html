@@ -35,10 +35,17 @@
 
         <meta name="description" content="{{ post.content | striptags | truncate(160) | trim | no_shy }}">
 
-        <meta name="twitter:card" content="summary">
         <meta name="twitter:creator" content="@middlesizetit">
         <meta name="twitter:description" content="{{ post.content | striptags | truncate(200) | trim | no_shy }}">
         <meta name="twitter:title" content="{{ post.title | truncate(70) | trim }}">
+
+        {% if post.first_image %}
+            <meta name="twitter:card" content="summary_large_image">
+            <meta property="og:image" content="{{ post.first_image }}" >
+            <meta name="twitter:image:src" content="{{ post.first_image }}">
+        {% else %}
+            <meta name="twitter:card" content="summary">
+        {% endif %}
     {% endif %}
 
     <link rel="author" href="https://plus.google.com/110904145311662435301">
@@ -61,7 +68,6 @@
 
 <body class="mindcollapse">
     <div class="container">
-
         <div class="header navbar navbar-default hidden-print" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">

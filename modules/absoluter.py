@@ -22,10 +22,18 @@ class AbsoluterExtension(Extension):
 
 class AbsoluterTreeprocessor(Treeprocessor):
     def run(self, root):
+        first_image = None
+
         imgs = root.getiterator("img")
+
         for image in imgs:
             if urlparse(image.attrib["src"]).scheme == "":
                 image.set("src", urljoin(self.config["base_url"](), image.attrib["src"]))
+
+            if not first_image:
+                first_image = image.attrib["src"]
+
+        self.markdown.first_image = first_image
 
 def makeExtension(configs=[]):
     return AbsoluterExtension(configs=configs)

@@ -22,11 +22,10 @@ def process_post(entry, content=True, hyphens=True):
 
         if post["type"] == "html": 
             post["content"] = post["raw_content"]
-            #post["metadata"] = {}
 
         elif post["type"] == "markdown": 
             post["content"] = flask.current_app.config["MD"].reset().convert(post["raw_content"]) 
-            #post["metadata"] = flask.current_app.config["MD"].Meta
+            post["first_image"] = flask.current_app.config["MD"].first_image
 
         if hyphens:
             post["content"] = hyphenate(post["content"])
