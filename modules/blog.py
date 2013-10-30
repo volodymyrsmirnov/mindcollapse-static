@@ -45,7 +45,7 @@ def register_assets():
 def nginx_redirect():
     first_post = get_data("blog").items()[0]
 
-    response = flask.make_response("return 307 {0}".format((flask.url_for("blog.post", slug=first_post[0], _external=True))))
+    response = flask.make_response("return 307 {0};".format((flask.url_for("blog.post", slug=first_post[0], _external=True))))
     response.headers["Content-Type"] = "text/plain"
     return response
 
