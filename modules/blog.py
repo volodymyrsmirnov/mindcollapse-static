@@ -41,10 +41,14 @@ def register_assets():
     cmdenv = CommandLineEnvironment(assets, flask.current_app.logger)
     cmdenv.build()
 
+@blog.route("/nginx_redirect.conf")
+def nginx_redirect():
+    first_post = get_data("blog").items()[0]
+    return "return 307 {0}".format((flask.url_for("blog.post", slug=first_post[0], _external=True)))
+
 @blog.route("/")
 def index():
-    first_post = get_data("blog").items()[0]
-    return flask.redirect(flask.url_for("blog.post", slug=first_post[0]))
+    return ""
 
 @blog.route("/404.html")
 def error_404():
