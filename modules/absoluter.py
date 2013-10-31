@@ -24,16 +24,28 @@ class AbsoluterTreeprocessor(Treeprocessor):
     def run(self, root):
         first_image = None
 
+        base_url = self.config["base_url"]()
+
         imgs = root.getiterator("img")
 
         for image in imgs:
             if urlparse(image.attrib["src"]).scheme == "":
-                image.set("src", urljoin(self.config["base_url"](), image.attrib["src"]))
+                image.set("src", urljoin(base_url, image.attrib["src"]))
 
             if not first_image:
                 first_image = image.attrib["src"]
 
         self.markdown.first_image = first_image
+
+        links = root.getiterator("a")
+
+        for link in links:
+            parsed_link = urlparse(link.attrib["href"])
+
+            if not parsed_link.scheme and not parsed_link.netloc:
+                link.set("href", urljoin(base_url, link.attrib["href"]))
+            elif parsed_link.netloc and parsed_link.netloc not in base_url:
+                link.set("rel", "nofollow")
 
 def makeExtension(configs=[]):
     return AbsoluterExtension(configs=configs)
