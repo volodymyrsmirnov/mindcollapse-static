@@ -50,8 +50,11 @@ def nginx_redirect():
     return response
 
 @blog.route("/")
+@blog.route("/blog/")
 def index():
-    return ""
+    first_post = get_data("blog").items()[0]
+
+    return flask.redirect(flask.url_for("blog.post", slug=first_post[0]))
 
 @blog.route("/404.html")
 def error_404():

@@ -24,7 +24,7 @@ $(function(){
 
 			e.originalEvent.clipboardData.setData("Text", selected_text);
 		}
-	})
+	});
 
 	// keyboard navigation
 	$(window).on("keyup", function(e){
@@ -45,6 +45,14 @@ $(function(){
 				document.location.href = newloc;
 			}
 		}
-	})
+	});
+
+	// open post full size images in new tab on click if window width < 900px;
+	// made for mobile image responsible problem solution
+	$(".content img").click(function(){
+		if ($(window).width() <= 900) {
+			window.open($(this).attr("src"), "_blank");
+		}
+	});
 })
 
