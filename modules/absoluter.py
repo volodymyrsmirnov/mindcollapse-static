@@ -42,7 +42,7 @@ class AbsoluterTreeprocessor(Treeprocessor):
         for link in links:
             parsed_link = urlparse(link.attrib["href"])
 
-            if not parsed_link.scheme and not parsed_link.netloc:
+            if not parsed_link.scheme and not parsed_link.netloc and parsed_link.path:
                 link.set("href", urljoin(base_url, link.attrib["href"]))
             elif parsed_link.netloc and parsed_link.netloc not in base_url:
                 link.set("rel", "nofollow")
