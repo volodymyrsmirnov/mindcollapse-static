@@ -50,7 +50,6 @@ def nginx_redirect():
     return response
 
 @blog.route("/")
-@blog.route("/blog/")
 def index():
     first_post = get_data("blog").items()[0]
 
