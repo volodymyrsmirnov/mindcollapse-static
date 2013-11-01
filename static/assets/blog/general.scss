@@ -1,4 +1,6 @@
 .mindcollapse {
+
+    -webkit-font-smoothing: subpixel-antialiased;
     
     .container {
         max-width: 930px;
@@ -130,6 +132,18 @@
                 display: block;
                 height: auto;
                 max-width: 100%;
+
+                /* Don't blur, but pixelate on retina screens */
+                image-rendering: -moz-crisp-edges;
+                image-rendering: -o-crisp-edges;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+                -ms-interpolation-mode: nearest-neighbor;
+
+                background-color: #f5f5f5;
+                background-image: url(/static/images/loading.gif);
+                background-repeat: no-repeat;
+                background-position: center; 
             }
         }
 
