@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
+            <loc>http://www.mindcollapse.com/blog/pegasus.html</loc>
+            <lastmod>2014-01-02</lastmod>
+    </url>
+
+    <url>
             <loc>http://www.mindcollapse.com/blog/asia.html</loc>
             <lastmod>2013-12-16</lastmod>
     </url>
