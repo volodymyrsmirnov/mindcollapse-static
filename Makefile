@@ -4,7 +4,7 @@ freeze:
 	$(PYTHON_BIN) manage.py freeze
 
 deploy: freeze
-	cd static/
+	cd build/
 	git add .
 	git commit -m "regenerated"
 	git push
