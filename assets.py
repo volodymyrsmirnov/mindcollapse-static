@@ -2,13 +2,11 @@ from flask.ext.assets import Bundle
 
 blog_js_bundle = Bundle(
 	"assets/third-party/jquery/jquery.min.js",
-	"assets/third-party/jquery/jquery-migrate.min.js",
 	"assets/third-party/bootstrap/bootstrap.min.js",
 
 	Bundle(
-		"assets/blog/general.js",
-
-		filters="rjsmin"
+		"assets/blog/general.coffee",
+		filters="coffeescript, rjsmin"
 	),
 
     output="compiled/blog.js"

@@ -12,11 +12,15 @@ from modules.helpers import get_data, get_content, hyphenate
 blog = flask.Blueprint("blog", __name__)
 
 def process_post(entry, content=True, hyphens=True):
-    post = {}
+    post = {
+        "slug": entry[0],
+        "date": entry[1],
+        "title": entry[2],
+        "file": entry[3],
+        "type": entry[4],
+        "parsed_date": datetime.datetime.strptime(entry[1], "%Y-%m-%d"),
+    }
 
-    post["slug"], post["date"], post["title"], post["file"], post["type"] = entry
-    post["parsed_date"] = datetime.datetime.strptime(post["date"], "%Y-%m-%d")
-    
     if content:
         post["raw_content"] = get_content("blog", post["file"])
 
@@ -38,79 +42,89 @@ def register_assets():
     assets.register("blog_js", blog_js_bundle)
     assets.register("blog_css", blog_css_bundle)
 
-    cmdenv = CommandLineEnvironment(assets, flask.current_app.logger)
-    cmdenv.build()
+    CommandLineEnvironment(assets, flask.current_app.logger).build()
 
 @blog.route("/nginx_redirect.conf")
 def nginx_redirect():
-    first_post = get_data("blog").items()[0]
-
-    response = flask.make_response("return 307 {0};".format((flask.url_for("blog.post", slug=first_post[0], _external=True))))
-    response.headers["Content-Type"] = "text/plain"
-    return response
+    return flask.Response(
+        "return 307 {0};".format(
+            flask.url_for(
+                "blog.post", 
+                slug=get_data("blog").items()[0][0], 
+                _external=True
+            )
+        ),
+        mimetype="text/plain"
+    )
 
 @blog.route("/")
 def index():
-    first_post = get_data("blog").items()[0]
-
-    return flask.redirect(flask.url_for("blog.post", slug=first_post[0]))
+    return flask.redirect(
+        flask.url_for(
+            "blog.post", 
+            slug=get_data("blog").items()[0][0]
+        )
+    )
 
 @blog.route("/404.html")
 def error_404():
-    return flask.render_template("blog/404.html")
+    return flask.render_template(
+        "blog/404.html"
+    )
 
 @blog.route("/blog/archive/")
 def archive():
-    posts = []
+    posts = [
+        {
+            "slug": entry[1][0],
+            "date": entry[1][1],
+            "title": entry[1][2],
+            "file": entry[1][3],
+            "type": entry[1][4],
+            "parsed_date": datetime.datetime.strptime(entry[1][1], "%Y-%m-%d"),
 
-    for entry in get_data("blog").items():
-        post = {}
-        post["slug"], post["date"], post["title"], post["file"], post["type"] = entry[1]
-        post["parsed_date"] = datetime.datetime.strptime(post["date"], "%Y-%m-%d")
+        } for entry in get_data("blog").items()
+    ]
 
-        posts.append(post)
-
-    return flask.render_template("blog/archive.html", posts=posts)
+    return flask.render_template(
+        "blog/archive.html", 
+        posts=posts
+    )
     
 @blog.route("/blog/<slug>.html")
 def post(slug):
     entries = get_data("blog")
 
-    if not slug in entries:
-        return flask.abort(404)
-
-    next_slug = None
-    prev_slug = None
-
     entries_keys = entries.keys()
-    current_slug_index = entries_keys.index(slug)
 
-    if not slug == entries_keys[-1]:
-        next_slug = entries_keys[current_slug_index + 1]
+    next_slug = entries_keys[entries_keys.index(slug) + 1] if slug != entries_keys[-1] else None
+    prev_slug = entries_keys[entries_keys.index(slug) - 1] if slug != entries_keys[0] else None
 
-    if not slug == entries_keys[0]:
-        prev_slug = entries_keys[current_slug_index - 1]   
-
-    return flask.render_template("blog/post.html", post=process_post(entries[slug]), next_slug=next_slug, prev_slug=prev_slug)
+    return flask.render_template(
+        "blog/post.html", 
+        post=process_post(entries[slug]), 
+        next_slug=next_slug, 
+        prev_slug=prev_slug
+    )
 
 @blog.route("/blog.xml")
 def rss():
-    posts = []
+    posts = [
+        process_post(post, hyphens=False) for post in get_data("blog").values()[0:8]
+    ]
 
-    for post in get_data("blog").values()[0:8]:
-        posts.append(process_post(post, hyphens=False))
-
-    response = flask.make_response(flask.render_template("blog/rss.xml", posts=posts))
-    response.headers["Content-Type"] = "application/xml"
-    return response
+    return flask.Response(
+        flask.render_template("blog/rss.xml", posts=posts),
+        mimetype="application/xml"
+    )
 
 @blog.route("/blog/sitemap.xml")
 def sitemap():
-    posts = []
+    posts = [
+        process_post(post, content=False) for post in get_data("blog").values()
+    ]
 
-    for post in get_data("blog").values():
-        posts.append(process_post(post, content=False))
-
-    response = flask.make_response(flask.render_template("blog/sitemap.xml", posts=posts))
-    response.headers["Content-Type"] = "application/xml"
-    return response
+    return flask.Response(
+        flask.render_template("blog/sitemap.xml", posts=posts),
+        mimetype="application/xml"
+    )

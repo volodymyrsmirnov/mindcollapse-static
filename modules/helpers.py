@@ -1,12 +1,11 @@
 import os
-import glob
 import json
 import re
 
 from collections import OrderedDict
 
 from hyphenator import Hyphenator
-from BeautifulSoup import BeautifulSoup, NavigableString
+from BeautifulSoup import BeautifulSoup
 
 import flask 
 

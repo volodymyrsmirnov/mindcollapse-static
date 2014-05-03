@@ -3,22 +3,26 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">{{ post.title }}</a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}" class="text-muted updated">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">{{ post.title }}</a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}" class="text-muted updated">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			{{ post.content | safe  }}
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="{{ url_for("blog.archive") }}">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}&amp;text={{ post.title | urlencode }}&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            {{ post.content | safe  }}
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="{{ url_for("blog.archive") }}">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}&amp;text={{ post.title | urlencode }}&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url={{ url_for("blog.post", slug=post.slug, _external=True) | urlencode }}">вконтакте</a></span>.</p>
+        </div>
+    </div>
 {% endblock %}

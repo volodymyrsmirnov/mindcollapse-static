@@ -9,7 +9,7 @@ manager = Manager(app)
 
 @manager.command
 def freeze():
-	freezer.freeze()
+    freezer.freeze()
 
 if __name__ == "__main__":
     manager.run()

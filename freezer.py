@@ -9,6 +9,3 @@ freezer = Freezer(app)
 def blog_post():
     for slug in get_data("blog"):
         yield ("blog.post", {"slug": slug})
-
-
-

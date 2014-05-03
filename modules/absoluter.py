@@ -8,7 +8,7 @@ import flask
 class AbsoluterExtension(Extension):
     def __init__(self, configs=[]):
         self.config = {
-            'base_url': [None, "Base URL"],
+            "base_url": [None, "Base URL"],
         }
 
         for key, value in configs:
