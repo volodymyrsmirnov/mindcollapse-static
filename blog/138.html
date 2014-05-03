@@ -49,11 +49,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?efdf9ffc" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?1301e2a5" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?4ecc0a3d"></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?d674d418"></script>
     
 
     <!--[if lt IE 9]>
@@ -91,24 +91,28 @@
         </div>
 
         
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/138.html">JS + PHP инкрементор чего-либо</a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="2008-08-02T00:00:00Z" class="text-muted updated">2 августа 2008 г.</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/138.html">JS + PHP инкрементор чего-либо</a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-08-02T00:00:00Z" class="text-muted updated">2 августа 2008 г.</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			На мно&shy;гих ре&shy;сур&shy;сах ста&shy;ло по&shy;пу&shy;ляр&shy;ным раз&shy;ме&shy;щать ин&shy;фор&shy;ма&shy;цию по ти&shy;пу "на на&shy;шем сай&shy;те за&shy;ре&shy;ге&shy;стри&shy;ро&shy;ва&shy;но 17.128.345 поль&shy;зо&shy;ва&shy;те&shy;лей", ли&shy;бо "мы предо&shy;став&shy;ля&shy;ем 6990.1569 МБ для ва&shy;ше&shy;го по&shy;что&shy;во&shy;го ящи&shy;ка". При чем дан&shy;ная ин&shy;фор&shy;ма&shy;ция об&shy;нов&shy;ля&shy;ет&shy;ся на стра&shy;ни&shy;це в ре&shy;аль&shy;ном вре&shy;ме&shy;ни (на&shy;при&shy;мер - <a href="http://gmail.com/">gmail</a>, <a href="http://vkontakte.ru">vkontakte</a>). Дан&shy;ный трюк яв&shy;ля&shy;ет&shy;ся пер&shy;во&shy;класс&shy;ной за&shy;вле&shy;ка&shy;лов&shy;кой, ко&shy;то&shy;рая ра&shy;с&shy;чи&shy;та&shy;на преж&shy;де все&shy;го на стад&shy;ный ин&shy;стинкт ("а я шо, ле&shy;вый?") или при&shy;род&shy;ную жад&shy;ность (ра&shy;ци&shy;о&shy;наль&shy;ность, ага) че&shy;ло&shy;ве&shy;ка - в за&shy;ви&shy;си&shy;мо&shy;сти от смыс&shy;ла тек&shy;ста.На сво&shy;ем сай&shy;те по&shy;доб&shy;ное мож&shy;но ре&shy;а&shy;ли&shy;зо&shy;вать дву&shy;мя спо&shy;со&shy;ба&shy;ми. Пер&shy;вый это AJAX. Ва&shy;ри&shy;ант до&shy;ста&shy;точ&shy;но не&shy;пло&shy;хой, точ&shy;ный, но со&shy;зда&shy;ет лиш&shy;ние за&shy;про&shy;сы к сер&shy;ве&shy;ру. И вто&shy;рой - с по&shy;мо&shy;щью JS. Тут то&shy;же есть два пу&shy;ти: если ин&shy;кре&shy;мен&shy;тор ста&shy;ти&shy;че&shy;ский (к при&shy;ме&shy;ру каж&shy;дую ми&shy;ну&shy;ту до&shy;бав&shy;лять поль&shy;зо&shy;ва&shy;те&shy;лю в ак&shy;каунт по 10 КБ без из&shy;ме&shy;не&shy;ний), то до&shy;ста&shy;точ&shy;но од&shy;но&shy;го JS скрип&shy;та. Если же он ди&shy;на&shy;ми&shy;че&shy;ский, то тут не обой&shy;тись без server-side, ведь при его из&shy;ме&shy;не&shy;нии (пе&shy;ре&shy;счет ко&shy;ли&shy;че&shy;ства ре&shy;ги&shy;стра&shy;ций, уста&shy;нов&shy;ка еще па&shy;ру де&shy;сят&shy;ков дис&shy;ков в мас&shy;сив) бу&shy;дет пол&shy;но&shy;стью пе&shy;ре&shy;счи&shy;ты&shy;вать&shy;ся чис&shy;ло, что бу&shy;дет до&shy;ста&shy;точ&shy;но за&shy;мет&shy;ным, осо&shy;бен&shy;но при умень&shy;ше&shy;нии ко&shy;эф&shy;фи&shy;ци&shy;ен&shy;та. Так вот, я на&shy;пи&shy;сал не&shy;боль&shy;шой хел&shy;пер, ко&shy;то&shy;рый по&shy;мо&shy;жет без лиш&shy;них уси&shy;лий ге&shy;не&shy;ри&shy;ро&shy;вать по&shy;доб&shy;ные ти&shy;ке&shy;ры, хра&shy;ня про&shy;ме&shy;жу&shy;точ&shy;ный ре&shy;зуль&shy;тат в фай&shy;ло&shy;вом ке&shy;ше. Функ&shy;ция counter_js ($increment, $routdto, $update_rate), где $increment - float, ну или integer, ко&shy;то&shy;рый до&shy;бав&shy;ля&shy;ет&shy;ся к те&shy;ку&shy;ще&shy;му ре&shy;зуль&shy;та&shy;ту каж&shy;дую се&shy;кун&shy;ду; $routdto - ко&shy;ли&shy;че&shy;ство чи&shy;сел по&shy;сле за&shy;пя&shy;той в ре&shy;зуль&shy;та&shy;те; $update_rate - вре&shy;мя об&shy;нов&shy;ле&shy;ния ке&shy;ша в се&shy;кун&shy;дах. При&shy;мер мож&shy;но по&shy;смот&shy;реть <a href="/media/etc/PHP/inc/">тут</a>, а ис&shy;ход&shy;ный код <a href="/media/etc/PHP/inc/source.phps">тут</a>. Все эле&shy;мен&shy;та&shy;но про&shy;сто.
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/138.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/138.html&amp;text=JS%20%2B%20PHP%20%D0%B8%D0%BD%D0%BA%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%20%D1%87%D0%B5%D0%B3%D0%BE-%D0%BB%D0%B8%D0%B1%D0%BE&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/138.html">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            На мно&shy;гих ре&shy;сур&shy;сах ста&shy;ло по&shy;пу&shy;ляр&shy;ным раз&shy;ме&shy;щать ин&shy;фор&shy;ма&shy;цию по ти&shy;пу "на на&shy;шем сай&shy;те за&shy;ре&shy;ге&shy;стри&shy;ро&shy;ва&shy;но 17.128.345 поль&shy;зо&shy;ва&shy;те&shy;лей", ли&shy;бо "мы предо&shy;став&shy;ля&shy;ем 6990.1569 МБ для ва&shy;ше&shy;го по&shy;что&shy;во&shy;го ящи&shy;ка". При чем дан&shy;ная ин&shy;фор&shy;ма&shy;ция об&shy;нов&shy;ля&shy;ет&shy;ся на стра&shy;ни&shy;це в ре&shy;аль&shy;ном вре&shy;ме&shy;ни (на&shy;при&shy;мер - <a href="http://gmail.com/">gmail</a>, <a href="http://vkontakte.ru">vkontakte</a>). Дан&shy;ный трюк яв&shy;ля&shy;ет&shy;ся пер&shy;во&shy;класс&shy;ной за&shy;вле&shy;ка&shy;лов&shy;кой, ко&shy;то&shy;рая ра&shy;с&shy;чи&shy;та&shy;на преж&shy;де все&shy;го на стад&shy;ный ин&shy;стинкт ("а я шо, ле&shy;вый?") или при&shy;род&shy;ную жад&shy;ность (ра&shy;ци&shy;о&shy;наль&shy;ность, ага) че&shy;ло&shy;ве&shy;ка - в за&shy;ви&shy;си&shy;мо&shy;сти от смыс&shy;ла тек&shy;ста.На сво&shy;ем сай&shy;те по&shy;доб&shy;ное мож&shy;но ре&shy;а&shy;ли&shy;зо&shy;вать дву&shy;мя спо&shy;со&shy;ба&shy;ми. Пер&shy;вый это AJAX. Ва&shy;ри&shy;ант до&shy;ста&shy;точ&shy;но не&shy;пло&shy;хой, точ&shy;ный, но со&shy;зда&shy;ет лиш&shy;ние за&shy;про&shy;сы к сер&shy;ве&shy;ру. И вто&shy;рой - с по&shy;мо&shy;щью JS. Тут то&shy;же есть два пу&shy;ти: если ин&shy;кре&shy;мен&shy;тор ста&shy;ти&shy;че&shy;ский (к при&shy;ме&shy;ру каж&shy;дую ми&shy;ну&shy;ту до&shy;бав&shy;лять поль&shy;зо&shy;ва&shy;те&shy;лю в ак&shy;каунт по 10 КБ без из&shy;ме&shy;не&shy;ний), то до&shy;ста&shy;точ&shy;но од&shy;но&shy;го JS скрип&shy;та. Если же он ди&shy;на&shy;ми&shy;че&shy;ский, то тут не обой&shy;тись без server-side, ведь при его из&shy;ме&shy;не&shy;нии (пе&shy;ре&shy;счет ко&shy;ли&shy;че&shy;ства ре&shy;ги&shy;стра&shy;ций, уста&shy;нов&shy;ка еще па&shy;ру де&shy;сят&shy;ков дис&shy;ков в мас&shy;сив) бу&shy;дет пол&shy;но&shy;стью пе&shy;ре&shy;счи&shy;ты&shy;вать&shy;ся чис&shy;ло, что бу&shy;дет до&shy;ста&shy;точ&shy;но за&shy;мет&shy;ным, осо&shy;бен&shy;но при умень&shy;ше&shy;нии ко&shy;эф&shy;фи&shy;ци&shy;ен&shy;та. Так вот, я на&shy;пи&shy;сал не&shy;боль&shy;шой хел&shy;пер, ко&shy;то&shy;рый по&shy;мо&shy;жет без лиш&shy;них уси&shy;лий ге&shy;не&shy;ри&shy;ро&shy;вать по&shy;доб&shy;ные ти&shy;ке&shy;ры, хра&shy;ня про&shy;ме&shy;жу&shy;точ&shy;ный ре&shy;зуль&shy;тат в фай&shy;ло&shy;вом ке&shy;ше. Функ&shy;ция counter_js ($increment, $routdto, $update_rate), где $increment - float, ну или integer, ко&shy;то&shy;рый до&shy;бав&shy;ля&shy;ет&shy;ся к те&shy;ку&shy;ще&shy;му ре&shy;зуль&shy;та&shy;ту каж&shy;дую се&shy;кун&shy;ду; $routdto - ко&shy;ли&shy;че&shy;ство чи&shy;сел по&shy;сле за&shy;пя&shy;той в ре&shy;зуль&shy;та&shy;те; $update_rate - вре&shy;мя об&shy;нов&shy;ле&shy;ния ке&shy;ша в се&shy;кун&shy;дах. При&shy;мер мож&shy;но по&shy;смот&shy;реть <a href="/media/etc/PHP/inc/">тут</a>, а ис&shy;ход&shy;ный код <a href="/media/etc/PHP/inc/source.phps">тут</a>. Все эле&shy;мен&shy;та&shy;но про&shy;сто.
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/138.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/138.html&amp;text=JS%20%2B%20PHP%20%D0%B8%D0%BD%D0%BA%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80%20%D1%87%D0%B5%D0%B3%D0%BE-%D0%BB%D0%B8%D0%B1%D0%BE&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/138.html">вконтакте</a></span>.</p>
+        </div>
+    </div>
 
     </div>   
 </body>

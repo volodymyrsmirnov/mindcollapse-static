@@ -49,11 +49,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?efdf9ffc" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?1301e2a5" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?4ecc0a3d"></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?d674d418"></script>
     
 
     <!--[if lt IE 9]>
@@ -91,24 +91,28 @@
         </div>
 
         
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/73.html">GoogleMaps + Geonames</a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="2007-07-26T00:00:00Z" class="text-muted updated">26 июля 2007 г.</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/73.html">GoogleMaps + Geonames</a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="2007-07-26T00:00:00Z" class="text-muted updated">26 июля 2007 г.</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			В про&shy;цес&shy;се ре&shy;а&shy;ли&shy;за&shy;ции од&shy;ной идеи столк&shy;нул&shy;ся с про&shy;бле&shy;мой, <a href="http://maps.google.com">Google Maps</a> на&shy;прочь от&shy;ка&shy;зы&shy;вал&shy;ся ра&shy;бо&shy;тать с рус&shy;ским псев&shy;до&shy;ни&shy;ма&shy;ми за&shy;бу&shy;гор&shy;ных го&shy;ро&shy;дов. К при&shy;ме&shy;ру, ве&shy;ли&shy;кая сто&shy;ли&shy;ца ве&shy;ли&shy;кой стра&shy;ны Япо&shy;нии на ве&shy;ли&shy;ком рус&shy;ском язы&shy;ке най&shy;де&shy;на не бы&shy;ла: <p class="message">Your search for То&shy;кио around this map area did not match any locations.</p>Не&shy;со&shy;мнен&shy;но, од&shy;ним из луч&shy;ших php клас&shy;сов для ра&shy;бо&shy;ты с <a href="http://maps.google.com">google maps</a> яв&shy;ля&shy;ет&shy;ся <a href="http://www.phpinsider.com/php/code/GoogleMapAPI/">PHP GoogleMapAPI by Monte Ohrt</a>, но, увы и ах, он ра&shy;бо&shy;та&shy;ет толь&shy;ко с <a href="http://google.com">google</a> и <a href="http://yahoo.com">yahoo!</a> geocode API, пер&shy;вый из ко&shy;то&shy;рых пе&shy;ре&shy;нес мой род&shy;ной го&shy;род Су&shy;мы на до&shy;брую сот&shy;ню ки&shy;ло&shy;мет&shy;ров юж&shy;нее, а вто&shy;рой - в свет&shy;лую стра&shy;ну Аме&shy;ри&shy;ку. Есте&shy;ствен&shy;но, по&shy;гуглив, бы&shy;ло най&shy;де&shy;но ре&shy;ше&shy;ние - <a href="http://www.geonames.org/">geonames</a>.Ви&shy;до&shy;из&shy;менён&shy;ный мною класс с под&shy;держ&shy;кой geonames lookup service вер&shy;сии<p class="message">/* $Id: GoogleMapAPI.class.php,v 1.61 2007/06/06 20:32:31 clark Exp $ */</p>мож&shy;но ска&shy;чать по ссыл&shy;ке: <a href="/media/etc/PHP/GoogleMapAPI.class.php.tar.gz">/media/etc/PHP/GoogleMapAPI.class.php.tar.gz</a>Как это ра&shy;бо&shy;та&shy;ет мож&shy;но по&shy;смот&shy;реть по ссыл&shy;ке: <a href="http://www.mindcollapse.com/lab/gmaps/">http://www.mindcollapse.com/lab/gmaps/</a>В клас&shy;се по умол&shy;ча&shy;нию все еще уста&shy;нов&shy;лен google geocode, для вклю&shy;че&shy;ния geonames - <i>$map-&gt;setLookupService ('GEONAMES');</i>
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/73.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/73.html&amp;text=GoogleMaps%20%2B%20Geonames&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/73.html">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            В про&shy;цес&shy;се ре&shy;а&shy;ли&shy;за&shy;ции од&shy;ной идеи столк&shy;нул&shy;ся с про&shy;бле&shy;мой, <a href="http://maps.google.com">Google Maps</a> на&shy;прочь от&shy;ка&shy;зы&shy;вал&shy;ся ра&shy;бо&shy;тать с рус&shy;ским псев&shy;до&shy;ни&shy;ма&shy;ми за&shy;бу&shy;гор&shy;ных го&shy;ро&shy;дов. К при&shy;ме&shy;ру, ве&shy;ли&shy;кая сто&shy;ли&shy;ца ве&shy;ли&shy;кой стра&shy;ны Япо&shy;нии на ве&shy;ли&shy;ком рус&shy;ском язы&shy;ке най&shy;де&shy;на не бы&shy;ла: <p class="message">Your search for То&shy;кио around this map area did not match any locations.</p>Не&shy;со&shy;мнен&shy;но, од&shy;ним из луч&shy;ших php клас&shy;сов для ра&shy;бо&shy;ты с <a href="http://maps.google.com">google maps</a> яв&shy;ля&shy;ет&shy;ся <a href="http://www.phpinsider.com/php/code/GoogleMapAPI/">PHP GoogleMapAPI by Monte Ohrt</a>, но, увы и ах, он ра&shy;бо&shy;та&shy;ет толь&shy;ко с <a href="http://google.com">google</a> и <a href="http://yahoo.com">yahoo!</a> geocode API, пер&shy;вый из ко&shy;то&shy;рых пе&shy;ре&shy;нес мой род&shy;ной го&shy;род Су&shy;мы на до&shy;брую сот&shy;ню ки&shy;ло&shy;мет&shy;ров юж&shy;нее, а вто&shy;рой - в свет&shy;лую стра&shy;ну Аме&shy;ри&shy;ку. Есте&shy;ствен&shy;но, по&shy;гуглив, бы&shy;ло най&shy;де&shy;но ре&shy;ше&shy;ние - <a href="http://www.geonames.org/">geonames</a>.Ви&shy;до&shy;из&shy;менён&shy;ный мною класс с под&shy;держ&shy;кой geonames lookup service вер&shy;сии<p class="message">/* $Id: GoogleMapAPI.class.php,v 1.61 2007/06/06 20:32:31 clark Exp $ */</p>мож&shy;но ска&shy;чать по ссыл&shy;ке: <a href="/media/etc/PHP/GoogleMapAPI.class.php.tar.gz">/media/etc/PHP/GoogleMapAPI.class.php.tar.gz</a>Как это ра&shy;бо&shy;та&shy;ет мож&shy;но по&shy;смот&shy;реть по ссыл&shy;ке: <a href="http://www.mindcollapse.com/lab/gmaps/">http://www.mindcollapse.com/lab/gmaps/</a>В клас&shy;се по умол&shy;ча&shy;нию все еще уста&shy;нов&shy;лен google geocode, для вклю&shy;че&shy;ния geonames - <i>$map-&gt;setLookupService ('GEONAMES');</i>
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/73.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/73.html&amp;text=GoogleMaps%20%2B%20Geonames&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/73.html">вконтакте</a></span>.</p>
+        </div>
+    </div>
 
     </div>   
 </body>

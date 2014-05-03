@@ -49,11 +49,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?efdf9ffc" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?1301e2a5" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?4ecc0a3d"></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?d674d418"></script>
     
 
     <!--[if lt IE 9]>
@@ -91,24 +91,28 @@
         </div>
 
         
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/177.html">MySQL БД синонимов русского языка</a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="2009-01-16T00:00:00Z" class="text-muted updated">16 января 2009 г.</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/177.html">MySQL БД синонимов русского языка</a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="2009-01-16T00:00:00Z" class="text-muted updated">16 января 2009 г.</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			Как-то по&shy;на&shy;до&shy;би&shy;лась мне для ре&shy;а&shy;ли&shy;за&shy;ции идеи по оп&shy;ти&shy;ми&shy;за&shy;ции вы&shy;да&shy;чи по&shy;ис&shy;ко&shy;вых за&shy;про&shy;сов на сай&shy;те од&shy;но&shy;го ла&shy;ба&shy;за сло&shy;варь си&shy;но&shy;ни&shy;мов рус&shy;ско&shy;го язы&shy;ка в ви&shy;де mysql или sqlite ба&shy;зы дан&shy;ных. Гугл по за&shy;про&shy;сам вы&shy;да&shy;вал лишь б-го&shy;мерз&shy;кие сай&shy;ты аля пла&shy;ти.ру и про&shy;чую ком&shy;мер&shy;че&shy;скую ху&shy;и&shy;ту, где эти ба&shy;зы дан&shy;ных мож&shy;но бы&shy;ло ска&shy;чать, от&shy;пра&shy;вив смс-ку на ко&shy;то&shy;рот&shy;кий но&shy;мер сто&shy;и&shy;мо&shy;стью под 15 бак&shy;сов. Из-за ге&shy;не&shy;ти&shy;че&shy;ско&shy;го ин&shy;стинк&shy;та жад&shy;но&shy;сти, пла&shy;тить ба&shy;ры&shy;гам не хо&shy;те&shy;лось. И в то же вре&shy;мя в ин&shy;тер&shy;не&shy;тах бы&shy;ли най&shy;де&shy;ны де&shy;сят&shy;ки сло&shy;ва&shy;рей в фор&shy;ма&shy;те txt, ко&shy;то&shy;рые я и ре&shy;шил разо&shy;брать в mysql. Про&shy;цесс длил&shy;ся ни мно&shy;го не ма&shy;ло - це&shy;лые сут&shy;ки, в ре&shy;зуль&shy;та&shy;те по&shy;лу&shy;чи&shy;лась mysql ба&shy;за дан&shy;ных на 193409 слов и раз&shy;ме&shy;ром sql фай&shy;ла на 11 с лиш&shy;ним ме&shy;га&shy;байт. Ска&shy;чать ре&shy;зуль&shy;тат в сдав&shy;лен&shy;ном zip-ом ви&shy;де мож&shy;но вот тут: <a href="/media/etc/rus_synonyms_mysql.zip">rus_synonyms_mysql.zip</a> (~3,3 mb). Па&shy;ру слов о том, как ис&shy;поль&shy;зо&shy;вать. Для на&shy;ча&shy;ла по&shy;лу&shy;ча&shy;е&shy;те id сло&shy;ва за&shy;про&shy;сом <em>SELECT id FROM words WHERE word='Про&shy;фит'</em>. По&shy;сле это&shy;го по&shy;лу&shy;ча&shy;ем спи&shy;сок си&shy;но&shy;ни&shy;мов <em>SELECT w_id, s_id FROM synonyms WHERE w_id='1234' or s_id='1234'</em>. Сор&shy;ти&shy;ру&shy;ем по&shy;вто&shy;ря&shy;ю&shy;щи&shy;е&shy;ся зна&shy;че&shy;ния и за&shy;би&shy;ра&shy;ем сло&shy;ва-си&shy;но&shy;ни&shy;мы <em>SELECT word FROM words WHERE id IN (1,2,3,4,5 ...).</em> Ум&shy;ные дядь&shy;ки объ&shy;еди&shy;нят все за&shy;про&shy;сы в один боль&shy;шой и бу&shy;дут счаст&shy;ли&shy;вы. Да, сло&shy;ва "хуй" (3991 си&shy;но&shy;ним) и "Ле&shy;нин" (10 си&shy;но&shy;ни&shy;мов) в ба&shy;зе име&shy;ют&shy;ся.
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/177.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/177.html&amp;text=MySQL%20%D0%91%D0%94%20%D1%81%D0%B8%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BE%D0%B2%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/177.html">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            Как-то по&shy;на&shy;до&shy;би&shy;лась мне для ре&shy;а&shy;ли&shy;за&shy;ции идеи по оп&shy;ти&shy;ми&shy;за&shy;ции вы&shy;да&shy;чи по&shy;ис&shy;ко&shy;вых за&shy;про&shy;сов на сай&shy;те од&shy;но&shy;го ла&shy;ба&shy;за сло&shy;варь си&shy;но&shy;ни&shy;мов рус&shy;ско&shy;го язы&shy;ка в ви&shy;де mysql или sqlite ба&shy;зы дан&shy;ных. Гугл по за&shy;про&shy;сам вы&shy;да&shy;вал лишь б-го&shy;мерз&shy;кие сай&shy;ты аля пла&shy;ти.ру и про&shy;чую ком&shy;мер&shy;че&shy;скую ху&shy;и&shy;ту, где эти ба&shy;зы дан&shy;ных мож&shy;но бы&shy;ло ска&shy;чать, от&shy;пра&shy;вив смс-ку на ко&shy;то&shy;рот&shy;кий но&shy;мер сто&shy;и&shy;мо&shy;стью под 15 бак&shy;сов. Из-за ге&shy;не&shy;ти&shy;че&shy;ско&shy;го ин&shy;стинк&shy;та жад&shy;но&shy;сти, пла&shy;тить ба&shy;ры&shy;гам не хо&shy;те&shy;лось. И в то же вре&shy;мя в ин&shy;тер&shy;не&shy;тах бы&shy;ли най&shy;де&shy;ны де&shy;сят&shy;ки сло&shy;ва&shy;рей в фор&shy;ма&shy;те txt, ко&shy;то&shy;рые я и ре&shy;шил разо&shy;брать в mysql. Про&shy;цесс длил&shy;ся ни мно&shy;го не ма&shy;ло - це&shy;лые сут&shy;ки, в ре&shy;зуль&shy;та&shy;те по&shy;лу&shy;чи&shy;лась mysql ба&shy;за дан&shy;ных на 193409 слов и раз&shy;ме&shy;ром sql фай&shy;ла на 11 с лиш&shy;ним ме&shy;га&shy;байт. Ска&shy;чать ре&shy;зуль&shy;тат в сдав&shy;лен&shy;ном zip-ом ви&shy;де мож&shy;но вот тут: <a href="/media/etc/rus_synonyms_mysql.zip">rus_synonyms_mysql.zip</a> (~3,3 mb). Па&shy;ру слов о том, как ис&shy;поль&shy;зо&shy;вать. Для на&shy;ча&shy;ла по&shy;лу&shy;ча&shy;е&shy;те id сло&shy;ва за&shy;про&shy;сом <em>SELECT id FROM words WHERE word='Про&shy;фит'</em>. По&shy;сле это&shy;го по&shy;лу&shy;ча&shy;ем спи&shy;сок си&shy;но&shy;ни&shy;мов <em>SELECT w_id, s_id FROM synonyms WHERE w_id='1234' or s_id='1234'</em>. Сор&shy;ти&shy;ру&shy;ем по&shy;вто&shy;ря&shy;ю&shy;щи&shy;е&shy;ся зна&shy;че&shy;ния и за&shy;би&shy;ра&shy;ем сло&shy;ва-си&shy;но&shy;ни&shy;мы <em>SELECT word FROM words WHERE id IN (1,2,3,4,5 ...).</em> Ум&shy;ные дядь&shy;ки объ&shy;еди&shy;нят все за&shy;про&shy;сы в один боль&shy;шой и бу&shy;дут счаст&shy;ли&shy;вы. Да, сло&shy;ва "хуй" (3991 си&shy;но&shy;ним) и "Ле&shy;нин" (10 си&shy;но&shy;ни&shy;мов) в ба&shy;зе име&shy;ют&shy;ся.
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/177.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/177.html&amp;text=MySQL%20%D0%91%D0%94%20%D1%81%D0%B8%D0%BD%D0%BE%D0%BD%D0%B8%D0%BC%D0%BE%D0%B2%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/177.html">вконтакте</a></span>.</p>
+        </div>
+    </div>
 
     </div>   
 </body>

@@ -49,11 +49,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?efdf9ffc" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?1301e2a5" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?4ecc0a3d"></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?d674d418"></script>
     
 
     <!--[if lt IE 9]>
@@ -91,24 +91,28 @@
         </div>
 
         
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/40.html">UMC GPRS + LINUX = </a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="2006-12-06T00:00:00Z" class="text-muted updated">6 декабря 2006 г.</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/40.html">UMC GPRS + LINUX = </a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="2006-12-06T00:00:00Z" class="text-muted updated">6 декабря 2006 г.</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			Аа&shy;а&shy;аа... Се&shy;го&shy;дня я рас&shy;ска&shy;жу вам про птиц! Вер&shy;нее о том, как на&shy;стро&shy;ить мо&shy;дем на ба&shy;зе com-под&shy;клю&shy;чен&shy;но&shy;го мо&shy;биль&shy;но&shy;го те&shy;ле&shy;фо&shy;на. По&shy;сле предо&shy;став&shy;ле&shy;ния <a href="http://umc.ua">UMC</a> <a href="http://umc.ua/ukr/hyper.php">по&shy;доб&shy;ной ха&shy;ля&shy;вы</a> я ре&shy;шил по&shy;про&shy;бо&shy;вать под&shy;клю&shy;чить один из сво&shy;их ди&shy;но&shy;зав&shy;ров (<a href="http://helpix.ru/sonyericsson/t200/">SE T200</a>) че&shy;рез com-порт и на&shy;стро&shy;ить dial-up со&shy;еди&shy;не&shy;ние. Что по&shy;лу&shy;чи&shy;лось - смот&shy;рим ни&shy;же.cat <strong>/etc/ppp/peers/umc-hypernet</strong><fieldset><code>noauthconnect "/usr/sbin/chat -v -f /etc/chatscripts/umc-hypernet"debug/dev/ttyS0115200noipdefaultdefaultrouteuser ""</code></fieldset>cat <strong>/etc/chatscripts/umc-hypernet</strong><fieldset><code># ispauth CHAP# abortstringABORT BUSY ABORT 'NO CARRIER' ABORT VOICE ABORT 'NO DIALTONE' ABORT 'NO DIAL TONE' ABORT 'NO ANSWER' ABORT DELAYED# modeminit'' AT+CGDCONT=1,"IP","hyper.net"# ispnumberOK-AT-OK "ATDT*99#"# ispconnectCONNECT \d\c# prelogin# ispname# isppassword# postlogin</code></fieldset><strong># pon umc-hypernet</strong> и по&shy;не&shy;слась...
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/40.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/40.html&amp;text=UMC%20GPRS%20%2B%20LINUX%20%3D%20&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/40.html">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            Аа&shy;а&shy;аа... Се&shy;го&shy;дня я рас&shy;ска&shy;жу вам про птиц! Вер&shy;нее о том, как на&shy;стро&shy;ить мо&shy;дем на ба&shy;зе com-под&shy;клю&shy;чен&shy;но&shy;го мо&shy;биль&shy;но&shy;го те&shy;ле&shy;фо&shy;на. По&shy;сле предо&shy;став&shy;ле&shy;ния <a href="http://umc.ua">UMC</a> <a href="http://umc.ua/ukr/hyper.php">по&shy;доб&shy;ной ха&shy;ля&shy;вы</a> я ре&shy;шил по&shy;про&shy;бо&shy;вать под&shy;клю&shy;чить один из сво&shy;их ди&shy;но&shy;зав&shy;ров (<a href="http://helpix.ru/sonyericsson/t200/">SE T200</a>) че&shy;рез com-порт и на&shy;стро&shy;ить dial-up со&shy;еди&shy;не&shy;ние. Что по&shy;лу&shy;чи&shy;лось - смот&shy;рим ни&shy;же.cat <strong>/etc/ppp/peers/umc-hypernet</strong><fieldset><code>noauthconnect "/usr/sbin/chat -v -f /etc/chatscripts/umc-hypernet"debug/dev/ttyS0115200noipdefaultdefaultrouteuser ""</code></fieldset>cat <strong>/etc/chatscripts/umc-hypernet</strong><fieldset><code># ispauth CHAP# abortstringABORT BUSY ABORT 'NO CARRIER' ABORT VOICE ABORT 'NO DIALTONE' ABORT 'NO DIAL TONE' ABORT 'NO ANSWER' ABORT DELAYED# modeminit'' AT+CGDCONT=1,"IP","hyper.net"# ispnumberOK-AT-OK "ATDT*99#"# ispconnectCONNECT \d\c# prelogin# ispname# isppassword# postlogin</code></fieldset><strong># pon umc-hypernet</strong> и по&shy;не&shy;слась...
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/40.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/40.html&amp;text=UMC%20GPRS%20%2B%20LINUX%20%3D%20&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/40.html">вконтакте</a></span>.</p>
+        </div>
+    </div>
 
     </div>   
 </body>

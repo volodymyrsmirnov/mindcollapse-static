@@ -49,11 +49,11 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?efdf9ffc" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?1301e2a5" rel="stylesheet" media="all">
     
 
     
-        <script type="text/javascript" src="/static/compiled/blog.js?4ecc0a3d"></script>
+        <script type="text/javascript" src="/static/compiled/blog.js?d674d418"></script>
     
 
     <!--[if lt IE 9]>
@@ -91,24 +91,28 @@
         </div>
 
         
-	<div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
-		<div class="content_header clearfix">
-			<h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/82.html">Душим спамеров на корню</a></h1>
-			<div class="published pull-right"><time itemprop="datePublished" datetime="2007-11-16T00:00:00Z" class="text-muted updated">16 ноября 2007 г.</time></div>
-		</div>
+    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+        <div class="content_header clearfix">
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/82.html">Душим спамеров на корню</a></h1>
+            <div class="published pull-right"><time itemprop="datePublished" datetime="2007-11-16T00:00:00Z" class="text-muted updated">16 ноября 2007 г.</time></div>
 
-		<hr class="first">
+            <div class="vcard author hidden">
+                <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
+            </div>
+        </div>
 
-		<div itemprop="articleBody" class="entry-content content">
-			На&shy;вер&shy;ное, са&shy;мы&shy;ми мерз&shy;ки&shy;ми изоб&shy;ре&shy;те&shy;ни&shy;я&shy;ми че&shy;ло&shy;ве&shy;че&shy;ства по&shy;сле фа&shy;ло&shy;и&shy;ми&shy;та&shy;то&shy;ров, без&shy;ал&shy;ко&shy;голь&shy;но&shy;го пи&shy;ва и му&shy;суль&shy;ман&shy;ских лю&shy;бов&shy;ных се&shy;ри&shy;а&shy;лов яв&shy;ля&shy;ет&shy;ся спам. (ба&shy;наль&shy;но про&shy;зву&shy;ча&shy;ло, imho) Так слу&shy;чи&shy;лось, что сер&shy;вер, за ко&shy;то&shy;рый я от&shy;вет&shy;стве&shy;нен, по&shy;се&shy;ти&shy;ла пе&shy;чаль&shy;ная участь - ip был за&shy;не&shy;сен в RBL и по&shy;ло&shy;ви&shy;на всех пи&shy;сем бло&shy;ки&shy;ро&shy;ва&shy;лись при ре&shy;лее. А учи&shy;ты&shy;вая то, что на сер&shy;ве&shy;ре ра&shy;бо&shy;та&shy;ло с 10 сай&shy;тов, это впол&shy;не мож&shy;но бы&shy;ло на&shy;звать ка&shy;та&shy;стро&shy;фой. Рас&shy;сыл&shy;ка про&shy;ис&shy;хо&shy;ди&shy;ла с по&shy;мо&shy;щью php mail (), то&shy;бишь то&shy;пор&shy;ным, но дей&shy;ствен&shy;ным спо&shy;со&shy;бом. А учи&shy;ты&shy;вая то, что suexec был от&shy;клю&shy;чен, - все пись&shy;ма ухо&shy;ди&shy;ли от де&shy;фолт&shy;но&shy;го юзе&shy;ра apache - nobody@blah-blah-blah. Про&shy;бле&shy;ма так же со&shy;сто&shy;я&shy;ла в том, что сер&shy;вер был че&shy;ре&shy;з&shy;вы&shy;чай&shy;но по&shy;се&shy;ща&shy;ем, а зна&shy;чит про&shy;че&shy;сы&shy;ва&shy;ние ак&shy;сес ло&shy;гов апа&shy;ча на пред&shy;мет мно&shy;же&shy;ства POST или GET за&shy;про&shy;сов к од&shy;но&shy;му скрип&shy;ту - не под&shy;хо&shy;дил.Соб&shy;ствен&shy;но, по&shy;сле дол&shy;гих му&shy;че&shy;ний и <a href="http://google.com">гугло&shy;ко&shy;вы&shy;ря&shy;ний</a> был най&shy;ден спо&shy;соб - <a href="http://www.lancs.ac.uk/~steveb/patches/php-mail-header-patch/">php mail header patch</a>.Но, мать&shy;пе&shy;ре&shy;мать, на сер&shy;ве&shy;ре уста&shy;нов&shy;лен <a href="http://cpanel.net">СPanel</a>, и по&shy;это&shy;му, ва&shy;ри&shy;ант с patch -p1 на сыр&shy;цы <em>/home/cpapachebuild/</em>, а опо&shy;сля сбор&shy;ка по&shy;сред&shy;ством <em>/scripts/easyapache</em> не ка&shy;ти&shy;ла, мерз&shy;кий спа&shy;ни&shy;ель каж&shy;дый раз ска&shy;чи&shy;вал со сво&shy;е&shy;го сер&shy;ве&shy;ра тар&shy;бол php и имен&shy;но его со&shy;би&shy;рал, а зна&shy;чит и патч те&shy;рял&shy;ся.Шел вто&shy;рой час <a href="http://google.com">гугло&shy;ко&shy;вы&shy;ря&shy;ний</a> и бы&shy;ло най&shy;де&shy;но ре&shy;ше&shy;ние от <a href="http://choon.net/php-mail-header.php">Choon</a>, ко&shy;то&shy;рый лю&shy;без&shy;но предо&shy;ста&shy;вил патч вы&shy;ше&shy;упо&shy;мя&shy;ну&shy;то&shy;го ре&shy;ше&shy;ния для cpanel. Ко&shy;ро&shy;че, об&shy;ра&shy;до&shy;ва&shy;ло это не&shy;имо&shy;вер&shy;но, му&shy;че&shy;ни&shy;ям при&shy;шел ко&shy;нец, спа&shy;мер&shy;ский скрипт был от&shy;лов&shy;лен, а кли&shy;ент по&shy;лу&shy;чил по ушам, за то что раз&shy;да&shy;вал свои па&shy;ро&shy;ли от FTP ак&shy;каун&shy;та на ле&shy;во и на пра&shy;во. Мо&shy;раль сей бас&shy;ни та&shy;ко&shy;ва - до&shy;бав&shy;ля&shy;ем <em>disable_functions=mail</em> в <em>php.ini</em> : пусть ту&shy;по&shy;ры&shy;лые про&shy;грам&shy;ми&shy;сты вы&shy;учат за&shy;вет&shy;ные 4 бук&shy;вы <abbr title="Simple Mail Transfer Protocol">SMTP</abbr> и юза&shy;ют ку&shy;чу ве&shy;ло&shy;си&shy;пе&shy;дов, на&shy;пи&shy;сан&shy;ных для ра&shy;бо&shy;ты с этим про&shy;то&shy;ко&shy;лом. 
-		</div>
+        <hr class="first">
 
-		<hr>
-		
-		<div class="content_footer hidden-print">
-			<p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/82.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/82.html&amp;text=%D0%94%D1%83%D1%88%D0%B8%D0%BC%20%D1%81%D0%BF%D0%B0%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D1%80%D0%BD%D1%8E&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/82.html">вконтакте</a></span>.</p>
-		</div>
-	</div>
+        <div itemprop="articleBody" class="entry-content content">
+            На&shy;вер&shy;ное, са&shy;мы&shy;ми мерз&shy;ки&shy;ми изоб&shy;ре&shy;те&shy;ни&shy;я&shy;ми че&shy;ло&shy;ве&shy;че&shy;ства по&shy;сле фа&shy;ло&shy;и&shy;ми&shy;та&shy;то&shy;ров, без&shy;ал&shy;ко&shy;голь&shy;но&shy;го пи&shy;ва и му&shy;суль&shy;ман&shy;ских лю&shy;бов&shy;ных се&shy;ри&shy;а&shy;лов яв&shy;ля&shy;ет&shy;ся спам. (ба&shy;наль&shy;но про&shy;зву&shy;ча&shy;ло, imho) Так слу&shy;чи&shy;лось, что сер&shy;вер, за ко&shy;то&shy;рый я от&shy;вет&shy;стве&shy;нен, по&shy;се&shy;ти&shy;ла пе&shy;чаль&shy;ная участь - ip был за&shy;не&shy;сен в RBL и по&shy;ло&shy;ви&shy;на всех пи&shy;сем бло&shy;ки&shy;ро&shy;ва&shy;лись при ре&shy;лее. А учи&shy;ты&shy;вая то, что на сер&shy;ве&shy;ре ра&shy;бо&shy;та&shy;ло с 10 сай&shy;тов, это впол&shy;не мож&shy;но бы&shy;ло на&shy;звать ка&shy;та&shy;стро&shy;фой. Рас&shy;сыл&shy;ка про&shy;ис&shy;хо&shy;ди&shy;ла с по&shy;мо&shy;щью php mail (), то&shy;бишь то&shy;пор&shy;ным, но дей&shy;ствен&shy;ным спо&shy;со&shy;бом. А учи&shy;ты&shy;вая то, что suexec был от&shy;клю&shy;чен, - все пись&shy;ма ухо&shy;ди&shy;ли от де&shy;фолт&shy;но&shy;го юзе&shy;ра apache - nobody@blah-blah-blah. Про&shy;бле&shy;ма так же со&shy;сто&shy;я&shy;ла в том, что сер&shy;вер был че&shy;ре&shy;з&shy;вы&shy;чай&shy;но по&shy;се&shy;ща&shy;ем, а зна&shy;чит про&shy;че&shy;сы&shy;ва&shy;ние ак&shy;сес ло&shy;гов апа&shy;ча на пред&shy;мет мно&shy;же&shy;ства POST или GET за&shy;про&shy;сов к од&shy;но&shy;му скрип&shy;ту - не под&shy;хо&shy;дил.Соб&shy;ствен&shy;но, по&shy;сле дол&shy;гих му&shy;че&shy;ний и <a href="http://google.com">гугло&shy;ко&shy;вы&shy;ря&shy;ний</a> был най&shy;ден спо&shy;соб - <a href="http://www.lancs.ac.uk/~steveb/patches/php-mail-header-patch/">php mail header patch</a>.Но, мать&shy;пе&shy;ре&shy;мать, на сер&shy;ве&shy;ре уста&shy;нов&shy;лен <a href="http://cpanel.net">СPanel</a>, и по&shy;это&shy;му, ва&shy;ри&shy;ант с patch -p1 на сыр&shy;цы <em>/home/cpapachebuild/</em>, а опо&shy;сля сбор&shy;ка по&shy;сред&shy;ством <em>/scripts/easyapache</em> не ка&shy;ти&shy;ла, мерз&shy;кий спа&shy;ни&shy;ель каж&shy;дый раз ска&shy;чи&shy;вал со сво&shy;е&shy;го сер&shy;ве&shy;ра тар&shy;бол php и имен&shy;но его со&shy;би&shy;рал, а зна&shy;чит и патч те&shy;рял&shy;ся.Шел вто&shy;рой час <a href="http://google.com">гугло&shy;ко&shy;вы&shy;ря&shy;ний</a> и бы&shy;ло най&shy;де&shy;но ре&shy;ше&shy;ние от <a href="http://choon.net/php-mail-header.php">Choon</a>, ко&shy;то&shy;рый лю&shy;без&shy;но предо&shy;ста&shy;вил патч вы&shy;ше&shy;упо&shy;мя&shy;ну&shy;то&shy;го ре&shy;ше&shy;ния для cpanel. Ко&shy;ро&shy;че, об&shy;ра&shy;до&shy;ва&shy;ло это не&shy;имо&shy;вер&shy;но, му&shy;че&shy;ни&shy;ям при&shy;шел ко&shy;нец, спа&shy;мер&shy;ский скрипт был от&shy;лов&shy;лен, а кли&shy;ент по&shy;лу&shy;чил по ушам, за то что раз&shy;да&shy;вал свои па&shy;ро&shy;ли от FTP ак&shy;каун&shy;та на ле&shy;во и на пра&shy;во. Мо&shy;раль сей бас&shy;ни та&shy;ко&shy;ва - до&shy;бав&shy;ля&shy;ем <em>disable_functions=mail</em> в <em>php.ini</em> : пусть ту&shy;по&shy;ры&shy;лые про&shy;грам&shy;ми&shy;сты вы&shy;учат за&shy;вет&shy;ные 4 бук&shy;вы <abbr title="Simple Mail Transfer Protocol">SMTP</abbr> и юза&shy;ют ку&shy;чу ве&shy;ло&shy;си&shy;пе&shy;дов, на&shy;пи&shy;сан&shy;ных для ра&shy;бо&shy;ты с этим про&shy;то&shy;ко&shy;лом. 
+        </div>
+
+        <hr>
+        
+        <div class="content_footer hidden-print">
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/82.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/82.html&amp;text=%D0%94%D1%83%D1%88%D0%B8%D0%BC%20%D1%81%D0%BF%D0%B0%D0%BC%D0%B5%D1%80%D0%BE%D0%B2%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D1%80%D0%BD%D1%8E&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/82.html">вконтакте</a></span>.</p>
+        </div>
+    </div>
 
     </div>   
 </body>
