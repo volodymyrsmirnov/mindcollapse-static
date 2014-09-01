@@ -27,7 +27,9 @@ class Config(object):
 		"extensions": [
 			"toc",
 			"extra",
-			"modules.absoluter"
+			"smarty",
+			"modules.video",
+			"modules.absoluter",
 			#"meta",
 			#"codehilite"
 		],
