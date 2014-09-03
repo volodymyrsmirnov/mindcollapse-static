@@ -7,7 +7,7 @@ from flask import url_for
 class Config(object):
 	DEBUG = True
 
-	FREEZER_BASE_URL = "http://www.mindcollapse.com/"
+	FREEZER_BASE_URL = "https://www.mindcollapse.com/"
 	FREEZER_REMOVE_EXTRA_FILES = True
 	FREEZER_DESTINATION = "build"
 	FREEZER_DESTINATION_IGNORE = [
