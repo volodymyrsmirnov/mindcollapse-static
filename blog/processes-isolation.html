@@ -12,26 +12,26 @@
     <meta name="msvalidate.01" content="62188F55275960794DDFA698C3EA9F05">
 
     <link rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.ru">
-    <link rel="sitemap" href="http://www.mindcollapse.com/blog/sitemap.xml">
+    <link rel="sitemap" href="https://www.mindcollapse.com/blog/sitemap.xml">
 
     
-        <link rel="canonical" href="http://www.mindcollapse.com/blog/processes-isolation.html">
+        <link rel="canonical" href="https://www.mindcollapse.com/blog/processes-isolation.html">
 
-        <link rel="up archives" href="http://www.mindcollapse.com/blog/archive/">
-
-        
-            <link rel="next" href="http://www.mindcollapse.com/blog/hong-kong.html">
-        
+        <link rel="up archives" href="https://www.mindcollapse.com/blog/archive/">
 
         
-            <link rel="prev" href="http://www.mindcollapse.com/blog/despair.html">
+            <link rel="next" href="https://www.mindcollapse.com/blog/hong-kong.html">
+        
+
+        
+            <link rel="prev" href="https://www.mindcollapse.com/blog/despair.html">
         
 
         <meta property="og:title" content="Теория изоляции и лимитирования процессов в linux userspace">
         <meta property="og:description" content="Этот пост задумывался пояснительными комментариями к листингу готовой программы, но меня почему-то в самый последний момент попросили удалить репозитарий из гитхаба, хотя открытость кода была оговорена заранее. Вот так теория и практика в ...">
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="mindcollapse.com">
-        <meta property="og:url" content="http://www.mindcollapse.com/blog/processes-isolation.html">
+        <meta property="og:url" content="https://www.mindcollapse.com/blog/processes-isolation.html">
 
         <meta name="description" content="Этот пост задумывался пояснительными комментариями к листингу готовой программы, но меня почему-то в самый последний момент ...">
 
@@ -41,14 +41,14 @@
 
         
             <meta name="twitter:card" content="summary_large_image">
-            <meta property="og:image" content="http://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg" >
-            <meta name="twitter:image:src" content="http://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg">
+            <meta property="og:image" content="https://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg" >
+            <meta name="twitter:image:src" content="https://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg">
         
     
 
     <link rel="author" href="https://plus.google.com/110904145311662435301">
     <link rel="icon" href="http://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="http://www.mindcollapse.com/blog.xml"> 
+    <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
         <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
@@ -87,7 +87,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
-                    <li><a href="http://www.mindcollapse.com/blog.xml">RSS</a></li>
+                    <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
             </div>
         </div>
@@ -95,7 +95,7 @@
         
     <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="http://www.mindcollapse.com/blog/processes-isolation.html">Теория изоляции и лимитирования процессов в linux userspace</a></h1>
+            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/processes-isolation.html">Теория изоляции и лимитирования процессов в linux userspace</a></h1>
             <div class="published pull-right"><time itemprop="datePublished" datetime="2012-11-05T00:00:00Z" class="text-muted updated">5 ноября 2012 г.</time></div>
 
             <div class="vcard author hidden">
@@ -106,7 +106,7 @@
         <hr class="first">
 
         <div itemprop="articleBody" class="entry-content content">
-            <p><img alt="Теория изоляции и лимитирования процессов в linux userspace" src="http://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg" /></p>
+            <p><img alt="Теория изоляции и лимитирования процессов в linux userspace" src="https://www.mindcollapse.com/static/media/blog/processes-isolation/header.jpg" /></p>
 <p>Этот пост за&shy;ду&shy;мы&shy;вал&shy;ся по&shy;яс&shy;ни&shy;тель&shy;ны&shy;ми ком&shy;мен&shy;та&shy;ри&shy;я&shy;ми к лис&shy;тин&shy;гу го&shy;то&shy;вой про&shy;грам&shy;мы, но ме&shy;ня по&shy;че&shy;му-то в са&shy;мый по&shy;след&shy;ний мо&shy;мент по&shy;про&shy;си&shy;ли уда&shy;лить ре&shy;по&shy;зи&shy;та&shy;рий из гит&shy;ха&shy;ба, хо&shy;тя от&shy;кры&shy;тость ко&shy;да бы&shy;ла ого&shy;во&shy;ре&shy;на за&shy;ра&shy;нее. Вот так те&shy;о&shy;рия и прак&shy;ти&shy;ка в за&shy;го&shy;лов&shy;ке ста&shy;тьи пре&shy;вра&shy;ти&shy;лась про&shy;сто в те&shy;о&shy;рию. Впро&shy;чем, я по&shy;ста&shy;ра&shy;юсь до&shy;ста&shy;точ&shy;но де&shy;таль&shy;но рас&shy;ска&shy;зать о двух основ&shy;ных спо&shy;со&shy;бах изо&shy;ля&shy;ции и ли&shy;ми&shy;ти&shy;ро&shy;ва&shy;ния ис&shy;пол&shy;ня&shy;е&shy;мо&shy;го про&shy;цес&shy;са: basic, ко&shy;то&shy;рый не тре&shy;бу&shy;ет осо&shy;бых зна&shy;ний, пе&shy;ре&shy;сбор&shy;ки ядра, а не&shy;об&shy;хо&shy;ди&shy;мый функ&shy;ци&shy;о&shy;нал уже при&shy;сут&shy;ству&shy;ет во всех со&shy;вре&shy;мен&shy;ных дис&shy;три&shy;бу&shy;ти&shy;вах и advanced. </p>
 <p>Пе&shy;ре&shy;до мной бы&shy;ла по&shy;став&shy;ле&shy;на сле&shy;ду&shy;ю&shy;щая за&shy;да&shy;ча - на&shy;пи&shy;сать бы&shy;струю и по&shy;стро&shy;ен&shy;ную не на ин&shy;стру&shy;мен&shy;тах ап&shy;па&shy;рат&shy;ной или про&shy;грамм&shy;ной вир&shy;ту&shy;а&shy;ли&shy;за&shy;ции сре&shy;ду за&shy;пус&shy;ка по&shy;тен&shy;ци&shy;аль&shy;но не&shy;без&shy;опас&shy;но&shy;го поль&shy;зо&shy;ва&shy;тель&shy;ско&shy;го ко&shy;да. Что&shy;бы вам ста&shy;ло по&shy;нят&shy;ней, мо&shy;же&shy;те взгля&shy;нуть на <a href="http://codepad.org/" rel="nofollow">Codepad</a> или <a href="http://ideone.com/" rel="nofollow">Ideone</a> - са&shy;мые обыч&shy;ные па&shy;сте&shy;би&shy;ны, поз&shy;во&shy;ля&shy;ю&shy;щие со&shy;би&shy;рать и вы&shy;пол&shy;нять на&shy;пи&shy;сан&shy;ный не&shy;из&shy;вест&shy;ным Ва&shy;си&shy;ли&shy;ем код, воз&shy;вра&shy;щая стан&shy;дарт&shy;ный вы&shy;вод про&shy;цес&shy;са. По&shy;доб&shy;ные за&shy;да&shy;чи - не мое про&shy;филь&shy;ное на&shy;прав&shy;ле&shy;ние, по&shy;это&shy;му про&shy;шу ме&shy;ня про&shy;стить, если я вдруг кое-где оши&shy;бусь в те&shy;о&shy;рии или бу&shy;ду го&shy;во&shy;рить от&shy;кро&shy;вен&shy;ные глу&shy;по&shy;сти.</p>
 <p>Преж&shy;де все&shy;го, су&shy;ще&shy;ству&shy;ю&shy;щие ре&shy;ше&shy;ния ко&shy;неч&shy;но же есть. Я не бу&shy;ду сей&shy;час пе&shy;ре&shy;чис&shy;лять все на&shy;ко&shy;лен&shy;ные по&shy;дел&shy;ки в этой об&shy;ла&shy;сти, боль&shy;шин&shy;ство из них на&shy;пи&shy;са&shy;ны для сво&shy;ей кон&shy;крет&shy;ной за&shy;да&shy;чи и нам не под&shy;хо&shy;дят. Без&shy;услов&shy;но, ра&shy;бо&shy;та&shy;ю&shy;щую си&shy;сте&shy;му мож&shy;но по&shy;стро&shy;ить на осно&shy;ве SELinux или AppArmor, оба про&shy;ек&shy;та име&shy;ют ба&shy;зо&shy;вую под&shy;держ&shy;ку сэнд&shy;бок&shy;син&shy;га, пусть и на&shy;хо&shy;дя&shy;щу&shy;ю&shy;ся в со&shy;сто&shy;я&shy;нии &ldquo;в ран&shy;ней раз&shy;ра&shy;бот&shy;ке&rdquo; уже очень дол&shy;го вре&shy;мя. Оста&shy;нав&shy;ли&shy;вать&shy;ся на этой те&shy;ма&shy;ти&shy;ке мы не бу&shy;дем, нас ин&shy;те&shy;ре&shy;су&shy;ет свое соб&shy;ствен&shy;ное ре&shy;ше&shy;ние, ин&shy;фор&shy;ма&shy;цию о пе&shy;соч&shy;ни&shy;це в SELinux мож&shy;но по&shy;чи&shy;тать в <a href="http://danwalsh.livejournal.com/28545.html" rel="nofollow">ЖЖ</a> раз&shy;ра&shy;бот&shy;чи&shy;ка. Про AppArmor <a href="http://wiki.apparmor.net/index.php/AppArmorSandboxing" rel="nofollow">aa-sandbox</a> то&shy;же ни&shy;че&shy;го ска&shy;зать не мо&shy;гу, раз&shy;ве что син&shy;так&shy;сис кон&shy;фи&shy;гу&shy;ра&shy;ци&shy;он&shy;ных фай&shy;лов по&shy;нят&shy;ней крас&shy;но&shy;гла&shy;зо&shy;го се&shy;ли&shy;нук&shy;са.</p>
@@ -125,7 +125,7 @@
         <hr>
         
         <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3A//www.mindcollapse.com/blog/processes-isolation.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=http%3A//www.mindcollapse.com/blog/processes-isolation.html&amp;text=%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%D0%B7%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%BB%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2%20%D0%B2%20linux%20userspace&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=http%3A//www.mindcollapse.com/blog/processes-isolation.html">вконтакте</a></span>.</p>
+            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/processes-isolation.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/processes-isolation.html&amp;text=%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F%20%D0%B8%D0%B7%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%BB%D0%B8%D0%BC%D0%B8%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2%20%D0%B2%20linux%20userspace&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/processes-isolation.html">вконтакте</a></span>.</p>
         </div>
     </div>
 
