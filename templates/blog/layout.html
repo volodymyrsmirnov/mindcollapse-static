@@ -16,7 +16,7 @@
 
     {% if post %}
         <link rel="canonical" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">
-        
+
         {% if next_slug %}
             <link rel="next" href="{{ url_for("blog.post", slug=next_slug, _external=True) }}">
         {% endif %}
@@ -46,7 +46,7 @@
         {% endif %}
     {% endif %}
 
-    <link rel="author" href="https://plus.google.com/110904145311662435301">
+    <link rel="publisher" href="https://plus.google.com/110904145311662435301">
     <link rel="icon" href="https://www.mindcollapse.com/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="{{ url_for("blog.rss", _external=True) }}"> 
 
