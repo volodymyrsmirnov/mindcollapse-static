@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/84.html">Squid + live &#39;src from files&#39; update</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2007-11-30T00:00:00Z" class="text-muted updated">30 ноября 2007 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/84.html">Squid + live &#39;src from files&#39; update</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2007-11-30T00:00:00Z" class="text-muted updated">30 ноября 2007 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Соб&shy;ствен&shy;но бы&shy;ла по&shy;став&shy;ле&shy;на пе&shy;ре&shy;до мной та&shy;кая за&shy;да&shy;ча - ор&shy;га&shy;ни&shy;зо&shy;вать proxy server c до&shy;сту&shy;пом по схе&shy;ме - ПО кли&shy;ен&shy;та каж&shy;дые 5 ми&shy;нут от&shy;прав&shy;ля&shy;ет http get за&shy;прос к скрип&shy;ту, ко&shy;то&shy;рый дол&shy;жен до&shy;бав&shy;лять IP кли&shy;ен&shy;та в БД и да&shy;вать ему до&shy;ступ к прок&shy;си на сле&shy;ду&shy;ю&shy;щие 5 ми&shy;нут. За&shy;чем это - объ&shy;яс&shy;нять дол&shy;го, сам факт ре&shy;а&shy;ли&shy;за&shy;ции со&shy;дер&shy;жал не&shy;ко&shy;то&shy;рые труд&shy;но&shy;сти. Пер&shy;вое разо&shy;ча&shy;ро&shy;ва&shy;ние ме&shy;ня по&shy;стиг&shy;ло, ко&shy;гда я узнал, что <a href="http://www.squid-cache.org/">squid</a>-ов&shy;ские <em>acl src</em>, ко&shy;то&shy;рые на&shy;зна&shy;ча&shy;ют&shy;ся из фай&shy;ла, кэ&shy;ши&shy;ру&shy;ют&shy;ся при стар&shy;те скви&shy;да, а зна&shy;чит лег&shy;кий ва&shy;ри&shy;ант с <em>chmod</em> фай&shy;ла со спис&shy;ком IP пра&shy;ва&shy;ми <em>0777</em> и обыч&shy;ным<em> fwrite</em> с <em>a+</em> не про&shy;хо&shy;дит... Обид&shy;но.При&shy;шлось из&shy;вра&shy;щать&shy;ся, и ре&shy;а&shy;ли&shy;зо&shy;вы&shy;вать все пра&shy;вой ле&shy;вой пят&shy;кой.Соб&shy;ствен&shy;но вот что по&shy;лу&shy;чи&shy;лось:<ul><li><a href="/media/etc/squid.conf">squid.conf</a> +<em> mkdir /etc/my_proxy</em>/ + <em>touch allowed.txt</em> + <em>chmod 0777 allowed.txt</em></li><li>да&shy;лее - связь кли&shy;ент-сер&shy;вер в ви&shy;де <a href="/media/etc/PHP/cron.phps">php скрип&shy;та </a></li><li>да&shy;лее ки&shy;да&shy;ем в <em>/usr/bin/</em> <a href="/media/etc/PHP/squid_reconfigure">дан&shy;ный файл</a> и не за&shy;бы&shy;ва&shy;ем <em>chmod +x</em></li><li>да&shy;лее, раз&shy;бе&shy;рем&shy;ся с sudo при&shy;ве&shy;ле&shy;ги&shy;я&shy;ми: по&shy;сред&shy;ством visudo до&shy;бав&shy;ля&shy;ем стро&shy;ку <em>nobody ALL = NOPASSWD: /usr/bin/squid_reconfigure</em> , где <ins>nobody </ins>у ме&shy;ня - юзер, под ко&shy;то&shy;рым жи&shy;вет апач.</li></ul>Вот соб&shy;ствен&shy;но и все, до&shy;бав&shy;ля&shy;ем в крон что-то ти&shy;па<em>*/5&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;links&nbsp;-dump&nbsp;http://*****.*****.com/?action=cron</em>Сес&shy;сия ини&shy;ци&shy;а&shy;ли&shy;зи&shy;ру&shy;ет&shy;ся GET-ом на ?action=new, пин&shy;гу&shy;ет&shy;ся ?action=ping и пре&shy;кра&shy;ща&shy;ет&shy;ся по ?action=terminate.Ми&shy;нус дан&shy;но&shy;го ме&shy;то&shy;да: если у вас боль&shy;шой кон&shy;фиг скви&shy;да, то на <em>squid -k reconfigure</em> мо&shy;жет уй&shy;ти при&shy;лич&shy;но вре&shy;ме&shy;ни, как про&shy;цес&shy;сор&shy;но&shy;го, так и че&shy;ло&shy;ве&shy;че&shy;ско&shy;го =)
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/84.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/84.html&amp;text=Squid%20%2B%20live%20%27src%20from%20files%27%20update&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/84.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/84.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/84.html&amp;text=Squid%20%2B%20live%20%27src%20from%20files%27%20update&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/84.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/149.html">Aspire One: 30 дней спустя</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-09-21T00:00:00Z" class="text-muted updated">21 сентября 2008 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/149.html">Aspire One: 30 дней спустя</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2008-09-21T00:00:00Z" class="text-muted updated">21 сентября 2008 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Вот и про&shy;шел ров&shy;но ме&shy;сяц с то&shy;го вре&shy;ме&shy;ни, как я <a href="/blog/142.html">ку&shy;пил</a> суб&shy;но&shy;ут&shy;бук Acer Aspire One. Не в мо&shy;их пра&shy;ви&shy;лах му&shy;со&shy;лить од&shy;ну и ту же те&shy;му по 5 раз, пе&shy;ре&shy;пи&shy;сы&shy;вая си&shy;кве&shy;лы, три&shy;кве&shy;лы и улуч&shy;шен&shy;ные из&shy;да&shy;ния к прош&shy;лым по&shy;стам, но все же дан&shy;ная за&shy;пись не&shy;об&shy;хо&shy;ди&shy;ма что бы мои за&shy;блу&shy;жде&shy;ния не по&shy;вто&shy;ря&shy;ли дру&shy;гие. До&shy;сто&shy;ин&shy;ства устрой&shy;ства я до&shy;ста&shy;точ&shy;но по&shy;дроб&shy;но опи&shy;сал в <a href="/blog/142.html">про&shy;шлом по&shy;сте</a>, по&shy;это&shy;му рас&shy;ска&shy;зы&shy;вать бу&shy;ду о не&shy;до&shy;стат&shy;ках.Основ&shy;ной ми&shy;нус все&shy;го но&shy;ут&shy;бу&shy;ка - его опе&shy;ра&shy;ци&shy;он&shy;ная си&shy;сте&shy;ма. Linpus крив, стар, урод&shy;лив, не&shy;по&shy;во&shy;рот&shy;лив и на&shy;по&shy;ми&shy;на&shy;ет го&shy;лую ста&shy;руш&shy;ку на ну&shy;дист&shy;ском пля&shy;же, пор&shy;тя все впе&shy;чат&shy;ле&shy;ния от уви&shy;ден&shy;но&shy;го. Бо&shy;лее то&shy;го, я, об&shy;ла&shy;дая бо&shy;лее-ме&shy;нее пря&shy;мы&shy;ми ру&shy;ка&shy;ми и n-лет&shy;ним ра&shy;бо&shy;ты с про&shy;из&shy;вод&shy;ны&shy;ми linux, умуд&shy;рил&shy;ся уже три&shy;жды ро&shy;нять его, ро&shy;нять эле&shy;мен&shy;тар&shy;ны&shy;ми опе&shy;ра&shy;ци&shy;я&shy;ми. Обыч&shy;ный yum update xorg-x11-* при&shy;вел к то&shy;му, что по&shy;сле пе&shy;ре&shy;за&shy;груз&shy;ки startx ру&shy;гал&shy;ся на ко&shy;ря&shy;вые мо&shy;ду&shy;ли intel_drv и драй&shy;вер тачпа&shy;да synaptics, а downgrade для yum в при&shy;ро&shy;де не су&shy;ще&shy;ству&shy;ет. И это толь&shy;ко от&shy;дель&shy;ный слу&shy;чай, я уже не го&shy;во&shy;рю о ку&shy;че пе&shy;ре&shy;пи&shy;сан&shy;ных Acer-ом биб&shy;лио&shy;тек из-за ко&shy;то&shy;рый по&shy;ло&shy;ви&shy;на нуж&shy;но&shy;го ПО от&shy;ка&shy;зы&shy;ва&shy;ет&shy;ся ста&shy;вит&shy;ся, а по&shy;сле rpm -Uvh --force --nodeps по&shy;рой еще и ра&shy;бо&shy;тать =) В ори&shy;ги&shy;наль&shy;ной ком&shy;плек&shy;та&shy;ции бе&shy;га&shy;ет все очень бы&shy;стро и не вы&shy;зы&shy;ва&shy;ет ни&shy;ка&shy;ких на&shy;ре&shy;ка&shy;ний, но толь&shy;ко вы столк&shy;не&shy;тесь с уста&shy;нов&shy;кой не&shy;до&shy;ста&shy;ю&shy;ще&shy;го соф&shy;та, как на&shy;чне&shy;те ма&shy;те&shy;рить про&shy;кля&shy;тый лин&shy;пус. К то&shy;му же fedora 8 уже дав&shy;ным-дав&shy;но пе&shy;ре&shy;жи&shy;ток про&shy;шло&shy;го, в ре&shy;по&shy;зи&shy;та&shy;рий ни&shy;кто ни&shy;че&shy;го но&shy;во&shy;го не со&shy;би&shy;ра&shy;ет. По край&shy;ней ме&shy;ре, тот же <a href="http://en.wikipedia.org/wiki/Xandros_Linux">Xandros</a> на <a href="http://en.wikipedia.org/wiki/ASUS_Eee_PC">eeePC</a> вы&shy;гля&shy;дел бо&shy;лее впе&shy;чат&shy;ля&shy;ю&shy;ще, хо&shy;ты бы по&shy;ото&shy;му что яв&shy;лял&shy;ся фор&shy;ком Debian, а не гиб&shy;ло&shy;го фе&shy;до&shy;ра.А по&shy;че&shy;му же не&shy;льзя уста&shy;но&shy;вить Windows, спро&shy;си&shy;те вы. А по&shy;то&shy;му что SSD, очень мед&shy;лен&shy;ный SSD. Плю&shy;сом ко&shy;неч&shy;но яв&shy;ля&shy;ет&shy;ся бо&shy;лее низ&shy;кое энер&shy;го&shy;по&shy;треб&shy;ле&shy;ния, тем&shy;пе&shy;ра&shy;ту&shy;ра и от&shy;сут&shy;ствия шу&shy;ма при ра&shy;бо&shy;те срав&shy;ни&shy;тель&shy;но с HDD SATA со&shy;бра&shy;том в 150 мо&shy;де&shy;ли, ну а ми&shy;ну&shy;сом - про&shy;сто ужас&shy;ную ско&shy;рость за&shy;пи&shy;си, ко&shy;то&shy;рая если и до&shy;тя&shy;ги&shy;ва&shy;ет до 5-8 Mbit\s, то все&shy;рав&shy;но IO sheduler уво&shy;дит си&shy;сте&shy;му в тор&shy;мо&shy;за на па&shy;ру се&shy;кунд, ми&shy;гая лап&shy;моч&shy;кой за&shy;пи&shy;си. В ли&shy;нук&shy;се это все ре&shy;ши&shy;лось уста&shy;нов&shy;кой до&shy;пол&shy;ни&shy;тель&shy;ной план&shy;ки па&shy;мя&shy;ти, от&shy;клю&shy;че&shy;ни&shy;ем дис&shy;ко&shy;во&shy;го сво&shy;па и пе&shy;ре&shy;но&shy;са /tmp в tmpfs опе&shy;ра&shy;тив&shy;ной па&shy;мя&shy;ти, а вот с Windows-ом та&shy;кой финт уша&shy;ми не прой&shy;дет. Как ва&shy;ри&shy;ант: уста&shy;нов&shy;ка 1,8" HDD с ZIF кон&shy;нек&shy;то&shy;ром, но это очень до&shy;ро&shy;го и очень глу&shy;по. Ко&shy;неч&shy;но на One мож&shy;но уста&shy;но&shy;вить что-то по ти&shy;пу Ubuntu, но то&shy;гда при&shy;дет&shy;ся еще не&shy;ко&shy;то&shy;рое вре&shy;мя дол&shy;бать&shy;ся с на&shy;строй&shy;кой wifi, кар&shy;дри&shy;де&shy;ров и про&shy;че&shy;го. А вре&shy;ме&shy;ни по&shy;ка на это не&shy;ту, да и же&shy;ла&shy;ния.<strong>UPD</strong>: На&shy;пи&shy;сал ста&shy;тью об уве&shy;ли&shy;че&shy;нии ско&shy;ро&shy;сти SSD в Linux (<a href="/blog/159.html">ссыл&shy;ка</a>) и Windows (<a href="/blog/161.html">ссыл&shy;ка</a>).Де&shy;ла&shy;ет ли это все но&shy;ут&shy;бук ху&shy;же? Ре&shy;шать вам, я не&shy;мно&shy;го разо&shy;ча&shy;ро&shy;вал&shy;ся, осо&shy;бен&shy;но в SSD, но не на столь&shy;ко, что бы на ра&shy;дость ста&shy;ре&shy;ю&shy;щих ни&shy;ще&shy;бро&shy;дов лить свои сле&shy;зы и рвать во&shy;ло&shy;сы на гру&shy;ди. Про&shy;сто та&shy;кая жизнь, ни&shy;че&shy;го иде&shy;аль&shy;но&shy;го за це&shy;ны ни&shy;же 400 бак&shy;сов быть не мо&shy;жет в прин&shy;ци&shy;пе. А но&shy;ут&shy;бук все ожи&shy;да&shy;ния оправ&shy;дал, ни бо&shy;лее - ни ме&shy;нее, да и оку&shy;пил уже се&shy;бя, на&shy;вер&shy;ня&shy;ка. По&shy;это&shy;му все еще со&shy;ве&shy;тую дан&shy;ный ап&shy;па&shy;рат, но уже те&shy;перь не без&shy;ого&shy;во&shy;роч&shy;но, во вся&shy;кеом слу&shy;чае со&shy;ве&shy;тую до&shy;ждать&shy;ся 6-ти яче&shy;еч&shy;ные ба&shy;та&shy;реи и уже то&shy;гда брать 150 мо&shy;ди&shy;фи&shy;ка&shy;цию, так как 2200 mAh для бо&shy;лее со&shy;лид&shy;ной ком&shy;плек&shy;та&shy;ции ма&shy;ло&shy;ва&shy;то бу&shy;дет.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/149.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/149.html&amp;text=Aspire%20One%3A%2030%20%D0%B4%D0%BD%D0%B5%D0%B9%20%D1%81%D0%BF%D1%83%D1%81%D1%82%D1%8F&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/149.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/149.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/149.html&amp;text=Aspire%20One%3A%2030%20%D0%B4%D0%BD%D0%B5%D0%B9%20%D1%81%D0%BF%D1%83%D1%81%D1%82%D1%8F&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/149.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

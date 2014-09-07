@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/132.html">Ода jquery</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-07-22T00:00:00Z" class="text-muted updated">22 июля 2008 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/132.html">Ода jquery</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2008-07-22T00:00:00Z" class="text-muted updated">22 июля 2008 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             <a href="http://jquery.com">JQuery</a> - луч&shy;ший javascript фрейм&shy;ворк. Та&shy;кое за&shy;яв&shy;ле&shy;ния я де&shy;лаю, осно&shy;вы&shy;ва&shy;ясь на зна&shy;ком&shy;стве с <a href="http://ru.wikipedia.org/wiki/Prototype">про&shy;то&shy;тай&shy;пом</a>, <a href="http://ru.wikipedia.org/wiki/Script.aculo.us">script.aculo.us</a>, <a href="http://ru.wikipedia.org/wiki/Yahoo_UI_Library">Yahoo! UI</a>&nbsp;(гос&shy;пад&shy;зи, как же мон&shy;стру&shy;оз&shy;но это йа&shy;ху, свой язык на js) и <a href="http://ru.wikipedia.org/wiki/MooTools">Mootools</a> (во&shy;об&shy;ще&nbsp;не&shy;по&shy;нят&shy;но, уби&shy;ли свой сим&shy;па&shy;тич&shy;ный сайт, про&shy;ап&shy;дей&shy;ти&shy;ли вер&shy;сию к пол&shy;ней&shy;шей не&shy;сов&shy;ме&shy;сти&shy;мо&shy;сти, до&shy;ки ста&shy;рые, де&shy;мок ма&shy;ло - на от&shy;лич&shy;нень&shy;ко, ви&shy;ди&shy;мо). &nbsp;Прав&shy;да не по&shy;про&shy;бо&shy;вал еще <a href="http://code.google.com/webtoolkit/">Google Web Toolkit</a>, но по&shy;че&shy;му-то ссы&shy;кот&shy;но и ка&shy;жет&shy;ся, что бу&shy;дет по&shy;вто&shy;ре&shy;ние ис&shy;то&shy;рии с yahooй&shy;ней.А вот JQuery на фо&shy;не все&shy;го это&shy;го на&shy;бо&shy;ра ис&shy;ход&shy;ных ко&shy;дов - пре&shy;ле&shy;стен, как ка&shy;пель&shy;ка ро&shy;сы на ли&shy;сточ&shy;ке де&shy;ре&shy;ва, про&shy;сти&shy;те ме&shy;ня за мой фе&shy;ти&shy;шизм. Пре&shy;ле&shy;стен из-за сво&shy;их <a href="http://docs.jquery.com/Selectors">selector-ов</a>, ве&shy;ли&shy;ко&shy;ле&shy;пен по при&shy;чи&shy;не на&shy;ли&shy;чия ку&shy;чи <a href="http://jquery.com/plugins/">пла&shy;ги&shy;нов</a>, при&shy;я&shy;тен сво&shy;ей <a href="http://docs.jquery.com/">до&shy;ку&shy;мен&shy;та&shy;ци&shy;ей</a>, удо&shy;бен сво&shy;им <a href="http://docs.jquery.com/Each">each</a> цик&shy;лом пе&shy;ре&shy;бо&shy;ра child-ов эле&shy;мен&shy;та. А еще есть от&shy;лич&shy;ные <a href="http://docs.jquery.com/Tutorials">ту&shy;то&shy;ри&shy;а&shy;лы </a>и ми&shy;лые <a href="http://docs.jquery.com/Discussion">гугл&shy;груп&shy;пы</a>. И глав&shy;ный плюс, раз&shy;ра&shy;бот&shy;чи&shy;ки ре&shy;ши&shy;ли та&shy;ки не вы&shy;ду&shy;мы&shy;вать свой ве&shy;ло&shy;си&shy;пед, они про&shy;сто ис&shy;поль&shy;зо&shy;ва&shy;ли JS, рас&shy;ши&shy;рив его объ&shy;ект&shy;ную па&shy;ра&shy;диг&shy;му. Во как!Ну да хва&shy;тит под&shy;ли&shy;зы&shy;вать, я на&shy;пи&shy;сал ма&shy;лень&shy;кое де&shy;мо, по&shy;смот&shy;реть его мож&shy;но <a href="http://www.mindcollapse.com/media/etc/jquery/">тут</a>. И это лишь од&shy;на со&shy;тая всех воз&shy;мож&shy;но&shy;стей, но до&shy;ста&shy;точ&shy;но что&shy;бы пе&shy;ре&shy;убе&shy;дить.&nbsp; А во&shy;об&shy;ще, если уж со&shy;всем на чи&shy;сто&shy;ту: ajax и javascript эф&shy;фек&shy;ты - хуй&shy;ня ти&shy;та&shy;ни&shy;ко&shy;об&shy;раз&shy;ная. Его мно&shy;го, он мощ&shy;ный, но ча&shy;ще все&shy;го по&shy;па&shy;да&shy;ет в ру&shy;ки пер&shy;во&shy;здан&shy;ных сле&shy;пых кре&shy;ти&shy;нов, ко&shy;то&shy;рые его то&shy;пят, еб&shy;нув об айс&shy;берг (тут я не на&shy;шел объ&shy;яс&shy;не&shy;ния ме&shy;та&shy;фо&shy;ре). Как итог, flash мертв и урод&shy;лив, <a href="http://ru.wikipedia.org/wiki/Silverlight">silverlight</a> не при&shy;жил&shy;ся (у M$ та&shy;лант де&shy;лать мер&shy;тво&shy;ро&shy;жден&shy;ные идеи), java <span style="text-decoration: line-through;">омлеты </span>ап&shy;пле&shy;ты во&shy;об&shy;ще ка&shy;ну&shy;ли в про&shy;пасть бы&shy;тия, да здрав&shy;ству&shy;ет JS, ajax, server-side, тем&shy;ная сто&shy;ро&shy;на си&shy;лы и боль&shy;шие бо&shy;е&shy;вые ро&shy;бо&shy;ты.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/132.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/132.html&amp;text=%D0%9E%D0%B4%D0%B0%20jquery&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/132.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/132.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/132.html&amp;text=%D0%9E%D0%B4%D0%B0%20jquery&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/132.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

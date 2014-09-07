@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/198.html">Трансляция статуса твиттера в контакт</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2009-07-15T00:00:00Z" class="text-muted updated">15 июля 2009 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/198.html">Трансляция статуса твиттера в контакт</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2009-07-15T00:00:00Z" class="text-muted updated">15 июля 2009 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             По&shy;яви&shy;лась у ме&shy;ня од&shy;на мысль, как пе&shy;ре&shy;ли&shy;вать из пу&shy;сто&shy;го в по&shy;рож&shy;нее, ины&shy;ми сло&shy;ва&shy;ми - по&shy;стить ста&shy;ту&shy;сы из твит&shy;те&shy;ра в кон&shy;такт. <a href="/blog/93.html">Од&shy;на&shy;жды</a> я уже из&shy;вра&shy;щал&shy;ся с пар&shy;син&shy;гом кон&shy;так&shy;та ре&shy;гу&shy;ляр&shy;ка&shy;ми (в на&shy;сто&shy;я&shy;щее вре&shy;мя тот скрипт ско&shy;рее все&shy;го не ра&shy;бо&shy;та&shy;ет), а те&shy;перь по&shy;яви&shy;лось <a href="http://userapi.com">userapi.com</a>, изоб&shy;ре&shy;те&shy;ние Па&shy;ши Ду&shy;ро&shy;ва для со&shy;зда&shy;ния сво&shy;их со&shy;ци&shy;аль&shy;ных се&shy;тей на ба&shy;зе кон&shy;так&shy;та с по&shy;мо&shy;щью js, ко&shy;то&shy;рое мы без&shy;бож&shy;но бу&shy;дем ис&shy;поль&shy;зо&shy;вать в сво&shy;их гряз&shy;ных це&shy;лях. Во&shy;об&shy;ще, о userapi я узнал, ко&shy;гда ра&shy;ди ин&shy;те&shy;ре&shy;са уста&shy;но&shy;вил tcpdump на iphone что&shy;бы по&shy;смот&shy;реть как ра&shy;бо&shy;та&shy;ет род&shy;ное <a href="http://yavkontakte.ru/go.php?redirect=http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=304247866&amp;mt=8">при&shy;ло&shy;же&shy;ние</a> vkontakte. Имен&shy;но от&shy;ту&shy;да и был рас&shy;ко&shy;пан ме&shy;ха&shy;низм ав&shy;то&shy;ри&shy;за&shy;ции, а по&shy;том еще и <a href="http://userapi.com/?act=doc">до&shy;ку&shy;мен&shy;та&shy;ция</a> на&shy;шлась.<p></p><p>Ко&shy;ро&shy;че, ис&shy;ход&shy;ный код мож&shy;но по&shy;смот&shy;реть и за&shy;гру&shy;зить (download it ссыл&shy;ка, кто ослеп) <a href="/media/copypaste/vtweet.php">ко&shy;пи&shy;па&shy;сте&shy;ре</a>. Ска&shy;чи&shy;вай&shy;те, ме&shy;няй&shy;те ло&shy;ги&shy;ны\па&shy;ро&shy;ли, до&shy;бав&shy;ляй&shy;те в cron и сча&shy;стье. Меж&shy;ду про&shy;чим, класс vkuserapi поз&shy;во&shy;ля&shy;ет вы&shy;зы&shy;вать лю&shy;бые ме&shy;то&shy;ды, опи&shy;сан&shy;ные на вы&shy;ше&shy;на&shy;зван&shy;ной стра&shy;ни&shy;це с до&shy;ку&shy;мен&shy;та&shy;ци&shy;ей, что впол&shy;не ин&shy;те&shy;рес&shy;но. Экс&shy;пе&shy;ри&shy;мен&shy;ти&shy;руй&shy;те на здо&shy;ро&shy;вье, един&shy;ствен&shy;ное что - род&shy;ной json_decode в php ну очень при&shy;ве&shy;ред&shy;лив, ино&shy;гда не мо&shy;жет рас&shy;пар&shy;сить от&shy;вет userapi, да и не&shy;ту хенд&shy;ле&shy;ра оши&shy;бок при ав&shy;то&shy;ри&shy;за&shy;ции. Но ра&shy;бо&shy;та&shy;ет же и все та&shy;кое, а зна&shy;чит до&shy;пи&shy;ли&shy;вай&shy;те са&shy;мо&shy;сто&shy;я&shy;тель&shy;но, если на&shy;до.</p><p></p><p>PS: для ра&shy;бо&shy;ты ну&shy;жен php &gt;= 5.1 c lib_curl, simple_xml и хо&shy;стинг с allow_url_fopen, а и еще ваш twitter про&shy;филь не дол&shy;жен быть private, по&shy;след&shy;ний ста&shy;тус по&shy;лу&shy;ча&shy;ет&shy;ся не по API, а че&shy;рез RSS.</p>
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/198.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/198.html&amp;text=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BB%D1%8F%D1%86%D0%B8%D1%8F%20%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81%D0%B0%20%D1%82%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80%D0%B0%20%D0%B2%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/198.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/198.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/198.html&amp;text=%D0%A2%D1%80%D0%B0%D0%BD%D1%81%D0%BB%D1%8F%D1%86%D0%B8%D1%8F%20%D1%81%D1%82%D0%B0%D1%82%D1%83%D1%81%D0%B0%20%D1%82%D0%B2%D0%B8%D1%82%D1%82%D0%B5%D1%80%D0%B0%20%D0%B2%20%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/198.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

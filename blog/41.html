@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/41.html">F***ing ATI + Beryl</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2006-12-24T00:00:00Z" class="text-muted updated">24 декабря 2006 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/41.html">F***ing ATI + Beryl</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2006-12-24T00:00:00Z" class="text-muted updated">24 декабря 2006 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Ре&shy;шил я по сво&shy;бо&shy;де вре&shy;ме&shy;ни по&shy;ста&shy;вить на до&shy;маш&shy;нюю ма&shy;шин&shy;ку <a href="http://beryl-project.org/">beryl</a>, т.к. па&shy;ру зна&shy;ко&shy;мых уже все уши про&shy;жуж&shy;жа&shy;ли, мол "там все очень кра&shy;си&shy;во, там все очень про&shy;зрач&shy;но".Уда&shy;лось вы&shy;кро&shy;ить па&shy;ру ча&shy;сов сво&shy;бод&shy;но&shy;го вре&shy;ме&shy;ни.Итак, по&shy;сле&shy;до&shy;ва&shy;тель&shy;ность со&shy;бы&shy;тий:<strong>10:15</strong> - ка&shy;чаю <a href="http://releases.beryl-project.org/0.1.3/">тар&shy;бо&shy;лы</a>. Ска&shy;чал, ка&shy;чаю де&shy;пен&shy;дан&shy;сы. Со&shy;би&shy;раю. Со&shy;брал.<strong>10:40</strong> - про&shy;чи&shy;тал, что для вы&shy;стро&shy;дей&shy;ствия же&shy;ла&shy;тель&shy;но за&shy;пус&shy;кать <a href="http://beryl-project.org/">beryl</a> под Xgl. По&shy;вто&shy;ряю все свои дей&shy;ствия.<strong>10:50</strong> - пер&shy;вое упо&shy;ми&shy;на&shy;ние "f***ing ATI". В xgl у ме&shy;ня пол&shy;но&shy;стью от&shy;сут&shy;ству&shy;ет TCL, а весь рен&shy;де&shy;ринг идет че&shy;рез Mesa indirect. Ра&shy;ду&shy;юсь, пью пи&shy;во.<strong>11:05</strong> - уста&shy;нав&shy;ли&shy;ваю ATI fglrx вер&shy;сии 7.28 (вы&shy;ше мой Radeon 9250 не под&shy;дер&shy;жи&shy;ва&shy;ет&shy;ся). Нерв&shy;но ку&shy;рю. Xgl ру&shy;га&shy;ет&shy;ся на от&shy;сут&shy;ствие X86-DRI. Едет ско&shy;рым по&shy;ез&shy;дом в жо&shy;пу. <strong>11:25</strong> - за&shy;би&shy;ваю на Xgl. Вы&shy;чи&shy;ты&shy;ваю, что бе&shy;рил ра&shy;бо&shy;та&shy;ет на Gnome &gt;= 2.16.1. Все ра&shy;бо&shy;та&shy;ет, ра&shy;ду&shy;юсь.ATI Device в xorg.conf<fieldset><code>Section "Device"&nbsp;&nbsp;Identifier\t"ATI Technologies, Inc. RV280 [Radeon 9250]"&nbsp;&nbsp;Driver "radeon"&nbsp;&nbsp;Option "DRI" "true"&nbsp;&nbsp;Option "ColorTiling" "on"&nbsp;&nbsp;Option "EnablePageFlip" "true"&nbsp;&nbsp;Option "AccelMethod" "EXA"&nbsp;&nbsp;Option "XAANoOffscreenPixmaps"&nbsp;&nbsp;Option "RenderAccel" "true"\t#у меня вешало систему Option "AGPMode" "2" &nbsp;&nbsp;Option "AGPFastWrite" "on"&nbsp;&nbsp;BusID\t\t"PCI:1:0:0"EndSection</code></fieldset><strong>PS: </strong> блог жил, жив и бу&shy;дет жить. Про&shy;сто ред&shy;ко об&shy;нов&shy;ля&shy;ет&shy;ся - у ме&shy;ня кри&shy;ти&shy;че&shy;ские дни. Мо&shy;дуль&shy;ные, рек&shy;тор&shy;ские, за&shy;чет&shy;ные, се&shy;ме&shy;стро&shy;вые и про&shy;чая га&shy;дость.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/41.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/41.html&amp;text=F%2A%2A%2Aing%20ATI%20%2B%20Beryl&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/41.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/41.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/41.html&amp;text=F%2A%2A%2Aing%20ATI%20%2B%20Beryl&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/41.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

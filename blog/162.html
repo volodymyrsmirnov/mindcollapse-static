@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/162.html">GeSHi, Codeigniter и немного Бонда</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-11-08T00:00:00Z" class="text-muted updated">8 ноября 2008 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/162.html">GeSHi, Codeigniter и немного Бонда</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2008-11-08T00:00:00Z" class="text-muted updated">8 ноября 2008 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             В PHP су&shy;ще&shy;ству&shy;ет встро&shy;ен&shy;ная функ&shy;ция под&shy;свет&shy;ки син&shy;так&shy;си&shy;са - <a href="http://ua.php.net/highlight-string">highlight_string</a>, ко&shy;то&shy;рая да&shy;же ра&shy;бо&shy;та&shy;ет, но ра&shy;бо&shy;та&shy;ет очень кри&shy;во, вре&shy;ме&shy;на&shy;ми ба&shy;наль&shy;но за&shy;кра&shy;ши&shy;вая весь код в крас&shy;ный цвет, а нам так хо&shy;чет&shy;ся че&shy;го-то боль&shy;ше&shy;го. От не&shy;че&shy;го де&shy;лать, до&shy;де&shy;лал к бло&shy;гу свой <a href="http://en.wikipedia.org/wiki/Pastebin">pastebin</a>. Для под&shy;свет&shy;ки син&shy;так&shy;си&shy;са взя&shy;лась биб&shy;лио&shy;те&shy;ка под на&shy;зва&shy;ние GeSHi, ко&shy;то&shy;рая уме&shy;ет ра&shy;бо&shy;тать c огром&shy;ной ку&shy;чей фор&shy;ма&shy;тов пе&shy;ре&shy;чис&shy;ле&shy;ных на <a href="http://qbnz.com/highlighter/">офи&shy;ци&shy;аль&shy;ном сай&shy;те</a>. К то&shy;му же ге&shy;не&shy;ри&shy;ру&shy;ет&shy;ся ва&shy;лид&shy;ный HTML код, под&shy;све&shy;чи&shy;ва&shy;ют&shy;ся име&shy;на функ&shy;ций с ссыл&shy;ка&shy;ми на ма&shy;ну&shy;а&shy;лы, ну&shy;ме&shy;ру&shy;ют&shy;ся стро&shy;ки, ну и дру&shy;гие вкус&shy;но&shy;сти.Что&shy;бы не быть го&shy;ло&shy;слов&shy;ным, вот <a href="/media/copypaste/media/copypaste.php">ссыл&shy;ка на сам код</a> кон&shy;трол&shy;ле&shy;ра ко&shy;пи&shy;па&shy;сте&shy;ра. Про&shy;сто рас&shy;па&shy;куй&shy;те <a href="http://sourceforge.net/project/showfiles.php?group_id=114997">по&shy;след&shy;нюю вер&shy;сию</a> geshi в APPPATH/libraries и со&shy;здай&shy;те view файл под свой ди&shy;зайн не за&shy;быв из&shy;ме&shy;нить rootpath пе&shy;ре&shy;мен&shy;ную. Для на&shy;гляд&shy;но&shy;го при&shy;ме&shy;ра <a href="/media/copypaste/balancer.pl">perl</a>-файл мо&shy;ей про&shy;грам&shy;мы <a href="/blog/157.html">RSBalancer</a> вер&shy;сии 0.0.2 и по&shy;след&shy;няя вер&shy;сия 0.1.1, ко&shy;то&shy;рая бы&shy;ла пе&shy;ре&shy;пи&shy;са&shy;на на <a href="/media/copypaste/balancer.pas">delphi</a>. Та&shy;кие де&shy;ла.Меж&shy;ду про&shy;чим, се&shy;го&shy;дня ве&shy;че&shy;ром ре&shy;шил схо&shy;дить на но&shy;вую се&shy;рию Бон&shy;ди&shy;а&shy;ны. Если ве&shy;рить от&shy;зы&shy;вам, гов&shy;но ред&shy;чай&shy;шое, а зна&shy;чит с про&shy;шлой вер&shy;сии, о ко&shy;то&shy;рой я <a href="/blog/30.html">пи&shy;сал</a> без не&shy;де&shy;ли 2 го&shy;да то&shy;му на&shy;зад, ни&shy;че&shy;го не из&shy;ме&shy;ни&shy;лось. Раз&shy;ве что <a href="http://www.youtube.com/watch?v=hM5UJvnbbuY">саун&shy;д&shy;трек</a> в ис&shy;пол&shy;не&shy;нии Али&shy;шии (вот я не пой&shy;му, а с хуя Али&shy;шия, а не Али&shy;сия? Я же не Влад&shy;ши&shy;мерш толь&shy;ко по&shy;то&shy;му что это зву&shy;чит ан&shy;ти&shy;мейн&shy;стри&shy;мо&shy;во и ин&shy;но&shy;ва&shy;ци&shy;он&shy;но) Ки&shy;из и Дже&shy;ка Вай&shy;та (ко&shy;то&shy;ро&shy;го я меж&shy;ду про&shy;чим лю&shy;блю тай&shy;но) зву&shy;чит то&shy;таль&shy;ным, бес&shy;ком&shy;про&shy;мисс&shy;ным, лю&shy;би&shy;тель&shy;ским, ка&shy;ко&shy;фо&shy;ни&shy;че&shy;ским гов&shy;ни&shy;щем. Да, до&shy;ро&shy;гие дру&shy;зья, да&shy;же я в ду&shy;ше пар&shy;тию "ОООоОООооОооООО" вы&shy;тя&shy;ги&shy;ваю по&shy;луч&shy;ше, не го&shy;во&shy;ря уже о смеш&shy;ных кон&shy;вуль&shy;си&shy;ях верх&shy;них ко&shy;неч&shy;но&shy;стей Дже&shy;ка и агрес&shy;сив&shy;ных уда&shy;ров Али&shy;шии дву&shy;мя паль&shy;чи&shy;ка&shy;ми по фор&shy;те&shy;пи&shy;а&shy;но, что впро&shy;чем в му&shy;зы&shy;ке ни&shy;как не отоб&shy;ра&shy;жа&shy;ет&shy;ся, но вы&shy;гля&shy;дит так бру&shy;таль&shy;но. А во&shy;об&shy;ще, ку&shy;да ка&shy;тит&shy;ся это су&shy;ма&shy;сшед&shy;ший мир? Сле&shy;ду&shy;ю&shy;щий Джеймс Бонд то&shy;же бу&shy;дет чер&shy;ным? Ре&shy;цен&shy;зия со спой&shy;ле&shy;ром бу&shy;дет зав&shy;тра утром, на&shy;вер&shy;ное.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/162.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/162.html&amp;text=GeSHi%2C%20Codeigniter%20%D0%B8%20%D0%BD%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%91%D0%BE%D0%BD%D0%B4%D0%B0&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/162.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/162.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/162.html&amp;text=GeSHi%2C%20Codeigniter%20%D0%B8%20%D0%BD%D0%B5%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%91%D0%BE%D0%BD%D0%B4%D0%B0&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/162.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

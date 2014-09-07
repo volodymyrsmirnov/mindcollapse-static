@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/56.html">Monkey-шейпер</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2007-04-01T00:00:00Z" class="text-muted updated">1 апреля 2007 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/56.html">Monkey-шейпер</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2007-04-01T00:00:00Z" class="text-muted updated">1 апреля 2007 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             В <a href="http://rs.net.ua">се&shy;ти</a> по&shy;явил&shy;ся за&shy;ман&shy;чи&shy;вый та&shy;риф. <b>512/128</b> без уче&shy;та тра&shy;фи&shy;ка и вы&shy;хо&shy;дом в ua-ix. Ре&shy;ши&shy;ли с то&shy;ва&shy;ри&shy;ща&shy;ми со&shy;об&shy;ра&shy;зить на тро&shy;их толь&shy;ко ра&shy;ди укра&shy;ин&shy;ских тре&shy;ке&shy;ров и <a href="http://infostore.org">infostore.org</a>. Сра&shy;зу воз&shy;ник во&shy;прос о де&shy;ле&shy;же ско&shy;ро&shy;сти по чест&shy;но&shy;сти и спра&shy;вед&shy;ли&shy;во&shy;сти.Вспо&shy;мнил&shy;ся <a href="http://freshmeat.net/projects/rshaper/">rshaper</a>.Об уста&shy;нов&shy;ке и на&shy;строй&shy;ке мож&shy;но по&shy;чи&shy;тать на <a href="http://www.opennet.ru/base/net/rshaper.txt.html">opennet.ru</a>, хо&shy;тя с фра&shy;зой, что "ра&shy;бо&shy;та&shy;ет меж&shy;ду про&shy;чим ста&shy;биль&shy;ней и чет&shy;че чем шей&shy;пер в ipfw" не&shy;со&shy;гла&shy;сен - тре&shy;бо&shy;ва&shy;лось сде&shy;лать все бы&shy;стро, тем бо&shy;лее на сер&shy;ве&shy;ре сто&shy;ит <a href="http://debian.org">debian linux </a>. Со&shy;брал&shy;ся на ядре 2.6.20 c cvs (<a href="http://cvs.gnudd.com/index.cgi/rshaper">link</a>) без осо&shy;бых про&shy;блем.Огром&shy;ный плюс про&shy;грам&shy;мы - эле&shy;мен&shy;тар&shy;ный син&shy;так&shy;сис, ми&shy;нус - воз&shy;рос la на 0,8%. Но для 3 ра&shy;бо&shy;чих ма&shy;шин это не су&shy;ще&shy;ствен&shy;но, ра&shy;бо&shy;та&shy;ет и йух с ним.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/56.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/56.html&amp;text=Monkey-%D1%88%D0%B5%D0%B9%D0%BF%D0%B5%D1%80&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/56.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/56.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/56.html&amp;text=Monkey-%D1%88%D0%B5%D0%B9%D0%BF%D0%B5%D1%80&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/56.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

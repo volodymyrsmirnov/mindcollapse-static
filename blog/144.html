@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/144.html">Бубен, gpsd, pl2303, linux, marlboro</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-08-27T00:00:00Z" class="text-muted updated">27 августа 2008 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/144.html">Бубен, gpsd, pl2303, linux, marlboro</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2008-08-27T00:00:00Z" class="text-muted updated">27 августа 2008 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Вче&shy;ра при&shy;шел на&shy;ко&shy;нец-то за&shy;ка&shy;зан&shy;ный на <a href="http://cgi.ebay.com/ws/eBayISAPI.dll?ViewItem&amp;ssPageName=STRK:MEWNX:IT&amp;item=130244924998">eBay</a> USB GPS ре&shy;си&shy;вер Royaltek RGM-2000 (<a href="http://picasaweb.google.com/solarzine/SceGdF/photo#5239268947092397202">фо&shy;то</a>). До&shy;ста&shy;точ&shy;но по&shy;жи&shy;лой, но впол&shy;не под&shy;хо&shy;дя&shy;щий для пре&shy;вра&shy;ще&shy;ния но&shy;ут&shy;бу&shy;ка в про&shy;стень&shy;кий на&shy;ви&shy;га&shy;тор. Сра&shy;зу же за&shy;хо&shy;те&shy;лось скон&shy;нек&shy;тить его с <a href="/blog/142.html">но&shy;ут&shy;бу&shy;ком</a> на ко&shy;то&shy;ром, на&shy;по&shy;мню, уста&shy;нов&shy;ле&shy;на мо&shy;ди&shy;фи&shy;ка&shy;ий fedora 8, <a href="http://www.linpus.com/xampp/webmaster/Products/Linux9.4Lite.htm">linux linpus lite</a>. То, что это бу&shy;дет за&shy;бав&shy;но. бы&shy;ло по&shy;нят&shy;но уже за&shy;ра&shy;нее. По&shy;сле кон&shy;нек&shy;та к usb пор&shy;ту <span style="font-style: italic;">dmesg</span> вы&shy;дал стан&shy;дарт&shy;ное <span style="font-style: italic;">usb1-1: configuration #1 chosen from 1 choice</span>, что со&shy;вер&shy;шен&shy;но не по&shy;ра&shy;до&shy;ва&shy;ло. Тем не ме&shy;нее, на вся&shy;кий слу&shy;чай про&shy;ве&shy;рил все <span style="font-style: italic;">/dev/ttys*</span> - к со&shy;жа&shy;ле&shy;нию, каж&shy;дый из них вы&shy;да&shy;вал Input/output error. Да&shy;лее за&shy;гля&shy;нул в <span style="font-style: italic;">lsusb</span>, где уви&shy;дел <span style="font-style: italic;">Bus 003 Device 002: ID 067b:2303 Prolific Technology, Inc. PL2303 Serial Port</span>. По&shy;сле дол&shy;гих гугло&shy;ко&shy;па&shy;ний ока&shy;за&shy;лось, что сам GPS ре&shy;си&shy;вер, как и все, ис&shy;поль&shy;зу&shy;ет serial port для вы&shy;во&shy;да дан&shy;ных (что за ана&shy;хро&shy;низм?), по на&shy;ше&shy;му - COM, а со&shy;еди&shy;ня&shy;ет&shy;ся с си&shy;сте&shy;мой че&shy;рез Serial&lt;-&gt;USB при&shy;сад&shy;ку&nbsp;<a href="http://www.prolific.com.tw/eng/Products.asp?ID=59">Prolific 2303</a>. При&shy;шлось пе&shy;ре&shy;со&shy;би&shy;рать мо&shy;ду&shy;ли ядра для то&shy;го что-бы по&shy;лу&shy;чить это са&shy;мый <span style="font-style: italic;">pl2303.ko</span>, ак&shy;ти&shy;ви&shy;ро&shy;вав в menuconfig (<span style="font-style: italic;">Devices -&gt; Support for USB</span>) <span style="font-style: italic;">USB Serial Converter support</span>&nbsp;и мо&shy;ду&shy;ли <span style="font-style: italic;">USB Generic Serial Driver</span>, <span style="font-style: italic;">USB Prolific 2303 Single Port Serial Driver</span>. &nbsp;По&shy;сле обыч&shy;но&shy;го <span style="font-style: italic;">modprobe usbserial</span> и <span style="font-style: italic;">insmod pl2303.ko</span>, <span style="font-style: italic;">dmesg</span> уже ра&shy;до&shy;вал<span style="font-style: italic;"> usb 2-2: pl2303 converter now attached to ttyUSB0</span>. &nbsp;Во&shy;прос, для че&shy;го я это все на&shy;ка&shy;тал? Да по&shy;то&shy;му что, как ока&shy;за&shy;лось, ту&shy;е&shy;ва ху&shy;ча раз&shy;лич&shy;ных "эк&shy;зо&shy;ти&shy;че&shy;ских" устройств ис&shy;поль&shy;зу&shy;ет этот про&shy;кля&shy;тый про&shy;ли&shy;фик - на&shy;чи&shy;ная про&shy;грам&shy;ма&shy;то&shy;ра&shy;ми обо&shy;ру&shy;до&shy;ва&shy;ния и за&shy;кан&shy;чи&shy;вая GPS-мо&shy;ду&shy;ля&shy;ми. Что ка&shy;са&shy;ет&shy;ся gpsd, то тут во&shy;об&shy;ще был дет&shy;ский ле&shy;пет. По&shy;сле уста&shy;нов&shy;ки gpsd и gpsd-clients сер&shy;вер стар&shy;ту&shy;ет&shy;ся ко&shy;ман&shy;дой <span style="font-style: italic;">dpsd -b -D2 -N /dev/ttyUSB0</span>, ли&shy;бо же мож&shy;но про&shy;сто по&shy;смот&shy;реть ста&shy;тус при&shy;ем&shy;ни&shy;ка и ко&shy;ор&shy;ди&shy;на&shy;ты для ре&shy;си&shy;ве&shy;ров с чи&shy;пом SiRF по&shy;сред&shy;ством <span style="font-style: italic;">sirfmon /dev/ttyUSB0</span>. Что ка&shy;са&shy;ет&shy;ся са&shy;мо&shy;го GPS при&shy;ло&shy;же&shy;ния, то по&shy;ка не мо&shy;гу най&shy;ти что-то бо&shy;лее-ме&shy;нее сим&shy;па&shy;тич&shy;ное и под&shy;дер&shy;жи&shy;ва&shy;ю&shy;щее хоть один из рас&shy;про&shy;стра&shy;нен&shy;ных ви&shy;дов карт. Для те&shy;сти&shy;ро&shy;ва&shy;ния и ба&shy;лов&shy;ства мо&shy;жет при&shy;го&shy;дит&shy;ся <a href="http://www.tangogps.org/">tangogps</a>, ко&shy;то&shy;рый вы&shy;ка&shy;чи&shy;ва&shy;ет то&shy;по&shy;гра&shy;фи&shy;че&shy;ские ли&shy;бо спут&shy;ни&shy;ко&shy;вые кар&shy;ты из ин&shy;тер&shy;не&shy;та, уме&shy;ет со&shy;хра&shy;нять тре&shy;ки, про&shy;счи&shy;ты&shy;вать про&shy;стей&shy;шую ста&shy;ти&shy;сти&shy;ку марш&shy;ру&shy;та и про&shy;чее. Под wine-ом, увы, ни&shy;че&shy;го за&shy;пу&shy;стить не уда&shy;лось, он по&shy;че&shy;му-то ка&shy;те&shy;го&shy;ри&shy;че&shy;ски от&shy;ка&shy;зы&shy;вал&shy;ся ра&shy;бо&shy;тать в ре&shy;жи&shy;ме эму&shy;ля&shy;ции с этим са&shy;мым ttyUSB0. Бу&shy;дем ис&shy;кать.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/144.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/144.html&amp;text=%D0%91%D1%83%D0%B1%D0%B5%D0%BD%2C%20gpsd%2C%20pl2303%2C%20linux%2C%20marlboro&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/144.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/144.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/144.html&amp;text=%D0%91%D1%83%D0%B1%D0%B5%D0%BD%2C%20gpsd%2C%20pl2303%2C%20linux%2C%20marlboro&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/144.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/68.html">OpenVPN на Debian</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2007-07-03T00:00:00Z" class="text-muted updated">3 июля 2007 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/68.html">OpenVPN на Debian</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2007-07-03T00:00:00Z" class="text-muted updated">3 июля 2007 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Дав&shy;но не пи&shy;сал в раз&shy;дел <a href="/index.php?cat=7">(.*)nix</a> - вот ис&shy;прав&shy;ля&shy;юсь.<b>За&shy;да&shy;ча:</b> под&shy;нять на <a href="http://www.debian.org/">Debian GNU/Linux</a> VPN сер&shy;вер на ба&shy;зе <a href="http://openvpn.net/">Open VPN</a> (rsa-cert ав&shy;то&shy;ри&shy;за&shy;ция,) и на&shy;стро&shy;ить windows-кли&shy;ен&shy;ты.<u>СЕР&shy;ВЕР</u>:1. apt-get install openvpn (в ре&shy;по&shy;зи&shy;та&shy;рии сбор&shy;ка вер&shy;сии 2.0.9-5)2. cp -R /usr/share/openvpn/easy-rsa /etc/openvpn3. nano /etc/openvpn/easy-rsa/vars<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 182px; text-align: left;">export D=`pwd`export KEY_CONFIG=$D/openssl.cnfexport KEY_DIR="/etc/openvpn/keys"echo NOTE: when you run ./clean-all, I will be doing a rm -rf on $KEY_DIRexport KEY_SIZE=1024export KEY_COUNTRY=UAexport KEY_PROVINCE=SRexport KEY_CITY=SUMYexport KEY_ORG="SMIRNOFF.HOME"export KEY_EMAIL="spam@gmail.com"</pre>4. mkdir /etc/openvpn/keys5. cd /etc/openvpn/easy-rsa &amp;&amp; ./vars. &amp;&amp; ./clean-all &amp;&amp; ./build-ca &amp;&amp; ./build-key-server homegw6.Да&shy;лее ге&shy;не&shy;ри&shy;ру&shy;ем клю&shy;чи (/etc/openvpn/easy-rsa/)<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 90px; text-align: left;">./build-key [computername]./build-key notebook1./build-key bosssuka etc...</pre>7. ./build-dh8. nano /etc/openvpn/server.conf:<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 190px; text-align: left;">port 1194proto tcpdev tunca keys/ca.crtcert keys/homegw.crtkey keys/homegw.keydh keys/dh1024.pemserver 10.20.30.0 255.255.255.0client-config-dir ccdpush "dhcp-option DNS 10.20.30.1"push "redirect-gateway"keepalive 10 120comp-lzopersist-keypersist-tunverb 3</pre>9. /etc/init.d/openvpn start Ву&shy;а&shy;ля, сер&shy;вер го&shy;тов. Не за&shy;бы&shy;ва&shy;ем при кон&shy;нек&shy;те до&shy;ба&shy;вить пра&shy;ви&shy;ло для каж&shy;до&shy;го кли&shy;ен&shy;та:<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 30px; text-align: left;">iptables -t nat -A POSTROUTING -s 10.20.30.110 -j SNAT --to 10.20.30.1</pre><u>КЛИ&shy;ЕНТ</u>:Ис&shy;поль&shy;зо&shy;вать мы бу&shy;дем <a href="http://openvpn.se/">OpenVPN GUI for Windows</a>, ко&shy;то&shy;рый успеш&shy;но ска&shy;чи&shy;ва&shy;ем и уста&shy;нав&shy;ли&shy;ва&shy;ем. Да&shy;лее ска&shy;чи&shy;ва&shy;ем с сер&shy;ве&shy;ра сге&shy;не&shy;ри&shy;ро&shy;ван&shy;ные фай&shy;лы клю&shy;чей:<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 60px; text-align: left;">/etc/openvpn/keys/ca.crt/etc/openvpn/keys/bosssuka.key/etc/openvpn/keys/bosssuka.crt</pre>Ре&shy;дак&shy;ти&shy;ру&shy;ем C:\Program Files\OpenVPN\config\VPNServer.ovpn<pre style="border: 1px inset ; margin: 0px; padding: 6px; overflow: auto; width: 400px; height: 190px; text-align: left;">clientdev tunproto tcpremote 10.20.30.1 1194resolv-retry infinitenobindpersist-keypersist-tunca ca.crtcert bosssuka.crtkey bosssuka.keyns-cert-type serverpush "dhcp-option DNS 10.20.30.1"comp-lzoverb 3route-method exeroute-delay 2</pre>ПКМ на зна&shy;чок в трее, вы&shy;би&shy;ра&shy;ем connect и гор&shy;дим&shy;ся, ка&shy;кие мы ум&shy;ные.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/68.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/68.html&amp;text=OpenVPN%20%D0%BD%D0%B0%20Debian&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/68.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/68.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/68.html&amp;text=OpenVPN%20%D0%BD%D0%B0%20Debian&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/68.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/206.html">ПО для HTPC: the начало</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2009-10-11T00:00:00Z" class="text-muted updated">11 октября 2009 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/206.html">ПО для HTPC: the начало</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2009-10-11T00:00:00Z" class="text-muted updated">11 октября 2009 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Как я обе&shy;щал в <a href="/blog/205.html">об&shy;зо&shy;ре Acer Revo R3600</a>, на&shy;пи&shy;шу о соф&shy;те для со&shy;зда&shy;ния пол&shy;но&shy;цен&shy;но&shy;го до&shy;маш&shy;не&shy;го ки&shy;но&shy;те&shy;ат&shy;ра, управ&shy;ля&shy;е&shy;мо&shy;го с пуль&shy;та и до&shy;став&shy;ля&shy;ю&shy;ще&shy;го очень мно&shy;го ра&shy;до&shy;сти до&shy;мо&shy;чад&shy;цам и спон&shy;тан&shy;ным по&shy;се&shy;ти&shy;те&shy;лям ва&shy;ше&shy;го жи&shy;лья. Итак, пер&shy;вый во&shy;прос, ко&shy;то&shy;рый по су&shy;ти яв&shy;ля&shy;ет&shy;ся боль&shy;ше идео&shy;ло&shy;ги&shy;че&shy;ским, чем тех&shy;ни&shy;че&shy;ским - ка&shy;кую ОС для это&shy;го все&shy;го де&shy;ла вы&shy;брать и ис&shy;поль&shy;зо&shy;вать. Ва&shy;ри&shy;ан&shy;тов у нас по су&shy;ти 2: Windows ли&shy;бо же Linux, и вот тут про&shy;ис&shy;хо&shy;дит не&shy;ожи&shy;дан&shy;ное и фе&shy;но&shy;ме&shy;наль&shy;ное, ока&shy;зы&shy;ва&shy;ет&shy;ся на Linux все на&shy;стро&shy;ить и за&shy;ста&shy;вить ра&shy;бо&shy;тать на&shy;мно&shy;го про&shy;ще, но об этом чуть ни&shy;же. Если вы опре&shy;де&shy;ли&shy;лись с вы&shy;бо&shy;ром, по&shy;ры ба по&shy;ду&shy;мать про вер&shy;сию сво&shy;е&shy;го вы&shy;бо&shy;ра. Для Windows ва&shy;ри&shy;на&shy;тов 2 - Vista, если вы дол&shy;бо&shy;еб и Windows 7, ко&shy;то&shy;роя вот-вот по&shy;явит&shy;ся в про&shy;да&shy;же. Что ка&shy;са&shy;ет&shy;ся XP - мо&shy;же&shy;те, увы, за&shy;быть, в этой си&shy;сте&shy;ме ис&shy;поль&shy;зу&shy;ют&shy;ся ста&shy;рые ме&shy;то&shy;ды ви&shy;део рен&shy;де&shy;рин&shy;га, ко&shy;то&shy;рые не поз&shy;во&shy;лят по&shy;лу&shy;чать весь про&shy;фит от ап&shy;па&shy;рат&shy;но&shy;го уско&shy;ре&shy;ния ви&shy;део и по&shy;это&shy;му не&shy;при&shy;ем&shy;ле&shy;мы. <p></p><p>Во&shy;об&shy;ще, для се&shy;бя я вы&shy;брал 7600 билд Windows 7, но все же ска&shy;жу па&shy;ру слов о Linux. Во-пер&shy;вых, для ап&shy;па&shy;рат&shy;но&shy;го де&shy;ко&shy;ди&shy;ро&shy;ва&shy;ния ви&shy;део вы&shy;со&shy;ко&shy;го ка&shy;че&shy;ства вам не&shy;об&shy;хо&shy;ди&shy;ма ви&shy;део&shy;кар&shy;та про&shy;из&shy;вод&shy;ства nVidia, по&shy;след&shy;ние дро&shy;ва и под&shy;дер&shy;жа <a href="http://en.wikipedia.org/wiki/VDPAU">VDPAU</a>, ко&shy;то&shy;рая яв&shy;ля&shy;ет&shy;ся аль&shy;тер&shy;на&shy;ти&shy;вой DxVA на Windows и ис&shy;поль&shy;зу&shy;ет то же ап&shy;па&shy;рат&shy;ное PureVideo. Аль&shy;тер&shy;на&shy;ти&shy;ва есть и для ATI, <a href="http://en.wikipedia.org/wiki/X-Video_Bitstream_Acceleration">XvBA</a>, но на&shy;стра&shy;и&shy;ва&shy;ет&shy;ся слож&shy;нее и прак&shy;ти&shy;че&shy;ски ни&shy;ка&shy;ким соф&shy;том не под&shy;дер&shy;жи&shy;ва&shy;ет&shy;ся. По&shy;сле уста&shy;нов&shy;ки и на&shy;строй&shy;ки вы&shy;бран&shy;но&shy;го ва&shy;ми дис&shy;три&shy;бу&shy;ти&shy;ва воз&shy;ни&shy;ка&shy;ет во&shy;прос вы&shy;бо&shy;ра муль&shy;ти&shy;ме&shy;дий&shy;ной обо&shy;лоч&shy;ки. И тут я без&shy;аль&shy;тер&shy;на&shy;тив&shy;но со&shy;ве&shy;тую вам <a href="http://xbmc.org/">XBMC</a>. Если вы ис&shy;поль&shy;зу&shy;е&shy;те Linux, то на этом мож&shy;но бы&shy;ло бы и за&shy;кан&shy;чи&shy;вать опи&shy;са&shy;ние, дан&shy;ный софт под&shy;дер&shy;жи&shy;ва&shy;ет и ап&shy;па&shy;рат&shy;ную ак&shy;се&shy;ле&shy;ра&shy;цию, и управ&shy;ле&shy;ние с пуль&shy;та, и ку&shy;чу раз&shy;ных дру&shy;гих ве&shy;щей-по&shy;лез&shy;но&shy;стей. Если вы со&shy;всем ле&shy;ни&shy;вый - мо&shy;же&shy;те ска&shy;чать <a href="http://xbmc.org/download/">Live-об&shy;раз</a> XBMC, я не про&shy;бы&shy;вал, но на фо&shy;ру&shy;мах по&shy;го&shy;ва&shy;ри&shy;ва&shy;ют, что все не&shy;об&shy;хо&shy;ди&shy;мое там уже име&shy;ет&shy;ся из ко&shy;роб&shy;ки + при&shy;сут&shy;ству&shy;ет воз&shy;мож&shy;ность ста&shy;ци&shy;о&shy;нар&shy;ной уста&shy;нов&shy;ки на диск.</p><p></p><p>Так, те&shy;перь что ка&shy;са&shy;ет&shy;ся на&shy;строй&shy;ки XBMC под Windows. Основ&shy;ная про&shy;бле&shy;ма со&shy;сто&shy;ит в том, что билд под ок&shy;на не под&shy;дер&shy;жи&shy;ва&shy;ет не&shy;ко&shy;шер&shy;но-за&shy;кры&shy;тый про&shy;то&shy;кол DxVA и по&shy;это&shy;му по&shy;став&shy;ля&shy;ет&shy;ся толь&shy;ко с соф&shy;твер&shy;ным рен&shy;де&shy;рин&shy;гом, что смер&shy;ти по&shy;доб&shy;но, если у вас в ме&shy;диа-цен&shy;тре сла&shy;бый про&shy;цес&shy;сор. Но обо всем по по&shy;ряд&shy;ку. По&shy;сле за&shy;груз&shy;ки и уста&shy;нов&shy;ке XBMC (по&shy;след&shy;ние бе&shy;та-бил&shy;ды в этом <a href="http://xbmc.org/forum/showthread.php?t=35452">тре&shy;де</a>) сра&shy;зу опре&shy;де&shy;ля&shy;ем&shy;ся с внеш&shy;ним ви&shy;дом. Стан&shy;дарт&shy;ные ски&shy;ны сим&shy;па&shy;тич&shy;ные, но эсте&shy;ти&shy;че&shy;ски ме&shy;ня пре&shy;льща&shy;ют 2 сто&shy;рон&shy;них: <a href="http://www.aeonproject.com/">AEON</a> (<a href="http://picasaweb.google.com/solarzine/XBMCAEONSkin#">скрин&shy;шо&shy;ты</a>) и <a href="http://xbmc.org/skins/rapier/">Rapier</a> (<a href="http://picasaweb.google.com/solarzine/XBMCRapierSkin#">скрин&shy;шо&shy;ты</a>). BTW, у всех ски&shy;нов по&shy;сто&shy;ян&shy;ные про&shy;бле&shy;мы с рус&shy;ской ко&shy;ди&shy;ров&shy;кой, да и шриф&shy;ты в ком&shy;плек&shy;те со&shy;дер&shy;жать толь&shy;ко ла&shy;ти&shy;ни&shy;цу, по&shy;это&shy;му со&shy;ве&shy;тую стан&shy;дарт&shy;ный язык оста&shy;вить English-ом, а все име&shy;на фай&shy;лов транс&shy;ли&shy;те&shy;ри&shy;ро&shy;вать, а еще луч&shy;ше ис&shy;поль&shy;зо&shy;вать ори&shy;ги&shy;наль&shy;ные ан&shy;глий&shy;ские на&shy;зва&shy;ние что&shy;бы по&shy;том не при&shy;шлось вруч&shy;ную до&shy;бав&shy;лять в биб&shy;лио&shy;те&shy;ку. </p><p></p><p>Те&shy;перь па&shy;ра слов по по&shy;во&shy;ду борь&shy;бы с от&shy;сут&shy;стви&shy;ем DxVA, один из мно&shy;гих пле&shy;е&shy;ров, ко&shy;то&shy;рый под&shy;дер&shy;жи&shy;ва&shy;ет этот про&shy;то&shy;кол, про&shy;стой в на&shy;строй&shy;ке и не об&shy;ре&shy;ме&shy;нен не&shy;нуж&shy;ны&shy;ми нам рю&shy;шеч&shy;ка&shy;ми-ху&shy;ю&shy;шеч&shy;ка&shy;ми это <a href="http://mpc-hc.sourceforge.net/">Media Player Classic - Home Cinema</a>. Глу&shy;бин&shy;ный смысл его на&shy;строй&shy;ки за&shy;клю&shy;ча&shy;ет&shy;ся в том, что в Output Settings ста&shy;вим User EVR, в Built-in filters ак&shy;ти&shy;ви&shy;ру&shy;ем DXVA де&shy;ко&shy;де&shy;ры для H264/AVC и VC1 и на вся&shy;кий слу&shy;чай бло&shy;ки&shy;ру&shy;ем в External filters ко&shy;дек ffdshow Video Decoder. Все, те&shy;перь все слож&shy;но&shy;сти де&shy;ко&shy;ди&shy;ро&shy;ва&shy;ния ло&shy;жат&shy;ся на GPU, FPS воз&shy;рас&shy;та&shy;ет, framedrop сво&shy;дит&shy;ся прак&shy;ти&shy;че&shy;ски к 0, а где-то в Аф&shy;ри&shy;ке улы&shy;ба&shy;ет&shy;ся го&shy;лод&shy;ный чер&shy;ный ре&shy;бе&shy;нок, про&shy;сти&shy;те. Все это здо&shy;ро&shy;во, но кра&shy;си&shy;вая обо&shy;лоч&shy;ка XBMC нам нра&shy;вит&shy;ся на&shy;мно&shy;го боль&shy;ше стан&shy;дарт&shy;но&shy;го explorer, по&shy;это&shy;му с по&shy;мо&shy;щью не&shy;боль&shy;шой хит&shy;ро&shy;сти де&shy;ла&shy;ем mpc-hc стан&shy;дарт&shy;ным про&shy;игры&shy;ва&shy;те&shy;лем. Де&shy;ла&shy;ет&shy;ся это за&shy;ки&shy;ды&shy;ва&shy;ни&shy;ем фай&shy;ла c сле&shy;ду&shy;ю&shy;щим име&shy;нем и на&shy;пол&shy;не&shy;ни&shy;ем <a href="/media/copypaste/advancedsettings.xml">advancedsettings.xml</a> в ди&shy;рек&shy;то&shy;рию userdata, ко&shy;то&shy;рая ле&shy;жит в уста&shy;но&shy;воч&shy;ной ди&shy;рек&shy;то&shy;рии XBMC. Ра&shy;зу&shy;ме&shy;ет&shy;ся, не&shy;об&shy;хо&shy;ди&shy;мо из&shy;ме&shy;нить путь к exe-шни&shy;ку mpc.</p><p></p><p>На этом де&shy;бют&shy;ную часть мож&shy;но счи&shy;тать окон&shy;чен&shy;ной, в сле&shy;ду&shy;ю&shy;щей я рас&shy;ска&shy;жу, как на&shy;учить XMBC, MPC да и весь Windows ра&shy;бо&shy;тать с пуль&shy;том управ&shy;ле&shy;ния, но для это&shy;го мне нуж&shy;но до&shy;ждать&shy;ся по&shy;сыл&shy;ки с ebay.</p>
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/206.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/206.html&amp;text=%D0%9F%D0%9E%20%D0%B4%D0%BB%D1%8F%20HTPC%3A%20the%20%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/206.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/206.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/206.html&amp;text=%D0%9F%D0%9E%20%D0%B4%D0%BB%D1%8F%20HTPC%3A%20the%20%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%BE&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/206.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>

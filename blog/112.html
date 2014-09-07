@@ -49,7 +49,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?c61aee56" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?85fbe913" rel="stylesheet" media="all">
     
 
     
@@ -63,9 +63,9 @@
 </head>
 
 <body class="mindcollapse">
-    <div class="container">
-        <div class="header navbar navbar-default hidden-print" role="navigation">
-            <div class="navbar-header">
+    <main class="container">
+        <header class="header navbar navbar-default hidden-print" role="navigation">
+            <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -73,9 +73,9 @@
                 </button>
 
                 <a href="/" class="navbar-brand">Владимир Смирнов</a>
-            </div>
+            </nav>
 
-            <div class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">Блог</a></li>
                     <li ><a href="/blog/archive/">Архив</a></li>
@@ -87,14 +87,19 @@
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="https://www.mindcollapse.com/blog.xml">RSS</a></li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
 
         
-    <div class="article hentry" itemscope itemtype="http://schema.org/BlogPosting" role="main">
+    <article class="article hentry" itemscope itemtype="http://schema.org/Article" role="main">
         <div class="content_header clearfix">
-            <h1 itemprop="name" class="entry-title pull-left"><a itemprop="url" href="https://www.mindcollapse.com/blog/112.html">MacOS на PearPC</a></h1>
-            <div class="published pull-right"><time itemprop="datePublished" datetime="2008-06-06T00:00:00Z" class="text-muted updated">6 июня 2008 г.</time></div>
+            <div itemprop="name" class="entry-title pull-left">
+                <h1><a itemprop="url" href="https://www.mindcollapse.com/blog/112.html">MacOS на PearPC</a></h1>
+            </div>
+
+            <div class="published pull-right">
+                <time itemprop="datePublished" datetime="2008-06-06T00:00:00Z" class="text-muted updated">6 июня 2008 г.</time>
+            </div>
 
             <div class="vcard author hidden">
                 <a itemprop="author" class="url fn" href="http://www.mindcollapse.com/">Vladimir Smirnov</a>
@@ -103,18 +108,18 @@
 
         <hr class="first">
 
-        <div itemprop="articleBody" class="entry-content content">
+        <div itemprop="description" class="entry-content content">
             Уста&shy;но&shy;вил се&shy;бе <a href="http://www.apple.com/macosx/">MacOS</a> в вир&shy;ту&shy;аль&shy;ную ма&shy;ши&shy;ну от не&shy;че&shy;го де&shy;лать и, от&shy;ча&shy;сти, по при&shy;чи&shy;не то&shy;го, что из&shy;ред&shy;ка ну&shy;жда&shy;юсь в <a href="http://www.apple.com/safari/">Safari</a>, но не в том не&shy;до-Safari, из&shy;вра&shy;щен&shy;ски-пор&shy;ти&shy;ро&shy;ван&shy;ным на ок&shy;на с глюч&shy;ным <a href="http://webkit.org/">WebKit</a>-ом, а в род&shy;ном - ма&shy;ло ли что мо&shy;жет слу&shy;чить&shy;ся. Про&shy;бле&shy;ма в том, что мой мозг, да и фи&shy;нан&shy;со&shy;вый ста&shy;тус еще не пе&shy;ре&shy;шел в не&shy;огра&shy;ни&shy;чен&shy;ное со&shy;сто&shy;я&shy;ние, имен&shy;но по&shy;это&shy;му зна&shy;ком&shy;ство с <a href="http://www.apple.com/">Apple</a> огра&shy;ни&shy;чи&shy;ва&shy;ет&shy;ся <a href="http://www.apple.com/ipodnano/">iPod</a>-ом и меч&shy;той ку&shy;пить ко&shy;гда-то <a href="http://www.macrumors.com/iphone/">iPhone 2gen</a>, если это не фейк (узна&shy;ем 9 июня, ага). Не со&shy;мне&shy;ва&shy;юсь, воз&shy;мож&shy;но в при&shy;ро&shy;де су&shy;ще&shy;ству&shy;ет ку&shy;ча спо&shy;со&shy;бов уста&shy;но&shy;вить MacOS на x86 PC, но мое очень эк&shy;зо&shy;ти&shy;че&shy;ское ме&shy;ста&shy;ми обо&shy;ру&shy;до&shy;ва&shy;ние та&shy;кой бы финт не вос&shy;при&shy;ня&shy;ло: имен&shy;но по&shy;это&shy;му при&shy;шлось ис&shy;кать эму&shy;ля&shy;то&shy;ры. Са&shy;мый от&shy;лич&shy;ный, оче&shy;вид&shy;но, <a href="http://pearpc.net/">PearPC</a>, ко&shy;то&shy;рый справ&shy;ля&shy;ет&shy;ся на все сто (хо&shy;тя по&shy;след&shy;ний ре&shy;лиз и слу&shy;чил&shy;ся в 2005), эму&shy;ли&shy;ру&shy;ет G3 и G4 плат&shy;фор&shy;мы, раз&shy;ре&shy;ша&shy;ет ис&shy;поль&shy;зо&shy;вать usb де&shy;вай&shy;сы (прав&shy;да у ме&shy;ня не уда&shy;лось), а так&shy;же - до&shy;ступ к ethernet (это у ме&shy;ня уда&shy;лось, но не сра&shy;зу) и да&shy;же идет с <a href="http://pearpc.net/pearpc_net_package.php">гу&shy;ем</a> для удоб&shy;ной и бы&shy;строй на&shy;строй&shy;ки вир&shy;ту&shy;аль&shy;ной ма&shy;ши&shy;ны. В ито&shy;ге по&shy;лу&shy;чил&shy;ся <a href="/media/pictures/macos_pearpc.jpg">та&shy;кой вот вид</a>. Ах да, чуть бы&shy;ло не за&shy;был, вер&shy;сия 10.5 Leopard эму&shy;ля&shy;то&shy;ром не под&shy;дер&shy;жи&shy;ва&shy;ет&shy;ся и, если ве&shy;рить по&shy;стам в ком&shy;мью&shy;ни&shy;ти, про&shy;ект сдох. Ну и фиг с ним, 10.4 Tiger по&shy;чти те же яй&shy;ца.
         </div>
+    </article>
 
-        <hr>
-        
-        <div class="content_footer hidden-print">
-            <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/112.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/112.html&amp;text=MacOS%20%D0%BD%D0%B0%20PearPC&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/112.html">вконтакте</a></span>.</p>
-        </div>
-    </div>
+    <hr>
 
-    </div>   
+    <footer class="footer hidden-print">
+        <p>Что делать, если вы все прочитали и вам понравилось? Можете посмотреть мои остальные статьи в <a href="/blog/archive/">архиве</a> или поделиться радостью со своими воображаемыми друзьями в социальных сетях: <span class="social"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https%3A//www.mindcollapse.com/blog/112.html">фейсбук</a>, <a target="_blank" href="http://twitter.com/share?url=https%3A//www.mindcollapse.com/blog/112.html&amp;text=MacOS%20%D0%BD%D0%B0%20PearPC&amp;via=middlesizetit">твиттер</a>, <a target="_blank" href="http://vkontakte.ru/share.php?url=https%3A//www.mindcollapse.com/blog/112.html">вконтакте</a></span>.</p>
+    </footer>
+
+    </main>   
 </body>
 
 </html>
