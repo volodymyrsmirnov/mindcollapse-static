@@ -33,7 +33,6 @@ $(document).on "ready", ()->
             switch event.which
                 when 37 then new_location = $("link[rel*=prev]").attr("href");
                 when 39 then new_location = $("link[rel*=next]").attr("href");
-                when 38 then new_location = $("link[rel*=up]").attr("href");
 
             if new_location?
                 document.location.href = new_location
