@@ -29,6 +29,8 @@ class AbsoluterTreeprocessor(Treeprocessor):
         imgs = root.getiterator("img")
 
         for image in imgs:
+            image.set("itemprop", "image")
+
             if urlparse(image.attrib["src"]).scheme == "":
                 image.set("src", urljoin(base_url, image.attrib["src"]))
 
