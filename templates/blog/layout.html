@@ -17,7 +17,7 @@
     {% if post %}
         <link rel="canonical" href="{{ url_for("blog.post", slug=post.slug, _external=True) }}">
 
-        <link rel="up archives" href="{{ url_for("blog.archive", _external=True) }}">
+        <link rel="archives" href="{{ url_for("blog.archive", _external=True) }}">
 
         {% if next_slug %}
             <link rel="next" href="{{ url_for("blog.post", slug=next_slug, _external=True) }}">
@@ -68,7 +68,7 @@
 
 <body class="mindcollapse">
     <main class="container">
-        <header class="header navbar navbar-default hidden-print" role="navigation">
+        <header class="header navbar navbar-default hidden-print">
             <nav class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".blogmenu">
                     <span class="icon-bar"></span>
@@ -79,7 +79,7 @@
                 <a href="{{ url_for("blog.index") }}" class="navbar-brand">Владимир Смирнов</a>
             </nav>
 
-            <nav class="collapse navbar-collapse blogmenu">
+            <nav class="collapse navbar-collapse blogmenu" role="navigation">
                 <ul class="nav navbar-nav">
                     <li {% if active == "blog.post" %}class="active"{% endif %}><a href="{{ url_for("blog.index") }}">Блог</a></li>
                     <li {% if active == "blog.archive" %}class="active"{% endif %}><a href="{{ url_for("blog.archive") }}">Архив</a></li>
