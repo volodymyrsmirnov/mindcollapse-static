@@ -1,4 +1,4 @@
-PYTHON_BIN := virtualenv/bin/python 
+PYTHON_BIN := python 
 
 freeze:
 	$(PYTHON_BIN) manage.py freeze
