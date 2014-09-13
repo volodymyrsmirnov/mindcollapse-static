@@ -5,6 +5,6 @@ freeze:
 
 deploy:
 	cd build/
-	git add .
+	git add --all .
 	git commit -m "regenerated"
 	ssh root@mindcollapse.com "su www-data -c \"cd /home/www/mindcollapse.com; git pull\""
