@@ -6,17 +6,16 @@ from urlparse import urljoin, urlparse
 import flask
 
 class AbsoluterExtension(Extension):
-    def __init__(self, configs=[]):
-        self.config = {
-            "base_url": [None, "Base URL"],
-        }
-
-        for key, value in configs:
-            self.setConfig(key, value)
+    def __init__(self, base_url):
+        self.base_url = base_url
 
     def extendMarkdown(self, md, md_globals):
         absoluter = AbsoluterTreeprocessor(md)
-        absoluter.config = self.getConfigs()
+
+        absoluter.config = {
+            "base_url": self.base_url
+        }
+
         md.treeprocessors.add("absoluter", absoluter, "_end")
         md.registerExtension(self)
 
@@ -49,5 +48,5 @@ class AbsoluterTreeprocessor(Treeprocessor):
             elif parsed_link.netloc and parsed_link.netloc not in base_url:
                 link.set("rel", "nofollow")
 
-def makeExtension(configs=[]):
-    return AbsoluterExtension(configs=configs)
+def makeExtension(base_url):
+    return AbsoluterExtension(base_url)

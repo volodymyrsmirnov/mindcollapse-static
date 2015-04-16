@@ -28,7 +28,6 @@ class Config(object):
 			"toc",
 			"extra",
 			"smarty",
-			"modules.video",
 			"modules.absoluter",
 			#"meta",
 			#"codehilite"

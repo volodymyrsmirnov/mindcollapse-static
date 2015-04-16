@@ -81,11 +81,10 @@
                 <ul class="nav navbar-nav">
                     <li {% if active == "blog.post" %}class="active"{% endif %}><a href="{{ url_for("blog.index") }}">Блог</a></li>
                     <li {% if active == "blog.archive" %}class="active"{% endif %}><a href="{{ url_for("blog.archive") }}">Архив</a></li>
-                    <li><a target="_blank" href="/moho/">Кино</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a target="_blank" href="http://www.twitter.com/middlesizetit">Twitter</a></li>
+                    <li><a target="_blank" href="https://twitter.com/middlesizetit">Twitter</a></li>
                     <li><a target="_blank" href="https://github.com/mindcollapse">GitHub</a></li>
                     <li><a href="{{ url_for("blog.rss", _external=True) }}">RSS</a></li>
                 </ul>
@@ -93,7 +92,7 @@
         </header>
 
         {% block content %}{% endblock %}
-    </main>   
+    </main>
 </body>
 
 </html>
