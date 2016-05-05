@@ -26,7 +26,7 @@
         
 
         <meta property="og:title" content="Popcorn A-110 + WUSB54 - танцы с бубном">
-        <meta property="og:description" content="Валялcя у меня дома непонятно откуда взявшийся USB Wi-Fi донгл Linksys WUSB54GC. Воскресным дождливым утром, почесав репу, я решил попробывать подсоединить его к медиа-плееру Popcorn Hour A-110, потому как надоело таскать его к компьютеру для заливки ...">
+        <meta property="og:description" content="Валялcя у меня дома непонятно откуда взявшийся USB Wi-Fi донгл Linksys WUSB54GC. Воскресным дождливым утром, почесав репу, я решил попробывать подсоединить его к медиа-плееру Popcorn Hour A-110, потому как надоело таскать его к компьютеру для заливки очередной ...">
         <meta property="og:type" content="article">
         <meta property="og:site_name" content="mindcollapse.com">
         <meta property="og:url" content="https://www.mindcollapse.com/blog/197.html">
@@ -47,7 +47,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?47e4fb13" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?626b399d" rel="stylesheet" media="all">
     
 
     
@@ -95,7 +95,7 @@
             </div>
 
             <div class="published pull-right">
-                <time itemprop="datePublished" datetime="2009-07-05T00:00:00Z" class="text-muted updated">5 июля 2009 г.</time>
+                <time itemprop="datePublished" datetime="2009-07-05T00:00:00Z" class="text-muted updated">07 July, 2009</time>
             </div>
 
             <div class="vcard author hidden">
@@ -106,7 +106,7 @@
         <hr class="first">
 
         <div itemprop="description" class="entry-content content">
-            Ва­лялcя у ме­ня до­ма не­по­нят­но от­ку­да взяв­ший­ся USB Wi-Fi донгл <a href="http://www.linksysbycisco.com/US/en/products/WUSB54GC">Linksys WUSB54GC</a>. Вос­крес­ным дожд­ли­вым утром, по­че­сав ре­пу, я ре­шил по­про­бы­вать под­со­еди­нить его к ме­диа-пле­е­ру <a href="/blog/173.html">Popcorn Hour A-110</a>, по­то­му как на­до­е­ло тас­кать его к ком­пью­те­ру для за­лив­ки оче­ред­ной пи­рат­ской ко­пии ки­но или му­зы­ки. Ко­ро­че, по­че­сал я сно­ва ре­пу и всу­нул донгл в USB порт пле­е­ра, за­ло­ги­нил­ся на не­го че­рез ssh и в dmesg уви­дил ба­наль­ный high-speed usb device connected, что не пред­ве­ща­ло лег­ких сце­на­ри­ев. <p></p><p>Ра­зу­ме­ет­ся, lsmod ядра был пуст, а lsusb ли­бо lshw про­сто от­сут­ство­ва­ли. По­гуглив, <a href="http://funcation.blogspot.com/">на­шел</a>, что мо­дуль ядра для дон­гла на­зы­ва­ет­ся rt73, чуть поз­же на­шлись и ском­пи­ли­ро­ван­ные би­нар­ни­ки (<a href="/media/etc/rt73.zip">ка­ча­бель­но</a>). Воз­ни­ка­ла еще од­на про­бле­ма, insmod мо­дуль уста­нав­ли­вал без эк­с­еп­ше­нов, но вот ifconfig, ли­бо да­же про­сто cat /proc/net/dev вы­зы­ва­ли segmentation fault. Ре­па уже бы­ла до­ста­точ­но ак­тив­но рас­че­са­на в кровь, но пу­тем ко­вы­ря­ний и чи­та­ний фо­ру­ма NMT на­шел та­ки ре­ше­ние.</p><p></p><p>Итак, по­ря­док дей­ствий для уста­нов­ки USB Wi-Fi кар­ты на ба­зе чип­се­та Ralink RT73 (а их мно­го) сле­ду­ю­щий: уста­нав­ли­ва­ем dropbear ssh с по­мо­щью <a href="http://www.networkedmediatank.com/showthread.php?tid=13161">CSI</a>, <a href="/media/etc/rt73.zip">ска­чи­ва­ем</a> би­нар­ни­ки и ки­да­ем их в ко­рень ftp сер­ве­ра ли­бо же в /share ди­рек­то­рию че­рез sftp, ре­дак­ти­ру­ем в этой же ди­рек­то­рии скрипт start_app.sh, при­мер не­об­хо­ди­мой кон­фи­гу­ра­ции в <a href="/media/copypaste/start_app.bash">ко­пи­па­сте­ре</a>. Да по­мо­жет вам <a href="http://linux.die.net/man/8/iwconfig">ма­ну­ал</a> по iwconfig-у. Ре­бу­тим­ся и все ра­бо­та­ет</p><p></p><p>На­по­сле­док на­до ска­зать, что с WPA шиф­ро­ва­ни­ем со­еди­нить­ся не по­лу­чи­лось, при­дет­ся пе­ре­клю­чать­ся на WEP. Ско­рость до­сти­га­ет ~ 5 mbit\s. По­смот­реть, как все вы­гля­дит мож­но на <a href="/media/pictures/pc.jpg">фо­то­гра­фии</a>, про­шу про­ще­ния за те­ле­фон­ное ка­че­ство.</p>
+            Ва­лялcя у ме­ня до­ма не­по­нят­но отку­да взяв­ший­ся USB Wi-Fi донгл <a href="http://www.linksysbycisco.com/US/en/products/WUSB54GC">Linksys WUSB54GC</a>. Воскрес­ным дождли­вым утром, по­че­сав ре­пу, я ре­шил по­про­бы­вать под­со­еди­нить его к ме­диа-пле­е­ру <a href="/blog/173.html">Popcorn Hour A-110</a>, по­то­му как на­до­е­ло тас­кать его к компью­те­ру для за­лив­ки оче­ред­ной пи­рат­ской ко­пии ки­но или му­зы­ки. Ко­ро­че, по­че­сал я сно­ва ре­пу и всу­нул донгл в USB порт пле­е­ра, за­ло­ги­нил­ся на не­го че­рез ssh и в dmesg уви­дил ба­наль­ный high-speed usb device connected, что не пред­ве­ща­ло лег­ких сцена­ри­ев. <p></p><p>Ра­зу­ме­ет­ся, lsmod ядра был пуст, а lsusb ли­бо lshw про­сто от­сут­ство­ва­ли. По­гуглив, <a href="http://funcation.blogspot.com/">на­шел</a>, что мо­дуль ядра для дон­гла на­зы­ва­ет­ся rt73, чуть поз­же на­шлись и скомпи­ли­ро­ван­ные би­нар­ни­ки (<a href="/media/etc/rt73.zip">ка­ча­бель­но</a>). Воз­ни­ка­ла еще од­на пробле­ма, insmod мо­дуль уста­нав­ли­вал без эк­с­еп­ше­нов, но вот ifconfig, ли­бо да­же про­сто cat /proc/net/dev вы­зы­ва­ли segmentation fault. Ре­па уже бы­ла до­ста­точ­но ак­тив­но рас­че­са­на в кровь, но пу­тем ковы­ря­ний и чи­та­ний фо­ру­ма NMT на­шел та­ки ре­ше­ние.</p><p></p><p>Итак, по­ря­док дей­ствий для уста­нов­ки USB Wi-Fi кар­ты на ба­зе чипсе­та Ralink RT73 (а их много) сле­ду­ю­щий: уста­нав­ли­ва­ем dropbear ssh с по­мо­щью <a href="http://www.networkedmediatank.com/showthread.php?tid=13161">CSI</a>, <a href="/media/etc/rt73.zip">ска­чи­ва­ем</a> би­нар­ни­ки и ки­да­ем их в ко­рень ftp сер­ве­ра ли­бо же в /share ди­рек­то­рию че­рез sftp, ре­дак­ти­ру­ем в этой же ди­рек­то­рии скрипт start_app.sh, при­мер необ­хо­ди­мой кон­фи­гу­ра­ции в <a href="/media/copypaste/start_app.bash">ко­пи­па­стере</a>. Да по­мо­жет вам <a href="http://linux.die.net/man/8/iwconfig">ма­ну­ал</a> по iwconfig-у. Ре­бу­тим­ся и все ра­бо­та­ет</p><p></p><p>На­по­сле­док на­до ска­зать, что с WPA шиф­ро­ва­ни­ем со­еди­нить­ся не по­лу­чи­лось, при­дет­ся переклю­чать­ся на WEP. Ско­рость до­сти­га­ет ~ 5 mbit\s. Посмот­реть, как все вы­гля­дит мож­но на <a href="/media/pictures/pc.jpg">фото­гра­фии</a>, про­шу про­ще­ния за теле­фонное ка­че­ство.</p>
         </div>
     </article>
 

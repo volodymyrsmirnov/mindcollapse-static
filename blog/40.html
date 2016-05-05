@@ -47,7 +47,7 @@
     <link rel="alternate" type="application/atom+xml" title="RSS лента mindcollapse.com" href="https://www.mindcollapse.com/blog.xml"> 
 
     
-        <link href="/static/compiled/blog.css?47e4fb13" rel="stylesheet" media="all">
+        <link href="/static/compiled/blog.css?626b399d" rel="stylesheet" media="all">
     
 
     
@@ -95,7 +95,7 @@
             </div>
 
             <div class="published pull-right">
-                <time itemprop="datePublished" datetime="2006-12-06T00:00:00Z" class="text-muted updated">6 декабря 2006 г.</time>
+                <time itemprop="datePublished" datetime="2006-12-06T00:00:00Z" class="text-muted updated">12 December, 2006</time>
             </div>
 
             <div class="vcard author hidden">
@@ -106,7 +106,7 @@
         <hr class="first">
 
         <div itemprop="description" class="entry-content content">
-            Аа­а­аа... Се­го­дня я рас­ска­жу вам про птиц! Вер­нее о том, как на­стро­ить мо­дем на ба­зе com-под­клю­чен­но­го мо­биль­но­го те­ле­фо­на. По­сле предо­став­ле­ния <a href="http://umc.ua">UMC</a> <a href="http://umc.ua/ukr/hyper.php">по­доб­ной ха­ля­вы</a> я ре­шил по­про­бо­вать под­клю­чить один из сво­их ди­но­зав­ров (<a href="http://helpix.ru/sonyericsson/t200/">SE T200</a>) че­рез com-порт и на­стро­ить dial-up со­еди­не­ние. Что по­лу­чи­лось - смот­рим ни­же.cat <strong>/etc/ppp/peers/umc-hypernet</strong><fieldset><code>noauthconnect "/usr/sbin/chat -v -f /etc/chatscripts/umc-hypernet"debug/dev/ttyS0115200noipdefaultdefaultrouteuser ""</code></fieldset>cat <strong>/etc/chatscripts/umc-hypernet</strong><fieldset><code># ispauth CHAP# abortstringABORT BUSY ABORT 'NO CARRIER' ABORT VOICE ABORT 'NO DIALTONE' ABORT 'NO DIAL TONE' ABORT 'NO ANSWER' ABORT DELAYED# modeminit'' AT+CGDCONT=1,"IP","hyper.net"# ispnumberOK-AT-OK "ATDT*99#"# ispconnectCONNECT \d\c# prelogin# ispname# isppassword# postlogin</code></fieldset><strong># pon umc-hypernet</strong> и по­не­слась...
+            Аа­а­аа... Се­год­ня я расска­жу вам про птиц! Вер­нее о том, как на­строить мо­дем на ба­зе com-под­клю­чен­но­го мо­биль­но­го теле­фо­на. По­сле предо­став­ле­ния <a href="http://umc.ua">UMC</a> <a href="http://umc.ua/ukr/hyper.php">подоб­ной ха­ля­вы</a> я ре­шил по­про­бо­вать под­клю­чить один из своих ди­но­зав­ров (<a href="http://helpix.ru/sonyericsson/t200/">SE T200</a>) че­рез com-порт и на­строить dial-up со­еди­не­ние. Что по­лу­чи­лось - смот­рим ни­же.cat <strong>/etc/ppp/peers/umc-hypernet</strong><fieldset><code>noauthconnect "/usr/sbin/chat -v -f /etc/chatscripts/umc-hypernet"debug/dev/ttyS0115200noipdefaultdefaultrouteuser ""</code></fieldset>cat <strong>/etc/chatscripts/umc-hypernet</strong><fieldset><code># ispauth CHAP# abortstringABORT BUSY ABORT 'NO CARRIER' ABORT VOICE ABORT 'NO DIALTONE' ABORT 'NO DIAL TONE' ABORT 'NO ANSWER' ABORT DELAYED# modeminit'' AT+CGDCONT=1,"IP","hyper.net"# ispnumberOK-AT-OK "ATDT*99#"# ispconnectCONNECT \d\c# prelogin# ispname# isppassword# postlogin</code></fieldset><strong># pon umc-hypernet</strong> и по­не­слась...
         </div>
     </article>
 
