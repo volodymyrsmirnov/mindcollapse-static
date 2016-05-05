@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 
-from flask.ext.script import Manager
-
 from application import app
-from freezer import freezer
+from flask.ext.script import Manager
+from modules.ext.freezer import freezer
 
 manager = Manager(app)
 

@@ -7,9 +7,7 @@ from modules.ext.helpers import no_shy
 
 app = flask.Flask(__name__)
 app.config.from_object(Config())
-
 app.register_blueprint(blog_module)
-
 app.jinja_env.filters["no_shy"] = no_shy
 
 
