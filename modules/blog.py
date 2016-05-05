@@ -55,7 +55,7 @@ def register_assets():
 @blog.route("/nginx_redirect.conf")
 def nginx_redirect():
     return Response(
-        "return 307 {0};".format(url_for("blog.post", slug=get_data("blog").items()[0][0], _external=True)),
+        "return 307 {0};".format(url_for("blog.post", slug=list(get_data("blog").items())[0][0], _external=True)),
         mimetype="text/plain"
     )
 
