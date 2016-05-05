@@ -6,7 +6,7 @@
     <ol class="archive list-unstyled">
         {% for post in posts %}
             <li>
-                <div class="text-muted">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</div>
+                <div class="text-muted">{{ post.parsed_date.strftime("%m %B, %Y") }}</div>
                 <div><a href="{{ url_for("blog.post", slug=post.slug) }}">{{ post.title }}</a></div>
             </li>
         {% endfor %}

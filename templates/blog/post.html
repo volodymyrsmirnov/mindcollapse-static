@@ -10,7 +10,7 @@
             </div>
 
             <div class="published pull-right">
-                <time itemprop="datePublished" datetime="{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}" class="text-muted updated">{{ pytils.dt.ru_strftime(format="%d %B %Y г." | string, inflected=True, date=post.parsed_date) }}</time>
+                <time itemprop="datePublished" datetime="{{ post.parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") }}" class="text-muted updated">{{ post.parsed_date.strftime("%m %B, %Y") }}</time>
             </div>
 
             <div class="vcard author hidden">

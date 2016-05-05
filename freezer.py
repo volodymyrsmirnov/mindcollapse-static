@@ -1,7 +1,6 @@
-from flask.ext.frozen import Freezer
 from application import app
-
-from modules.helpers import get_data
+from flask.ext.frozen import Freezer
+from modules.ext.helpers import get_data
 
 freezer = Freezer(app)
 
